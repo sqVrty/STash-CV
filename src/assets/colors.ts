@@ -1,4 +1,5 @@
 export const COLORS = {
   white: "#FFF",
-  main: "rgba(16, 231, 236, 1)",
+  aqua: "rgba(16, 231, 236, 1)",
+  lightgray: "#d3d3d3",
 };

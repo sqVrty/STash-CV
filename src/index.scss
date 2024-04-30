@@ -65,19 +65,26 @@ p {
   // flex-direction: column;
 }
 
-.content {
-  // margin-top: 130px;
-  // width: 75vw;
-  // min-width: 900px;
-  // max-width: 1250px;
+.header {
+  height: 85vh;
+  width: 5vw;
+  padding: 30px 15px;
+  margin-top: auto;
+  margin-bottom: auto;
   margin-left: auto;
+
+  background-color: rgb(30, 30, 30);
+}
+
+.content {
+  // aspect-ratio: 16/9;
+  width: 70vw;
+  height: 85vh;
+  padding: 30px 15px;
   margin-right: auto;
   margin-top: auto;
   margin-bottom: auto;
   display: flex;
-  aspect-ratio: 16/9;
-  width: 70vw;
-  height: 90vh;
 
-  background-color: red;
+  background-color: rgb(30, 30, 30);
 }

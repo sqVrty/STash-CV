@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "./app/hooks";
 import { setDeviceType } from "./redux/features/deviceInfoSlice";
 
+import PCHeader from "./components/header/PCHeader/PCHeader";
 import Home from "./pages/Home/Home";
 
 export default function App() {
@@ -20,7 +21,7 @@ export default function App() {
   return (
     <Router>
       <div className="root">
-        {/* Header */}
+        <PCHeader />
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
