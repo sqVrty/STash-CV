@@ -1,0 +1,123 @@
+.container {
+  display: flex;
+  position: relative;
+
+  .photoContainer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: -15px;
+    top: 0;
+    transform: translateY(-7.5%);
+    height: 100vh;
+    max-width: 35vw;
+    box-shadow: 0px 0px 50px black;
+
+    .photo {
+      height: 100%;
+      width: 100%;
+    }
+
+    .infoContainer {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      z-index: 2;
+      bottom: 7.5%;
+      gap: 20px;
+
+      .name {
+        font-size: 50px;
+        font-weight: bold;
+      }
+
+      .career {
+        // margin-top: 20px;
+        text-align: center;
+        font-weight: 500;
+      }
+
+      .socialsContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+
+        .icon {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .rightBlock {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    left: 35vw;
+    margin-left: 15px;
+
+    .textBlock {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      .header {
+        font-size: 70px;
+        font-weight: bold;
+      }
+
+      .experience {
+        text-decoration: dashed;
+        font-style: italic;
+
+        .slash {
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+      }
+
+      .description {
+        font-weight: 400;
+      }
+
+      .line {
+        width: 100%;
+        height: 1px;
+      }
+    }
+
+    .skillsBlock {
+      margin-top: 50px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .headerContainer {
+        display: flex;
+        align-items: center;
+
+        .header {
+          margin-left: 10px;
+          font-size: 32px;
+          font-weight: bold;
+        }
+      }
+
+      .progressLinesContainer {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 25px;
+      }
+
+      .line {
+        margin-top: auto;
+        width: 100%;
+        height: 1px;
+      }
+    }
+  }
+}
