@@ -1,0 +1,53 @@
+$lightgray: #d3d3d3;
+$aqua: rgba(16, 200, 236, 0.8);
+
+.container {
+  position: absolute;
+  width: 100vw;
+  height: calc(100vh - 60px);
+  left: 0;
+  top: 60px;
+  background-color: rgba(0, 0, 0, 0.9);
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out;
+  z-index: 999;
+
+  &.open {
+    transform: translateX(0);
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 30px 25px;
+
+    .navigationContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .iconContainer {
+        display: flex;
+        text-decoration: none;
+        align-items: center;
+        gap: 10px;
+
+        .icon {
+          fill: $lightgray;
+          width: 25px;
+          height: 25px;
+
+          &.activeIcon {
+            fill: $aqua;
+          }
+        }
+      }
+    }
+
+    .contactMe {
+      display: flex;
+      margin-top: auto;
+    }
+  }
+}

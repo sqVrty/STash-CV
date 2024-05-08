@@ -1,3 +1,5 @@
+import { useAppSelector } from "../../app/hooks";
+
 import ProgressLine from "../../components/progressLine/ProgressLine";
 
 import { COLORS } from "../../assets/colors";
@@ -13,6 +15,10 @@ import {
 import classes from "./Home.module.scss";
 
 export default function Home() {
+  const isMobileDevice = useAppSelector(
+    (state) => state.deviceInfo.isMobileDevice
+  );
+
   const skillsData = [
     {
       header: "web development",
@@ -55,9 +61,15 @@ export default function Home() {
     }
   };
 
-  return (
+  return isMobileDevice ? (
+    <div className="mobileContent">
+      <div className={classes.mobileContainer}>
+        <img src={MyPhoto} className={classes.photo} />
+      </div>
+    </div>
+  ) : (
     <div className="content">
-      <div className={classes.container}>
+      <div className={classes.PCContainer}>
         <div className={classes.photoContainer}>
           <img src={MyPhoto} className={classes.photo} />
           <div className={classes.infoContainer}>

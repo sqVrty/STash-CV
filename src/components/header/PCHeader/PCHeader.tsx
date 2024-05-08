@@ -32,11 +32,11 @@ export default function PCHeader() {
   }, [location]);
 
   return (
-    <div className="header">
+    <div className="PCHeader">
       <div className={classes.container}>
-        <p className={classes.logo} style={{ color: COLORS.aqua }}>
+        <h1 className={classes.logo} style={{ color: COLORS.aqua }}>
           ST
-        </p>
+        </h1>
         <div className={classes.navigationContainer}>
           <Link to="/" className={classes.iconContainer}>
             <ProfileIcon

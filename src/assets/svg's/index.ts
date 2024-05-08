@@ -6,3 +6,4 @@ export { ReactComponent as TelegramIcon } from "./telegram.svg";
 export { ReactComponent as WhatsAppIcon } from "./whatsapp.svg";
 export { ReactComponent as GitHubIcon } from "./github.svg";
 export { ReactComponent as InstagramIcon } from "./instagram.svg";
+export { ReactComponent as MenuIcon } from "./menu.svg";
