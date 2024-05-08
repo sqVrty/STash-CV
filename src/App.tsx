@@ -4,6 +4,7 @@ import { useAppDispatch, useAppSelector } from "./app/hooks";
 import { setDeviceType } from "./redux/features/deviceInfoSlice";
 
 import PCHeader from "./components/header/PCHeader/PCHeader";
+import PhotoContainer from "./components/PhotoContainer/PhotoContainer";
 import MobileHeader from "./components/header/MobileHeader/MobileHeader";
 import Home from "./pages/Home/Home";
 
@@ -25,7 +26,14 @@ export default function App() {
         className="root"
         style={isMobileDevice ? { flexDirection: "column" } : {}}
       >
-        {isMobileDevice ? <MobileHeader /> : <PCHeader />}
+        {isMobileDevice ? (
+          <MobileHeader />
+        ) : (
+          <>
+            <PCHeader />
+            <PhotoContainer />
+          </>
+        )}
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>

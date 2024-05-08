@@ -168,95 +168,44 @@ export default function Home() {
   ) : (
     <div className="content">
       <div className={classes.PCContainer}>
-        <div className={classes.photoContainer}>
-          <img src={MyPhoto} className={classes.photo} />
-          <div className={classes.infoContainer}>
-            <h1 className={classes.name}>Ren Nolan</h1>
-            <TypeAnimation
-              sequence={[
-                "Developer",
-                3000,
-                "Application Developer",
-                3000,
-                "UI/UX Designer",
-                3000,
-              ]}
-              className={classes.career}
-              style={{ color: COLORS.aqua }}
-              repeat={Infinity}
-            />
-            <div className={classes.socialsContainer}>
-              <TelegramIcon
-                width={25}
-                height={25}
-                className={classes.icon}
-                onClick={() => handleSocialClick("telegram")}
-              />
-              <WhatsAppIcon
-                width={25}
-                height={25}
-                className={classes.icon}
-                onClick={() => handleSocialClick("whatsapp")}
-              />
-              <GitHubIcon
-                width={25}
-                height={25}
-                className={classes.icon}
-                onClick={() => handleSocialClick("github")}
-              />
-              <InstagramIcon
-                width={25}
-                height={25}
-                className={classes.icon}
-                onClick={() => handleSocialClick("instagram")}
-              />
-            </div>
-          </div>
+        <div className={classes.textBlock}>
+          <h1 className={classes.header}>resume</h1>
+          <p className={classes.experience} style={{ color: COLORS.aqua }}>
+            10 years in design
+            <span className={classes.slash} style={{ color: COLORS.gray }}>
+              /
+            </span>
+            6 years in coding
+            <span className={classes.slash} style={{ color: COLORS.gray }}>
+              /
+            </span>
+            master's degree
+          </p>
+          <p className={classes.description} style={{ color: COLORS.gray }}>
+            Web Developer with 10 years of experience in designing and
+            developing user interfaces, testing, debugging, and training staff
+            within eCommerce technologies. Proven ability in optimizing web
+            functionality that improve data retrieval and workflow efficiencies.
+          </p>
+          <div
+            className={classes.line}
+            style={{ backgroundColor: COLORS.gray }}
+          />
         </div>
-        <div className={classes.rightBlock}>
-          <div className={classes.textBlock}>
-            <h1 className={classes.header}>resume</h1>
-            <p className={classes.experience} style={{ color: COLORS.aqua }}>
-              10 years in design
-              <span className={classes.slash} style={{ color: COLORS.gray }}>
-                /
-              </span>
-              6 years in coding
-              <span className={classes.slash} style={{ color: COLORS.gray }}>
-                /
-              </span>
-              master's degree
-            </p>
-            <p className={classes.description} style={{ color: COLORS.gray }}>
-              Web Developer with 10 years of experience in designing and
-              developing user interfaces, testing, debugging, and training staff
-              within eCommerce technologies. Proven ability in optimizing web
-              functionality that improve data retrieval and workflow
-              efficiencies.
-            </p>
-            <div
-              className={classes.line}
-              style={{ backgroundColor: COLORS.gray }}
-            />
+        <div className={classes.skillsBlock}>
+          <div className={classes.headerContainer}>
+            <SpeedometerIcon fill={COLORS.aqua} width={35} height={35} />
+            <h1 className={classes.header}>skills</h1>
           </div>
-          <div className={classes.skillsBlock}>
-            <div className={classes.headerContainer}>
-              <SpeedometerIcon fill={COLORS.aqua} width={35} height={35} />
-              <h1 className={classes.header}>skills</h1>
-            </div>
-            <div className={classes.progressLinesContainer}>
-              {skillsData.map((data, index) => (
-                <ProgressLine
-                  header={data.header}
-                  percentage={data.percentage}
-                />
-              ))}
-            </div>
-            <div
-              className={classes.line}
-              style={{ backgroundColor: COLORS.darkgray }}
-            />
+          <div className={classes.progressLinesContainer}>
+            {skillsData.map((data, index) => (
+              <ProgressLine header={data.header} percentage={data.percentage} />
+            ))}
           </div>
+          <div
+            className={classes.line}
+            style={{ backgroundColor: COLORS.darkgray }}
+          />
         </div>
       </div>
     </div>

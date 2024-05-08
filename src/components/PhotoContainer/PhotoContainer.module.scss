@@ -1,0 +1,50 @@
+$lightgray: #d3d3d3;
+$aqua: rgba(16, 200, 236, 0.8);
+
+.photoContainer {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 35vw;
+  box-shadow: 0px 0px 50px black;
+
+  .photo {
+    height: 100%;
+    width: 100%;
+  }
+
+  .infoContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 7.5%;
+    gap: 20px;
+
+    .name {
+      font-size: 50px;
+      font-weight: bold;
+    }
+
+    .career {
+      text-align: center;
+      font-weight: 500;
+    }
+
+    .socialsContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 25px;
+
+      .icon {
+        cursor: pointer;
+        fill: $lightgray;
+        transition: 0.2s ease-in-out fill;
+
+        &:hover {
+          fill: $aqua;
+        }
+      }
+    }
+  }
+}
