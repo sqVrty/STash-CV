@@ -1,3 +1,76 @@
+$lightgray: #d3d3d3;
+$aqua: rgba(16, 200, 236, 0.8);
+
+.infoContainer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  bottom: 7.5%;
+  gap: 20px;
+
+  .name {
+    font-size: 50px;
+    font-weight: bold;
+  }
+
+  .career {
+    text-align: center;
+    font-weight: 500;
+  }
+
+  .socialsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+    .icon {
+      cursor: pointer;
+      fill: $lightgray;
+      transition: 0.2s ease-in-out fill;
+
+      &:hover {
+        fill: $aqua;
+      }
+    }
+  }
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+}
+
+.skillsBlock {
+  margin-top: 50px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .headerContainer {
+    display: flex;
+    align-items: center;
+
+    .header {
+      margin-left: 10px;
+      font-size: 32px;
+      font-weight: bold;
+    }
+  }
+
+  .progressLinesContainer {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 25px;
+  }
+
+  .line {
+    margin-top: auto;
+  }
+}
+
 .PCContainer {
   display: flex;
   position: relative;
@@ -16,37 +89,6 @@
     .photo {
       height: 100%;
       width: 100%;
-    }
-
-    .infoContainer {
-      position: absolute;
-      display: flex;
-      flex-direction: column;
-      z-index: 2;
-      bottom: 7.5%;
-      gap: 20px;
-
-      .name {
-        font-size: 50px;
-        font-weight: bold;
-      }
-
-      .career {
-        // margin-top: 20px;
-        text-align: center;
-        font-weight: 500;
-      }
-
-      .socialsContainer {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 25px;
-
-        .icon {
-          cursor: pointer;
-        }
-      }
     }
   }
 
@@ -69,7 +111,6 @@
       }
 
       .experience {
-        text-decoration: dashed;
         font-style: italic;
 
         .slash {
@@ -80,11 +121,6 @@
 
       .description {
         font-weight: 400;
-      }
-
-      .line {
-        width: 100%;
-        height: 1px;
       }
     }
 
@@ -115,18 +151,59 @@
 
       .line {
         margin-top: auto;
-        width: 100%;
-        height: 1px;
       }
     }
   }
 }
 
-.mobileContainer {
-  height: 1000vh;
+.photoContainer {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: auto;
 
   .photo {
+    height: 100%;
     width: 100%;
-    height: auto;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+}
+
+.mobileContainer {
+  .textBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .header {
+      text-align: center;
+      font-size: 40px;
+      font-weight: bold;
+    }
+
+    .experience {
+      font-style: italic;
+      text-align: center;
+
+      .slash {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    }
+
+    .description {
+      text-align: center;
+      font-weight: 400;
+    }
+  }
+
+  .skillsBlock {
+    margin-top: 30px;
+
+    .progressLinesContainer {
+      margin-top: 20px;
+      gap: 20px;
+    }
   }
 }

@@ -78,6 +78,7 @@ p {
 
 .mobileHeader {
   position: fixed;
+  z-index: 100;
   width: 100vw;
   height: 60px;
 
@@ -105,4 +106,8 @@ p {
   width: 100vw;
 
   background-color: rgb(30, 30, 30);
+}
+
+.mobileContentContainer {
+  padding: 30px 15px;
 }

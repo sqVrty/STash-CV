@@ -4,7 +4,7 @@
   width: 100%;
   height: 100%;
 
-  .textContainer {
+  .paddingContainer {
     display: flex;
     width: 100%;
     height: 100%;
@@ -12,8 +12,30 @@
     align-items: center;
     justify-content: space-between;
 
-    .logo {
-      font-size: 30px;
+    .leftBlock {
+      display: flex;
+      align-items: center;
+
+      .avatarImage {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+      }
+
+      .textContainer {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+
+        .name {
+          font-weight: 400;
+        }
+
+        .career {
+          font-weight: 300;
+          font-size: 14px;
+        }
+      }
     }
 
     .rightBlock {

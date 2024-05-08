@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
+import { TypeAnimation } from "react-type-animation";
 
 import BurgerMenu from "./BurgerMenu";
 
+import { AvatarPhoto } from "../../../assets/img's";
 import { MenuIcon } from "../../../assets/svg's";
 import { COLORS } from "./../../../assets/colors";
 
@@ -21,10 +23,26 @@ export default function MobileHeader() {
   return (
     <div className="mobileHeader">
       <div className={classes.container}>
-        <div className={classes.textContainer}>
-          <h1 className={classes.logo} style={{ color: COLORS.aqua }}>
-            ST
-          </h1>
+        <div className={classes.paddingContainer}>
+          <div className={classes.leftBlock}>
+            <img src={AvatarPhoto} className={classes.avatarImage} />
+            <div className={classes.textContainer}>
+              <p className={classes.name}>Ren Nolan</p>
+              <TypeAnimation
+                sequence={[
+                  "Developer",
+                  3000,
+                  "Application Developer",
+                  3000,
+                  "UI/UX Designer",
+                  3000,
+                ]}
+                className={classes.career}
+                style={{ color: COLORS.aqua }}
+                repeat={Infinity}
+              />
+            </div>
+          </div>
           <div className={classes.rightBlock}>
             <MenuIcon
               fill="white"
