@@ -1,0 +1,67 @@
+$gray: rgba(100, 100, 100, 0.5);
+
+.heyContainer {
+  display: flex;
+  flex-direction: column;
+
+  .greeting {
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+
+  .aboutDataContainer {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+
+    .question {
+      font-weight: 400;
+
+      .dots {
+        letter-spacing: 2.5px;
+      }
+
+      .answer {
+        margin-left: 7.5px;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  .crossContainer {
+    display: flex;
+    padding: 15px;
+
+    &:nth-child(odd) {
+      border-right: 1px solid $gray;
+    }
+
+    &:nth-child(-n + 2) {
+      border-bottom: 1px solid $gray;
+    }
+
+    &:nth-child(3n + 1) {
+      padding-top: 15px;
+    }
+
+    &:nth-child(3n + 2) {
+      padding-right: 15px;
+    }
+
+    &:nth-child(3n + 3) {
+      padding-left: 15px;
+    }
+  }
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+}

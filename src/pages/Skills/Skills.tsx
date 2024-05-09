@@ -1,3 +1,4 @@
+import "animate.css";
 import { useAppSelector } from "../../app/hooks";
 import { TypeAnimation } from "react-type-animation";
 
@@ -13,9 +14,9 @@ import {
   InstagramIcon,
 } from "../../assets/svg's";
 
-import classes from "./Home.module.scss";
+import classes from "./Skills.module.scss";
 
-export default function Home() {
+export default function Skills() {
   const isMobileDevice = useAppSelector(
     (state) => state.deviceInfo.isMobileDevice
   );
@@ -166,46 +167,53 @@ export default function Home() {
       </div>
     </>
   ) : (
-    <div className="content">
-      <div className={classes.PCContainer}>
-        <div className={classes.textBlock}>
-          <h1 className={classes.header}>resume</h1>
-          <p className={classes.experience} style={{ color: COLORS.aqua }}>
-            10 years in design
-            <span className={classes.slash} style={{ color: COLORS.gray }}>
-              /
-            </span>
-            6 years in coding
-            <span className={classes.slash} style={{ color: COLORS.gray }}>
-              /
-            </span>
-            master's degree
-          </p>
-          <p className={classes.description} style={{ color: COLORS.gray }}>
-            Web Developer with 10 years of experience in designing and
-            developing user interfaces, testing, debugging, and training staff
-            within eCommerce technologies. Proven ability in optimizing web
-            functionality that improve data retrieval and workflow efficiencies.
-          </p>
-          <div
-            className={classes.line}
-            style={{ backgroundColor: COLORS.gray }}
-          />
-        </div>
-        <div className={classes.skillsBlock}>
-          <div className={classes.headerContainer}>
-            <SpeedometerIcon fill={COLORS.aqua} width={35} height={35} />
-            <h1 className={classes.header}>skills</h1>
+    <div
+      className={
+        "content" +
+        " animate__animated animate__slideInLeft animate__delay-0.7s"
+      }
+    >
+      <div className="PCContentContainer">
+        <div className={classes.PCContainer}>
+          <div className={classes.textBlock}>
+            <h1 className={classes.header}>resume</h1>
+            <p className={classes.experience} style={{ color: COLORS.aqua }}>
+              10 years in design
+              <span className={classes.slash} style={{ color: COLORS.gray }}>
+                /
+              </span>
+              6 years in coding
+              <span className={classes.slash} style={{ color: COLORS.gray }}>
+                /
+              </span>
+              master's degree
+            </p>
+            <p className={classes.description} style={{ color: COLORS.gray }}>
+              Web Developer with 10 years of experience in designing and
+              developing user interfaces, testing, debugging, and training staff
+              within eCommerce technologies. Proven ability in optimizing web
+              functionality that improve data retrieval and workflow
+              efficiencies.
+            </p>
+            <div
+              className={classes.line}
+              style={{ backgroundColor: COLORS.gray }}
+            />
           </div>
-          <div className={classes.progressLinesContainer}>
-            {skillsData.map((data, index) => (
-              <ProgressLine header={data.header} percentage={data.percentage} />
-            ))}
+          <div className={classes.skillsBlock}>
+            <div className={classes.headerContainer}>
+              <SpeedometerIcon fill={COLORS.aqua} width={35} height={35} />
+              <h1 className={classes.header}>skills</h1>
+            </div>
+            <div className={classes.progressLinesContainer}>
+              {skillsData.map((data, index) => (
+                <ProgressLine
+                  header={data.header}
+                  percentage={data.percentage}
+                />
+              ))}
+            </div>
           </div>
-          <div
-            className={classes.line}
-            style={{ backgroundColor: COLORS.darkgray }}
-          />
         </div>
       </div>
     </div>

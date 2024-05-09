@@ -1,0 +1,29 @@
+$aqua: rgba(16, 200, 236, 0.1);
+$gray: rgba(140, 140, 140, 1);
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
+  border: 0.5px solid $gray;
+  border-radius: 15px;
+
+  .iconContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    box-shadow: 0 0 3px 3px $aqua;
+    background-color: $aqua;
+  }
+
+  .header {
+    margin-top: 10px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+}

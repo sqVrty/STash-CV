@@ -2,6 +2,8 @@ $lightgray: #d3d3d3;
 $aqua: rgba(16, 200, 236, 0.8);
 
 .photoContainer {
+  position: relative;
+  z-index: 2;
   display: flex;
   justify-content: center;
   height: 100vh;

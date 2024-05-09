@@ -4,9 +4,10 @@ import { useAppDispatch, useAppSelector } from "./app/hooks";
 import { setDeviceType } from "./redux/features/deviceInfoSlice";
 
 import PCHeader from "./components/header/PCHeader/PCHeader";
-import PhotoContainer from "./components/PhotoContainer/PhotoContainer";
+import PhotoContainer from "./components/photoContainer/PhotoContainer";
 import MobileHeader from "./components/header/MobileHeader/MobileHeader";
-import Home from "./pages/Home/Home";
+import About from "./pages/About/About";
+import Skills from "./pages/Skills/Skills";
 
 export default function App() {
   const dispatch = useAppDispatch();
@@ -35,7 +36,8 @@ export default function App() {
           </>
         )}
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<About />} />
+          <Route path="/skills" element={<Skills />} />
         </Routes>
         {/* Footer */}
       </div>

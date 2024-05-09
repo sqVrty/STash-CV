@@ -7,3 +7,8 @@ export { ReactComponent as WhatsAppIcon } from "./whatsapp.svg";
 export { ReactComponent as GitHubIcon } from "./github.svg";
 export { ReactComponent as InstagramIcon } from "./instagram.svg";
 export { ReactComponent as MenuIcon } from "./menu.svg";
+export { ReactComponent as ReactIcon } from "./react.svg";
+export { ReactComponent as AppStoreIcon } from "./appStore.svg";
+export { ReactComponent as BrushIcon } from "./brush.svg";
+export { ReactComponent as QuotationMarksIcon } from "./quotationMarks.svg";
+export { ReactComponent as StarIcon } from "./star.svg";

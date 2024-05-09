@@ -1,0 +1,53 @@
+$aqua: rgba(16, 200, 236, 0.1);
+$gray: rgba(140, 140, 140, 1);
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
+  border: 0.5px solid $gray;
+  border-radius: 15px;
+
+  .image {
+    position: absolute;
+    top: -20px;
+    right: 7.5%;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+
+  .infoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .name {
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .post {
+      font-size: 14px;
+      font-style: italic;
+    }
+  }
+
+  .desc {
+    margin-top: 15px;
+    display: flex;
+
+    .quotationMarks {
+      width: fit-content;
+      align-self: flex-end;
+    }
+  }
+
+  .starsRatingContainer {
+    display: flex;
+    margin-top: 15px;
+    margin-left: 10px;
+  }
+}
