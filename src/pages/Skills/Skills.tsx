@@ -37,9 +37,7 @@ export default function Skills() {
               icon={<SuitcaseIcon fill={COLORS.aqua} width={35} height={35} />}
               text="Experience"
             />
-            <div
-              style={{ display: "flex", flexDirection: "column", gap: "10px" }}
-            >
+            <div className={classes.block}>
               <ExperienceBlock
                 period="2013 - Present"
                 isPresent={true}
@@ -48,6 +46,9 @@ export default function Skills() {
                 logo={EmotionalEggheadIcon}
                 desc="applied the engineering design process to design, develop, test, maintain, and evaluate software."
               />
+              <div className={`${classes.dot} ${classes.present}`} />
+            </div>
+            <div className={classes.block}>
               <ExperienceBlock
                 period="2011 - 2012"
                 post="Data Scientist"
@@ -55,6 +56,9 @@ export default function Skills() {
                 logo={BMSTULogo}
                 desc="applied the engineering design process to design, develop, test, maintain, and evaluate software."
               />
+              <div className={`${classes.dot}`} />
+            </div>
+            <div className={classes.block}>
               <ExperienceBlock
                 period="2011 - 2012"
                 post="Data Scientist"
@@ -62,6 +66,9 @@ export default function Skills() {
                 logo={InginiriumLogo}
                 desc="applied the engineering design process to design, develop, test, maintain, and evaluate software."
               />
+              <div className={`${classes.dot}`} />
+            </div>
+            <div className={classes.block}>
               <ExperienceBlock
                 period="2011 - 2012"
                 post="Data Scientist"
@@ -69,6 +76,7 @@ export default function Skills() {
                 logo={KworkIcon}
                 desc="applied the engineering design process to design, develop, test, maintain, and evaluate software."
               />
+              <div className={`${classes.dot}`} />
             </div>
           </div>
           <div className={classes.educationContainer}>
@@ -76,9 +84,7 @@ export default function Skills() {
               icon={<EducationIcon fill={COLORS.aqua} width={35} height={35} />}
               text="Education"
             />
-            <div
-              style={{ display: "flex", flexDirection: "column", gap: "10px" }}
-            >
+            <div className={classes.block}>
               <EducationBlock
                 period="2022 - Present"
                 isPresent={true}
@@ -86,15 +92,21 @@ export default function Skills() {
                 city="Moscow"
                 desc="applied the engineering design process to design, develop, test, maintain, and evaluate software."
               />
+              <div className={`${classes.dot} ${classes.present}`} />
+            </div>
+            <div className={classes.block}>
               <EducationBlock
                 period="2011 - 2022"
                 name="Gymnasium No. 7"
                 city="Minsk"
                 desc="applied the engineering design process to design, develop, test, maintain, and evaluate software."
               />
+              <div className={`${classes.dot}`} />
             </div>
           </div>
         </div>
+
+        <TextWithCircle text="Programming Skills" />
       </div>
     </div>
   );

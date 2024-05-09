@@ -1,12 +1,52 @@
+$gray: rgba(100, 100, 100, 0.5);
+$aqua: rgba(16, 200, 236, 0.8);
+
 .expAndEduContainer {
   display: flex;
-  gap: 10px;
 
   .experienceContainer {
     width: 50%;
+    border-right: 1px solid $gray;
+    padding-right: 15px;
   }
 
   .educationContainer {
     width: 50%;
+    padding-left: 15px;
+
+    .block {
+      .dot {
+        top: 20px;
+      }
+    }
+  }
+}
+
+.block {
+  position: relative;
+  padding: 15px;
+  padding-right: 0;
+
+  border-left: 0.5px solid $gray;
+  border-bottom: 0.5px solid $gray;
+
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 30px;
+  }
+
+  .dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    left: -5.5px;
+    top: 40px;
+
+    background-color: $gray;
+
+    &.present {
+      background-color: $aqua;
+    }
   }
 }
