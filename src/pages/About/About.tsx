@@ -11,6 +11,7 @@ import { Pagination } from "swiper/modules";
 import TextWithCircle from "../../components/textWithCircle/TextWithCircle";
 import ServiceBlock from "./components/ServiceBlock";
 import TestimonialsBlock from "./components/TestimonialsBlock";
+import FactBlock from "./components/FactBlock";
 
 import { COLORS } from "../../assets/colors";
 import { AvatarPhoto } from "../../assets/img's";
@@ -19,6 +20,10 @@ import {
   AppStoreIcon,
   BrushIcon,
   GitHubIcon,
+  MusicRecordIcon,
+  LaptopIcon,
+  DumbbellsIcon,
+  CoffeeCapIcon,
 } from "../../assets/svg's";
 
 import classes from "./About.module.scss";
@@ -162,6 +167,34 @@ export default function About() {
         </div>
 
         <TextWithCircle text="Fun Facts" />
+        <div className={classes.factsContainer}>
+          <div className={classes.delimiterContainer}>
+            <FactBlock
+              icon={<LaptopIcon stroke={COLORS.aqua} width={35} height={35} />}
+              text="3 Laptopes Changed"
+            />
+          </div>
+          <div className={classes.delimiterContainer}>
+            <FactBlock
+              icon={<DumbbellsIcon fill={COLORS.aqua} width={35} height={35} />}
+              text="Sports Enthusiast"
+            />
+          </div>
+          <div className={classes.delimiterContainer}>
+            <FactBlock
+              icon={<CoffeeCapIcon fill={COLORS.aqua} width={35} height={35} />}
+              text="1 000+ Cups Of Coffee"
+            />
+          </div>
+          <div className={classes.delimiterContainer}>
+            <FactBlock
+              icon={
+                <MusicRecordIcon fill={COLORS.aqua} width={35} height={35} />
+              }
+              text="100+ Albumes Listened"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

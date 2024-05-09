@@ -41,22 +41,11 @@ $gray: rgba(100, 100, 100, 0.5);
 
     &:nth-child(odd) {
       border-right: 1px solid $gray;
+      padding-left: 0px;
     }
 
     &:nth-child(-n + 2) {
       border-bottom: 1px solid $gray;
-    }
-
-    &:nth-child(3n + 1) {
-      padding-top: 15px;
-    }
-
-    &:nth-child(3n + 2) {
-      padding-right: 15px;
-    }
-
-    &:nth-child(3n + 3) {
-      padding-left: 15px;
     }
   }
 }
@@ -93,6 +82,21 @@ $gray: rgba(100, 100, 100, 0.5);
       width: 10px;
       height: 10px;
       border-radius: 50%;
+    }
+  }
+}
+
+.factsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-bottom: 50px;
+
+  .delimiterContainer {
+    display: flex;
+    padding: 15px;
+
+    &:not(:first-child) {
+      border-left: 1px solid $gray;
     }
   }
 }

@@ -12,3 +12,7 @@ export { ReactComponent as AppStoreIcon } from "./appStore.svg";
 export { ReactComponent as BrushIcon } from "./brush.svg";
 export { ReactComponent as QuotationMarksIcon } from "./quotationMarks.svg";
 export { ReactComponent as StarIcon } from "./star.svg";
+export { ReactComponent as MusicRecordIcon } from "./musicRecord.svg";
+export { ReactComponent as LaptopIcon } from "./laptop.svg";
+export { ReactComponent as DumbbellsIcon } from "./dumbbells.svg";
+export { ReactComponent as CoffeeCapIcon } from "./coffeeCap.svg";
