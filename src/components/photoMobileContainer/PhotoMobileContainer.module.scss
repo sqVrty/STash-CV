@@ -1,0 +1,38 @@
+.photoContainer {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: auto;
+
+  .photo {
+    height: 100%;
+    width: 100%;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+
+  .infoContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 7.5%;
+    gap: 20px;
+
+    .name {
+      font-size: 50px;
+      font-weight: bold;
+    }
+
+    .career {
+      text-align: center;
+      font-weight: 500;
+    }
+
+    .socialsContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 25px;
+    }
+  }
+}

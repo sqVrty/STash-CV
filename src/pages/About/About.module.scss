@@ -16,6 +16,11 @@ $gray: rgba(100, 100, 100, 0.5);
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
 
+    @media (max-width: 600px) {
+      display: flex;
+      flex-direction: column;
+    }
+
     .question {
       font-weight: 400;
 
@@ -35,17 +40,33 @@ $gray: rgba(100, 100, 100, 0.5);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
-  .crossContainer {
+  @media (max-width: 600px) {
     display: flex;
-    padding: 15px;
+    flex-direction: column;
 
-    &:nth-child(odd) {
-      border-right: 1px solid $gray;
-      padding-left: 0px;
-    }
-
-    &:nth-child(-n + 2) {
+    .crossContainer {
+      padding: 15px;
       border-bottom: 1px solid $gray;
+
+      &:last-child {
+        border: none;
+      }
+    }
+  }
+
+  @media (min-width: 601px) {
+    .crossContainer {
+      display: flex;
+      padding: 15px;
+
+      &:nth-child(odd) {
+        border-right: 1px solid $gray;
+        padding-left: 0px;
+      }
+
+      &:nth-child(-n + 2) {
+        border-bottom: 1px solid $gray;
+      }
     }
   }
 }
@@ -91,12 +112,35 @@ $gray: rgba(100, 100, 100, 0.5);
   grid-template-columns: repeat(4, 1fr);
   padding-bottom: 50px;
 
-  .delimiterContainer {
-    display: flex;
-    padding: 15px;
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 25px;
+  }
 
-    &:not(:first-child) {
-      border-left: 1px solid $gray;
+  @media (max-width: 600px) {
+    .delimiterContainer {
+      display: flex;
+      padding: 15px;
+
+      &:nth-child(odd) {
+        border-right: 1px solid $gray;
+        padding-left: 0px;
+      }
+
+      &:nth-child(-n + 2) {
+        border-bottom: 1px solid $gray;
+      }
+    }
+  }
+
+  @media (min-width: 601px) {
+    .delimiterContainer {
+      display: flex;
+      padding: 15px;
+
+      &:not(:first-child) {
+        border-left: 1px solid $gray;
+      }
     }
   }
 }
