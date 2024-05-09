@@ -1,5 +1,12 @@
+import { useRef } from "react";
 import "animate.css";
 import { useAppSelector } from "../../app/hooks";
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+// import required modules
+import { Pagination } from "swiper/modules";
 
 import TextWithCircle from "../../components/textWithCircle/TextWithCircle";
 import ServiceBlock from "./components/ServiceBlock";
@@ -20,6 +27,8 @@ export default function About() {
   const isMobileDevice = useAppSelector(
     (state) => state.deviceInfo.isMobileDevice
   );
+
+  const paginationRef = useRef(null);
 
   return isMobileDevice ? (
     <div
@@ -76,11 +85,12 @@ export default function About() {
             </p>
           </div>
         </div>
+
         <TextWithCircle text="My Services" />
         <div className={classes.servicesGrid}>
           <div className={classes.crossContainer}>
             <ServiceBlock
-              icon={<ReactIcon fill={COLORS.aqua} width={35} height={35} />}
+              icon={<ReactIcon fill={COLORS.aqua} width={40} height={40} />}
               header="Web Development"
               desc="Modern and mobile-ready website that will help you reach all of your marketing."
             />
@@ -94,7 +104,7 @@ export default function About() {
           </div>
           <div className={classes.crossContainer}>
             <ServiceBlock
-              icon={<BrushIcon fill={COLORS.aqua} width={35} height={35} />}
+              icon={<BrushIcon fill={COLORS.aqua} width={40} height={40} />}
               header="UI/UX Design"
               desc="End-to-end organization, ui/ux design, optimization, and maintenance of your mobile app project."
             />
@@ -107,16 +117,51 @@ export default function About() {
             />
           </div>
         </div>
+
         <TextWithCircle text="Testimonials" />
         <div className={classes.testimonials}>
-          <TestimonialsBlock
-            img={AvatarPhoto}
-            name="Robert Chase"
-            post="CEO"
-            review="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quisquam numquam quod, illo quis eligendi nobis officiis voluptatum sed!"
-            stars={4}
-          />
+          <Swiper
+            slidesPerView={2}
+            spaceBetween={30}
+            pagination={{
+              el: paginationRef.current,
+              clickable: true,
+            }}
+            modules={[Pagination]}
+            className={classes.swiper}
+          >
+            <SwiperSlide className={classes.swiperSlide}>
+              <TestimonialsBlock
+                img={AvatarPhoto}
+                name="Robert Chase"
+                post="CEO"
+                review="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quisquam numquam quod, illo quis eligendi nobis officiis voluptatum sed!"
+                stars={4}
+              />
+            </SwiperSlide>
+            <SwiperSlide className={classes.swiperSlide}>
+              <TestimonialsBlock
+                img={AvatarPhoto}
+                name="Robert Chase"
+                post="CEO"
+                review="Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores reprehenderit nesciunt dolores commodi quibusdam reiciendis! Sequi corporis tenetur ut molestias ratione dolore adipisci neque a accusantium dolorem tempora nam saepe itaque commodi obcaecati non repellendus sint, vel quae, laborum sed laudantium laboriosam excepturi. Sint repudiandae ipsam repellat similique voluptatibus rerum."
+                stars={4}
+              />
+            </SwiperSlide>
+            <SwiperSlide className={classes.swiperSlide}>
+              <TestimonialsBlock
+                img={AvatarPhoto}
+                name="Robert Chase"
+                post="CEO"
+                review="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quisquam numquam quod, illo quis eligendi nobis officiis voluptatum sed!"
+                stars={4}
+              />
+            </SwiperSlide>
+          </Swiper>
+          <div ref={paginationRef} className={classes.pagination} />
         </div>
+
+        <TextWithCircle text="Fun Facts" />
       </div>
     </div>
   );

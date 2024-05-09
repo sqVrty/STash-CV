@@ -1,3 +1,4 @@
+$aqua: rgba(16, 200, 236, 0.8);
 $gray: rgba(100, 100, 100, 0.5);
 
 .heyContainer {
@@ -61,7 +62,37 @@ $gray: rgba(100, 100, 100, 0.5);
 }
 
 .testimonials {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 30px;
+  .swiper {
+    overflow: visible;
+    margin-right: 15px;
+
+    .swiperSlide {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+
+  .pagination {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    :global(.swiper-pagination-bullet) {
+      background-color: transparent;
+      border: 0.5px solid $aqua;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      opacity: 1;
+    }
+
+    :global(.swiper-pagination-bullet-active) {
+      background-color: $aqua;
+      border: 0.5px solid $aqua;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+  }
 }
