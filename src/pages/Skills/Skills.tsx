@@ -4,6 +4,7 @@ import { useAppSelector } from "../../app/hooks";
 import TextWithCircle from "../../components/textWithCircle/TextWithCircle";
 import TextWithIcon from "../../components/textWithIcon/TextWithIcon";
 import ExperienceBlock from "./components/ExperienceBlock";
+import EducationBlock from "./components/EducationBlock";
 
 import { COLORS } from "../../assets/colors";
 import {
@@ -75,6 +76,23 @@ export default function Skills() {
               icon={<EducationIcon fill={COLORS.aqua} width={35} height={35} />}
               text="Education"
             />
+            <div
+              style={{ display: "flex", flexDirection: "column", gap: "10px" }}
+            >
+              <EducationBlock
+                period="2022 - Present"
+                isPresent={true}
+                name="Bauman Moscow State Technical University"
+                city="Moscow"
+                desc="applied the engineering design process to design, develop, test, maintain, and evaluate software."
+              />
+              <EducationBlock
+                period="2011 - 2022"
+                name="Gymnasium No. 7"
+                city="Minsk"
+                desc="applied the engineering design process to design, develop, test, maintain, and evaluate software."
+              />
+            </div>
           </div>
         </div>
       </div>

@@ -1,5 +1,3 @@
-import { ReactElement } from "react";
-
 import { COLORS } from "../../../assets/colors";
 
 import classes from "./ExperienceBlock.module.scss";

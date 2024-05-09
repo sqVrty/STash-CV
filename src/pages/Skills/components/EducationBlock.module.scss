@@ -1,0 +1,43 @@
+$gray: rgba(140, 140, 140, 1);
+$aqua: rgba(16, 200, 236, 0.8);
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
+  border: 0.5px solid $gray;
+  border-radius: 15px;
+
+  .textContainer {
+    .periodContainer {
+      width: fit-content;
+      padding: 2px 7px;
+      border-radius: 5px;
+      border: 1px solid $gray;
+      color: $gray;
+      font-size: 13px;
+
+      &.present {
+        border: 1px solid $aqua;
+        color: $aqua;
+      }
+    }
+
+    .post {
+      margin-top: 10px;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .cpName {
+      margin-top: 5px;
+      font-size: 14px;
+      font-style: italic;
+    }
+  }
+}
+
+.description {
+  margin-top: 10px;
+}
