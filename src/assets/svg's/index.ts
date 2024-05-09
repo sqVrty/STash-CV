@@ -16,3 +16,7 @@ export { ReactComponent as MusicRecordIcon } from "./musicRecord.svg";
 export { ReactComponent as LaptopIcon } from "./laptop.svg";
 export { ReactComponent as DumbbellsIcon } from "./dumbbells.svg";
 export { ReactComponent as CoffeeCapIcon } from "./coffeeCap.svg";
+export { ReactComponent as SuitcaseIcon } from "./suitcase.svg";
+export { ReactComponent as EducationIcon } from "./education.svg";
+export { default as EmotionalEggheadIcon } from "./emotionalEgghead.svg";
+export { default as KworkIcon } from "./kwork.svg";
