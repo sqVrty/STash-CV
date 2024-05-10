@@ -72,16 +72,14 @@ $aqua: rgba(16, 200, 236, 0.8);
     width: 50%;
     border-right: 1px solid $gray;
     padding-right: 15px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
   }
 
   .langContainer {
     width: 50%;
     padding-left: 15px;
+  }
 
+  .blocksContainer {
     display: flex;
     flex-direction: column;
     gap: 20px;

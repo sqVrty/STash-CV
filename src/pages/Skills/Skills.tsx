@@ -14,12 +14,14 @@ import {
   EducationIcon,
   KworkIcon,
   JavascriptIcon,
-  ScssIcon,
+  ReduxIcon,
   PythonIcon,
   CppIcon,
   CodingIcon,
   LanguagesIcon,
   ReactColoredIcon,
+  TypeScriptIcon,
+  ScssIcon,
   UKIcon,
   RussiaIcon,
   BelarusIcon,
@@ -129,9 +131,9 @@ export default function Skills() {
             name="JavaScript"
           />
           <CircleSkillBlock
-            icon={<ScssIcon width={40} height={40} />}
+            icon={<ReduxIcon width={40} height={40} />}
             percentage={9}
-            name="SCSS"
+            name="Redux"
           />
           <CircleSkillBlock
             icon={<PythonIcon width={40} height={40} />}
@@ -152,40 +154,54 @@ export default function Skills() {
               icon={<CodingIcon fill={COLORS.aqua} width={35} height={35} />}
               text="Coding"
             />
-            <LineSkillBlock
-              icon={<ReactColoredIcon width={35} height={35} />}
-              name="React"
-              percentage={77}
-            />
-            <LineSkillBlock
-              icon={<JavascriptIcon width={35} height={35} />}
-              name="React"
-              percentage={90}
-            />
+            <div className={classes.blocksContainer}>
+              <LineSkillBlock
+                icon={<ReactColoredIcon width={35} height={35} />}
+                name="React"
+                percentage={82}
+              />
+              <LineSkillBlock
+                icon={<ReactColoredIcon width={35} height={35} />}
+                name="React Native"
+                percentage={69}
+              />
+              <LineSkillBlock
+                icon={<TypeScriptIcon width={35} height={35} />}
+                name="TypeScript"
+                percentage={90}
+              />
+              <LineSkillBlock
+                icon={<ScssIcon width={35} height={35} />}
+                name="SCSS"
+                percentage={94}
+              />
+            </div>
           </div>
           <div className={classes.langContainer}>
             <TextWithIcon
               icon={<LanguagesIcon fill={COLORS.aqua} width={35} height={35} />}
               text="Languages"
             />
-            <LineSkillBlock
-              icon={<UKIcon width={35} height={35} />}
-              name="English"
-              percentage={75}
-              circled={true}
-            />
-            <LineSkillBlock
-              icon={<RussiaIcon width={35} height={35} />}
-              name="Russian"
-              percentage={90}
-              circled={true}
-            />
-            <LineSkillBlock
-              icon={<BelarusIcon width={35} height={35} />}
-              name="Belarusian"
-              percentage={35}
-              circled={true}
-            />
+            <div className={classes.blocksContainer}>
+              <LineSkillBlock
+                icon={<UKIcon width={35} height={35} />}
+                name="English"
+                percentage={75}
+                circled={true}
+              />
+              <LineSkillBlock
+                icon={<RussiaIcon width={35} height={35} />}
+                name="Russian"
+                percentage={90}
+                circled={true}
+              />
+              <LineSkillBlock
+                icon={<BelarusIcon width={35} height={35} />}
+                name="Belarusian"
+                percentage={35}
+                circled={true}
+              />
+            </div>
           </div>
         </div>
 

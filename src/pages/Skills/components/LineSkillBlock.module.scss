@@ -31,7 +31,6 @@ $darkgray: rgba(100, 100, 100, 1);
     .lineContainer {
       display: flex;
       align-items: center;
-      //   background-color: aqua;
 
       .circlesContainer {
         display: flex;
@@ -43,11 +42,6 @@ $darkgray: rgba(100, 100, 100, 1);
           border-radius: 50%;
 
           background-color: $darkgray;
-
-          //   background-color: red;
-          //   background-repeat: repeat-y;
-          //   background-size: 50% auto;
-          // background: linear-gradient(to left, #ff0000 50%, #0000ff 50%);
         }
       }
 

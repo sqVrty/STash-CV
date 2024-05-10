@@ -1,3 +1,4 @@
+import { useAppSelector } from "../../../app/hooks";
 import { ReactElement } from "react";
 
 import { COLORS } from "../../../assets/colors";
@@ -15,17 +16,22 @@ export default function LineSkillBlock({
   percentage: number;
   circled?: boolean;
 }) {
+  const windowSize = useAppSelector((state) => state.windowSizeInfo.windowSize);
+
   const circlesArray = [];
 
-  for (let i = 0; i < 10; i++) {
+  const circlesAmount = windowSize.width < 1400 ? 5 : 10;
+
+  for (let i = 0; i < circlesAmount; i++) {
     circlesArray.push(
       <div
         key={i}
         className={classes.circle}
         style={
-          i < Math.floor(percentage / 10)
+          i < Math.floor(percentage / (100 / circlesAmount))
             ? { backgroundColor: COLORS.aqua }
-            : i - (percentage / 10 - 1) > 0.1 && i - (percentage / 10 - 1) < 1
+            : i - (percentage / (100 / circlesAmount) - 1) > 0.1 &&
+              i - (percentage / (100 / circlesAmount) - 1) < 1
             ? {
                 background: `linear-gradient(to left, ${COLORS.darkgray} 50%, ${COLORS.aqua}  50%)`,
               }
@@ -34,6 +40,8 @@ export default function LineSkillBlock({
       />
     );
   }
+
+  console.log(windowSize.width);
 
   return (
     <div className={classes.container}>
