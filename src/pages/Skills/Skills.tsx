@@ -5,15 +5,23 @@ import TextWithCircle from "../../components/textWithCircle/TextWithCircle";
 import TextWithIcon from "../../components/textWithIcon/TextWithIcon";
 import ExperienceBlock from "./components/ExperienceBlock";
 import EducationBlock from "./components/EducationBlock";
+import CircleSkillBlock from "./components/CircleSkillsBlock";
 
 import { COLORS } from "../../assets/colors";
 import {
   SuitcaseIcon,
   EducationIcon,
-  EmotionalEggheadIcon,
   KworkIcon,
+  JavascriptIcon,
+  ScssIcon,
+  PythonIcon,
+  CppIcon,
 } from "../../assets/svg's";
-import { BMSTULogo, InginiriumLogo } from "../../assets/img's";
+import {
+  BMSTULogo,
+  InginiriumLogo,
+  EmotionalEggheadLogo,
+} from "../../assets/img's";
 
 import classes from "./Skills.module.scss";
 
@@ -43,7 +51,7 @@ export default function Skills() {
                 isPresent={true}
                 post="Software Engineer"
                 cpName="Google Inc."
-                logo={EmotionalEggheadIcon}
+                logo={EmotionalEggheadLogo}
                 desc="applied the engineering design process to design, develop, test, maintain, and evaluate software."
               />
               <div className={`${classes.dot} ${classes.present}`} />
@@ -107,6 +115,30 @@ export default function Skills() {
         </div>
 
         <TextWithCircle text="Programming Skills" />
+        <div className={classes.progSkillsContainer}>
+          <CircleSkillBlock
+            icon={<JavascriptIcon width={40} height={40} />}
+            percentage={90}
+            name="JavaScript"
+          />
+          <CircleSkillBlock
+            icon={<ScssIcon width={40} height={40} />}
+            percentage={9}
+            name="SCSS"
+          />
+          <CircleSkillBlock
+            icon={<PythonIcon width={40} height={40} />}
+            percentage={40}
+            name="Python"
+          />
+          <CircleSkillBlock
+            icon={<CppIcon width={40} height={40} />}
+            percentage={40}
+            name="C++"
+          />
+        </div>
+
+        <TextWithCircle text="Tool Stack" />
       </div>
     </div>
   );
