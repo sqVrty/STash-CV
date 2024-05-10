@@ -171,13 +171,13 @@ export default function Skills() {
             <LineSkillBlock
               icon={<UKIcon width={35} height={35} />}
               name="English"
-              percentage={90}
+              percentage={75}
               circled={true}
             />
             <LineSkillBlock
               icon={<RussiaIcon width={35} height={35} />}
               name="Russian"
-              percentage={75}
+              percentage={90}
               circled={true}
             />
             <LineSkillBlock

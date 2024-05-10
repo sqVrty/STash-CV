@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "./app/hooks";
 import { setDeviceType } from "./redux/features/deviceInfoSlice";
+import { setWindowSize } from "./redux/features/windowSizeInfoSlice";
 
 import PCHeader from "./components/header/PCHeader/PCHeader";
 import PhotoContainer from "./components/photoContainer/PhotoContainer";
@@ -14,12 +15,13 @@ export default function App() {
   const isMobileDevice = useAppSelector(
     (state) => state.deviceInfo.isMobileDevice
   );
-
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const windowSize = useAppSelector((state) => state.windowSizeInfo.windowSize);
 
   useEffect(() => {
     const handleResize = () => {
-      setWindowWidth(window.innerWidth);
+      dispatch(
+        setWindowSize({ width: window.innerWidth, height: window.innerHeight })
+      );
     };
 
     window.addEventListener("resize", handleResize);
@@ -27,15 +29,18 @@ export default function App() {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
     const isMobile =
       /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) ||
-      windowWidth < 1000;
+      windowSize.width < 1000;
 
     dispatch(setDeviceType(isMobile));
-  }, [dispatch]);
+    dispatch(
+      setWindowSize({ width: window.innerWidth, height: window.innerHeight })
+    );
+  }, [dispatch, windowSize]);
 
   return (
     <Router>

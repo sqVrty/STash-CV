@@ -20,6 +20,7 @@ export default function LineSkillBlock({
   for (let i = 0; i < 10; i++) {
     circlesArray.push(
       <div
+        key={i}
         className={classes.circle}
         style={
           i < Math.floor(percentage / 10)
