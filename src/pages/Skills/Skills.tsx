@@ -6,6 +6,7 @@ import TextWithIcon from "../../components/textWithIcon/TextWithIcon";
 import ExperienceBlock from "./components/ExperienceBlock";
 import EducationBlock from "./components/EducationBlock";
 import CircleSkillBlock from "./components/CircleSkillsBlock";
+import LineSkillBlock from "./components/LineSkillBlock";
 
 import { COLORS } from "../../assets/colors";
 import {
@@ -16,6 +17,12 @@ import {
   ScssIcon,
   PythonIcon,
   CppIcon,
+  CodingIcon,
+  LanguagesIcon,
+  ReactColoredIcon,
+  UKIcon,
+  RussiaIcon,
+  BelarusIcon,
 } from "../../assets/svg's";
 import {
   BMSTULogo,
@@ -138,7 +145,51 @@ export default function Skills() {
           />
         </div>
 
-        <TextWithCircle text="Tool Stack" />
+        <TextWithCircle text="General Skills" />
+        <div className={classes.codingAndLangContainer}>
+          <div className={classes.codingContainer}>
+            <TextWithIcon
+              icon={<CodingIcon fill={COLORS.aqua} width={35} height={35} />}
+              text="Coding"
+            />
+            <LineSkillBlock
+              icon={<ReactColoredIcon width={35} height={35} />}
+              name="React"
+              percentage={77}
+            />
+            <LineSkillBlock
+              icon={<JavascriptIcon width={35} height={35} />}
+              name="React"
+              percentage={90}
+            />
+          </div>
+          <div className={classes.langContainer}>
+            <TextWithIcon
+              icon={<LanguagesIcon fill={COLORS.aqua} width={35} height={35} />}
+              text="Languages"
+            />
+            <LineSkillBlock
+              icon={<UKIcon width={35} height={35} />}
+              name="English"
+              percentage={90}
+              circled={true}
+            />
+            <LineSkillBlock
+              icon={<RussiaIcon width={35} height={35} />}
+              name="Russian"
+              percentage={75}
+              circled={true}
+            />
+            <LineSkillBlock
+              icon={<BelarusIcon width={35} height={35} />}
+              name="Belarusian"
+              percentage={35}
+              circled={true}
+            />
+          </div>
+        </div>
+
+        <TextWithCircle text="General Skills" />
       </div>
     </div>
   );
