@@ -29,33 +29,13 @@ import {
 
 import classes from "./About.module.scss";
 
-function getWindowDimensions() {
-  const { innerWidth: width, innerHeight: height } = window;
-  return {
-    width,
-    height,
-  };
-}
-
 export default function About() {
   const isMobileDevice = useAppSelector(
     (state) => state.deviceInfo.isMobileDevice
   );
+  const windowSize = useAppSelector((state) => state.windowSizeInfo.windowSize);
 
   const paginationRef = useRef(null);
-
-  const [windowDimensions, setWindowDimensions] = useState(
-    getWindowDimensions()
-  );
-
-  useEffect(() => {
-    function handleResize() {
-      setWindowDimensions(getWindowDimensions());
-    }
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   return (
     <>
@@ -156,7 +136,7 @@ export default function About() {
           <TextWithCircle text="Testimonials" />
           <div className={classes.testimonials}>
             <Swiper
-              slidesPerView={windowDimensions.width < 600 ? 1 : 2}
+              slidesPerView={windowSize.width < 600 ? 1 : 2}
               spaceBetween={30}
               pagination={{
                 el: paginationRef.current,

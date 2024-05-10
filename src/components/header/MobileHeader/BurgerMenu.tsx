@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useAppSelector } from "../../../app/hooks";
 
 import {
   ProfileIcon,
@@ -15,14 +16,6 @@ type IconMapType = {
   [key: string]: string;
 };
 
-function getWindowDimensions() {
-  const { innerWidth: width, innerHeight: height } = window;
-  return {
-    width,
-    height,
-  };
-}
-
 export default function BurgerMenu({
   isOpen,
   setIsOpen,
@@ -30,20 +23,10 @@ export default function BurgerMenu({
   isOpen: boolean;
   setIsOpen: (val: boolean) => void;
 }) {
+  const windowSize = useAppSelector((state) => state.windowSizeInfo.windowSize);
+
   const location = useLocation();
   const [activeIcon, setActiveIcon] = useState<string>("");
-  const [windowDimensions, setWindowDimensions] = useState(
-    getWindowDimensions()
-  );
-
-  useEffect(() => {
-    function handleResize() {
-      setWindowDimensions(getWindowDimensions());
-    }
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   useEffect(() => {
     const { pathname } = location;
@@ -65,7 +48,7 @@ export default function BurgerMenu({
     <div className={`${classes.container} ${isOpen && classes.open}`}>
       <div
         className={classes.content}
-        style={{ height: windowDimensions.height - 120 + "px" }}
+        style={{ height: windowSize.height - 120 + "px" }}
       >
         <div className={classes.navigationContainer}>
           <Link
