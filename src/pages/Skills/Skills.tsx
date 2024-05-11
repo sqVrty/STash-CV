@@ -7,6 +7,8 @@ import ExperienceBlock from "./components/ExperienceBlock";
 import EducationBlock from "./components/EducationBlock";
 import CircleSkillBlock from "./components/CircleSkillsBlock";
 import LineSkillBlock from "./components/LineSkillBlock";
+import PlatformBlock from "./components/PlatformBlock";
+import KnowledgeBlock from "./components/KnowledgeBlock";
 
 import { COLORS } from "../../assets/colors";
 import {
@@ -25,6 +27,8 @@ import {
   UKIcon,
   RussiaIcon,
   BelarusIcon,
+  GearsIcon,
+  ListIcon,
 } from "../../assets/svg's";
 import {
   BMSTULogo,
@@ -48,13 +52,13 @@ export default function Skills() {
     >
       <div className="PCContentContainer">
         <TextWithCircle text="Resume" isFirst={true} />
-        <div className={classes.expAndEduContainer}>
-          <div className={classes.experienceContainer}>
+        <div className={classes.textWithIconsContainer}>
+          <div className={classes.textWithIconContainer1}>
             <TextWithIcon
               icon={<SuitcaseIcon fill={COLORS.aqua} width={35} height={35} />}
               text="Experience"
             />
-            <div className={classes.block}>
+            <div className={classes.expAndEduBlock}>
               <ExperienceBlock
                 period="2013 - Present"
                 isPresent={true}
@@ -65,7 +69,7 @@ export default function Skills() {
               />
               <div className={`${classes.dot} ${classes.present}`} />
             </div>
-            <div className={classes.block}>
+            <div className={classes.expAndEduBlock}>
               <ExperienceBlock
                 period="2011 - 2012"
                 post="Data Scientist"
@@ -75,7 +79,7 @@ export default function Skills() {
               />
               <div className={`${classes.dot}`} />
             </div>
-            <div className={classes.block}>
+            <div className={classes.expAndEduBlock}>
               <ExperienceBlock
                 period="2011 - 2012"
                 post="Data Scientist"
@@ -85,7 +89,7 @@ export default function Skills() {
               />
               <div className={`${classes.dot}`} />
             </div>
-            <div className={classes.block}>
+            <div className={classes.expAndEduBlock}>
               <ExperienceBlock
                 period="2011 - 2012"
                 post="Data Scientist"
@@ -96,12 +100,12 @@ export default function Skills() {
               <div className={`${classes.dot}`} />
             </div>
           </div>
-          <div className={classes.educationContainer}>
+          <div className={classes.textWithIconContainer2}>
             <TextWithIcon
               icon={<EducationIcon fill={COLORS.aqua} width={35} height={35} />}
               text="Education"
             />
-            <div className={classes.block}>
+            <div className={classes.expAndEduBlock}>
               <EducationBlock
                 period="2022 - Present"
                 isPresent={true}
@@ -111,7 +115,7 @@ export default function Skills() {
               />
               <div className={`${classes.dot} ${classes.present}`} />
             </div>
-            <div className={classes.block}>
+            <div className={classes.expAndEduBlock}>
               <EducationBlock
                 period="2011 - 2022"
                 name="Gymnasium No. 7"
@@ -148,13 +152,13 @@ export default function Skills() {
         </div>
 
         <TextWithCircle text="General Skills" />
-        <div className={classes.codingAndLangContainer}>
-          <div className={classes.codingContainer}>
+        <div className={classes.textWithIconsContainer}>
+          <div className={classes.textWithIconContainer1}>
             <TextWithIcon
               icon={<CodingIcon fill={COLORS.aqua} width={35} height={35} />}
               text="Coding"
             />
-            <div className={classes.blocksContainer}>
+            <div className={classes.lineSkillBlocksContainer}>
               <LineSkillBlock
                 icon={<ReactColoredIcon width={35} height={35} />}
                 name="React"
@@ -177,12 +181,12 @@ export default function Skills() {
               />
             </div>
           </div>
-          <div className={classes.langContainer}>
+          <div className={classes.textWithIconContainer2}>
             <TextWithIcon
               icon={<LanguagesIcon fill={COLORS.aqua} width={35} height={35} />}
               text="Languages"
             />
-            <div className={classes.blocksContainer}>
+            <div className={classes.lineSkillBlocksContainer}>
               <LineSkillBlock
                 icon={<UKIcon width={35} height={35} />}
                 name="English"
@@ -205,7 +209,39 @@ export default function Skills() {
           </div>
         </div>
 
-        <TextWithCircle text="General Skills" />
+        <div
+          className={`${classes.textWithIconsContainer} ${classes.platformsAndKnowledgeContainer}`}
+        >
+          <div className={classes.textWithIconContainer1}>
+            <TextWithIcon
+              icon={<GearsIcon fill={COLORS.aqua} width={35} height={35} />}
+              text="Platforms"
+            />
+            <div className={classes.platformsBlocksContainer}>
+              <PlatformBlock percentage={90} name="Visual Studio Code" />
+              <PlatformBlock percentage={70} name="Figma" />
+              <PlatformBlock percentage={40} name="Xcode" />
+              <PlatformBlock percentage={35} name="Adobe XD" />
+            </div>
+          </div>
+          <div className={classes.textWithIconContainer2}>
+            <TextWithIcon
+              icon={<ListIcon stroke={COLORS.aqua} width={35} height={35} />}
+              text="Knowledge"
+            />
+            <div className={classes.knowledgeBlocksContainer}>
+              <KnowledgeBlock text="JavaScript Frameworks/Libraries" />
+              <KnowledgeBlock text="Git and GitHub" />
+              <KnowledgeBlock text="Containerization with Docker" />
+              <KnowledgeBlock text="NGINX Configuration" />
+              <KnowledgeBlock text="Responsive Design" />
+              <KnowledgeBlock text="Browser Developer Tools" />
+              <KnowledgeBlock text="Integrating with third-party API's" />
+              <KnowledgeBlock text="Object-Oriented Programming (OOP)" />
+              <KnowledgeBlock text="Communication and collaboration" />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

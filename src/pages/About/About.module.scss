@@ -110,11 +110,10 @@ $gray: rgba(100, 100, 100, 0.5);
 .factsContainer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  padding-bottom: 50px;
+  padding-bottom: 25px;
 
   @media (max-width: 600px) {
     grid-template-columns: repeat(2, 1fr);
-    padding-bottom: 25px;
   }
 
   @media (max-width: 600px) {

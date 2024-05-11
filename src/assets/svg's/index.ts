@@ -31,3 +31,6 @@ export { ReactComponent as ScssIcon } from "./scss.svg";
 export { ReactComponent as UKIcon } from "./uk.svg";
 export { ReactComponent as RussiaIcon } from "./russia.svg";
 export { ReactComponent as BelarusIcon } from "./belarus.svg";
+export { ReactComponent as GearsIcon } from "./gears.svg";
+export { ReactComponent as ListIcon } from "./list.svg";
+export { ReactComponent as CheckIcon } from "./check.svg";
