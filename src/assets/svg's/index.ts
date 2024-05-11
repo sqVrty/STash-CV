@@ -36,3 +36,5 @@ export { ReactComponent as ListIcon } from "./list.svg";
 export { ReactComponent as CheckIcon } from "./check.svg";
 export { ReactComponent as ResumeIcon } from "./resume.svg";
 export { ReactComponent as FolderIcon } from "./folder.svg";
+export { ReactComponent as GoOverIcon } from "./goOver.svg";
+export { ReactComponent as EyeIcon } from "./eye.svg";

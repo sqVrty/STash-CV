@@ -1,0 +1,27 @@
+$aqua: rgba(16, 200, 236, 0.8);
+$gray: rgba(100, 100, 100, 0.5);
+
+.workBlocksContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  .blockContainer {
+    // display: flex;
+    padding: 15px;
+
+    border-bottom: 1px solid $gray;
+
+    &:nth-child(-n + 2) {
+      padding-top: 0;
+    }
+
+    &:nth-child(odd) {
+      border-right: 1px solid $gray;
+      padding-left: 0;
+    }
+
+    &:nth-child(even) {
+      padding-right: 0;
+    }
+  }
+}
