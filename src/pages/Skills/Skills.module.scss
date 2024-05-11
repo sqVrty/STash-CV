@@ -5,21 +5,43 @@ $aqua: rgba(16, 200, 236, 0.8);
 .textWithIconsContainer {
   display: flex;
 
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
+
   .textWithIconContainer1 {
     width: 50%;
-    border-right: 1px solid $gray;
     padding-right: 15px;
+
+    border-right: 1px solid $gray;
+
+    @media (max-width: 600px) {
+      width: 100%;
+      padding: 0;
+
+      border: none;
+    }
   }
 
   .textWithIconContainer2 {
     width: 50%;
     padding-left: 15px;
+
+    @media (max-width: 600px) {
+      margin-top: 50px;
+      width: 100%;
+      padding: 0;
+    }
   }
 }
 
 //expAndEdu
 .textWithIconsContainer {
   .textWithIconContainer2 {
+    // @media (max-width: 600px) {
+    //   margin-top: 20px;
+    // }
+
     .expAndEduBlock {
       .dot {
         top: 20px;
@@ -38,6 +60,10 @@ $aqua: rgba(16, 200, 236, 0.8);
     &:last-child {
       border-bottom: none;
       margin-bottom: 30px;
+
+      @media (max-width: 600px) {
+        margin-bottom: 0;
+      }
     }
 
     .dot {
@@ -60,14 +86,28 @@ $aqua: rgba(16, 200, 236, 0.8);
 .progSkillsContainer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
   gap: 20px;
 
-  @media (max-width: 1000px) {
-    grid-template-columns: repeat(2, 1fr);
+  &.mobile {
+    @media (max-width: 600px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 601px) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
   }
 
-  @media (min-width: 1001px) and (max-width: 1275px) {
-    grid-template-columns: repeat(3, 1fr);
+  &:not(.mobile) {
+    @media (max-width: 1000px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 1001px) and (max-width: 1275px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 }
 
@@ -90,6 +130,7 @@ $aqua: rgba(16, 200, 236, 0.8);
   .platformsBlocksContainer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
     gap: 20px;
   }
 

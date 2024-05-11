@@ -16,11 +16,14 @@ export default function LineSkillBlock({
   percentage: number;
   circled?: boolean;
 }) {
+  const isMobileDevice = useAppSelector(
+    (state) => state.deviceInfo.isMobileDevice
+  );
   const windowSize = useAppSelector((state) => state.windowSizeInfo.windowSize);
 
   const circlesArray = [];
 
-  const circlesAmount = windowSize.width < 1400 ? 5 : 10;
+  const circlesAmount = windowSize.width < 1400 && !isMobileDevice ? 5 : 10;
 
   for (let i = 0; i < circlesAmount; i++) {
     circlesArray.push(

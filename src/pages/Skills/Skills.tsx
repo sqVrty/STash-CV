@@ -46,11 +46,17 @@ export default function Skills() {
   return (
     <div
       className={
-        "content" +
-        " animate__animated animate__slideInLeft animate__delay-0.7s"
+        isMobileDevice
+          ? "mobileContent"
+          : "content" +
+            " animate__animated animate__slideInLeft animate__delay-0.7s"
       }
     >
-      <div className="PCContentContainer">
+      <div
+        className={
+          isMobileDevice ? "mobileContentContainer" : "PCContentContainer"
+        }
+      >
         <TextWithCircle text="Resume" isFirst={true} />
         <div className={classes.textWithIconsContainer}>
           <div className={classes.textWithIconContainer1}>
@@ -128,7 +134,11 @@ export default function Skills() {
         </div>
 
         <TextWithCircle text="Programming Skills" />
-        <div className={classes.progSkillsContainer}>
+        <div
+          className={`${classes.progSkillsContainer} ${
+            isMobileDevice && classes.mobile
+          }`}
+        >
           <CircleSkillBlock
             icon={<JavascriptIcon width={40} height={40} />}
             percentage={90}
