@@ -33,48 +33,6 @@ export default function PCHeader() {
             icon={<FolderIcon width={25} height={25} />}
             hintName="Projects"
           />
-          {/* <Link
-            to="/"
-            className={classes.iconContainer}
-            onMouseEnter={(e: MouseEvent) => handleMouseEnter("about")}
-            onMouseLeave={handleMouseLeave}
-          >
-            <ProfileIcon
-              className={`${classes.icon} ${
-                hoverActiveIcon ||
-                (activeIcon === "about" && classes.activeIcon)
-              }`}
-            />
-            <div className={classes.nameHintContainer}>
-              <p className={classes.name}>About</p>
-            </div>
-          </Link> */}
-          {/* <Link
-            to="/resume"
-            className={classes.iconContainer}
-            onMouseEnter={(e: MouseEvent) => handleMouseEnter("resume")}
-            onMouseLeave={handleMouseLeave}
-          >
-            <ResumeIcon
-              className={`${classes.icon} ${
-                hoverActiveIcon ||
-                (activeIcon === "resume" && classes.activeIcon)
-              }`}
-            />
-          </Link>
-          <Link
-            to="/projects"
-            className={classes.iconContainer}
-            onMouseEnter={(e: MouseEvent) => handleMouseEnter("projects")}
-            onMouseLeave={handleMouseLeave}
-          >
-            <FolderIcon
-              className={`${classes.icon} ${
-                hoverActiveIcon ||
-                (activeIcon === "projects" && classes.activeIcon)
-              }`}
-            />
-          </Link> */}
         </div>
         <PhoneIcon fill={COLORS.aqua} width={40} height={40} />
       </div>
