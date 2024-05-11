@@ -5,7 +5,7 @@ import TextWithCircle from "../../components/textWithCircle/TextWithCircle";
 import TextWithIcon from "../../components/textWithIcon/TextWithIcon";
 import ExperienceBlock from "./components/ExperienceBlock";
 import EducationBlock from "./components/EducationBlock";
-import CircleSkillBlock from "./components/CircleSkillsBlock";
+import CircleSkillBlock from "./components/CircleSkillBlock";
 import LineSkillBlock from "./components/LineSkillBlock";
 import PlatformBlock from "./components/PlatformBlock";
 import KnowledgeBlock from "./components/KnowledgeBlock";
@@ -17,8 +17,8 @@ import {
   KworkIcon,
   JavascriptIcon,
   ReduxIcon,
-  PythonIcon,
-  CppIcon,
+  HTMLIcon,
+  DockerIcon,
   CodingIcon,
   LanguagesIcon,
   ReactColoredIcon,
@@ -140,14 +140,14 @@ export default function Skills() {
             name="Redux"
           />
           <CircleSkillBlock
-            icon={<PythonIcon width={40} height={40} />}
+            icon={<HTMLIcon width={40} height={40} />}
             percentage={40}
-            name="Python"
+            name="HTML 5"
           />
           <CircleSkillBlock
-            icon={<CppIcon width={40} height={40} />}
+            icon={<DockerIcon width={40} height={40} />}
             percentage={40}
-            name="C++"
+            name="Docker"
           />
         </div>
 

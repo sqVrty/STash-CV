@@ -41,8 +41,6 @@ export default function LineSkillBlock({
     );
   }
 
-  console.log(windowSize.width);
-
   return (
     <div className={classes.container}>
       <div className={classes.icon}>{icon}</div>
