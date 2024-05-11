@@ -8,7 +8,8 @@ import PCHeader from "./components/header/PCHeader/PCHeader";
 import PhotoContainer from "./components/photoContainer/PhotoContainer";
 import MobileHeader from "./components/header/MobileHeader/MobileHeader";
 import About from "./pages/About/About";
-import Skills from "./pages/Skills/Skills";
+import Resume from "./pages/Resume/Resume";
+import Projects from "./pages/Projects/Projects";
 
 export default function App() {
   const dispatch = useAppDispatch();
@@ -58,8 +59,8 @@ export default function App() {
         )}
         <Routes>
           <Route path="/" element={<About />} />
-          <Route path="/resume" element={<Skills />} />
-          {/* <Route path="/projects" element={<Skills />} /> */}
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/projects" element={<Projects />} />
         </Routes>
       </div>
     </Router>

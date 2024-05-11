@@ -36,9 +36,9 @@ import {
   EmotionalEggheadLogo,
 } from "../../assets/img's";
 
-import classes from "./Skills.module.scss";
+import classes from "./Resume.module.scss";
 
-export default function Skills() {
+export default function Resume() {
   const isMobileDevice = useAppSelector(
     (state) => state.deviceInfo.isMobileDevice
   );
