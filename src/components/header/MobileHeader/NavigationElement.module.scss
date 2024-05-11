@@ -1,0 +1,10 @@
+.iconContainer {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  gap: 10px;
+
+  .name {
+    font-weight: 400;
+  }
+}
