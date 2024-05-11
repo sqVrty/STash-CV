@@ -51,16 +51,16 @@ export default function App() {
         {isMobileDevice ? (
           <MobileHeader />
         ) : (
-          <>
+          <div className="PCHeaderAndPhotoContainer">
             <PCHeader />
             <PhotoContainer />
-          </>
+          </div>
         )}
         <Routes>
           <Route path="/" element={<About />} />
-          <Route path="/skills" element={<Skills />} />
+          <Route path="/resume" element={<Skills />} />
+          {/* <Route path="/projects" element={<Skills />} /> */}
         </Routes>
-        {/* Footer */}
       </div>
     </Router>
   );

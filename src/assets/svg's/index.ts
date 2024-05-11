@@ -34,3 +34,5 @@ export { ReactComponent as BelarusIcon } from "./belarus.svg";
 export { ReactComponent as GearsIcon } from "./gears.svg";
 export { ReactComponent as ListIcon } from "./list.svg";
 export { ReactComponent as CheckIcon } from "./check.svg";
+export { ReactComponent as ResumeIcon } from "./resume.svg";
+export { ReactComponent as FolderIcon } from "./folder.svg";

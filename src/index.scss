@@ -69,8 +69,13 @@ p {
   margin-right: auto;
 }
 
-.PCHeader {
+.PCHeaderAndPhotoContainer {
+  position: relative;
+  display: flex;
   z-index: 2;
+}
+
+.PCHeader {
   height: 85vh;
   width: 50px;
   padding: 30px 15px;
