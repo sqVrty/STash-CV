@@ -8,11 +8,11 @@ import classes from "./PreviewWorkBlock.module.scss";
 
 export default function PreviewWorkBlock({
   previewImg,
-  type,
+  category,
   header,
 }: {
   previewImg: string;
-  type: string;
+  category: string;
   header: string;
 }) {
   const [hoverActiveBlock, setHoverActiveBlock] = useState<string | null>(null);
@@ -35,6 +35,7 @@ export default function PreviewWorkBlock({
       className={classes.container}
       onMouseEnter={(e: MouseEvent) => handleMouseEnter(header)}
       onMouseLeave={handleMouseLeave}
+      //   onClick={handleBlockClicked}
     >
       <div className={classes.imgWrapper}>
         <img
@@ -65,7 +66,7 @@ export default function PreviewWorkBlock({
       <div className={classes.bottomContainer}>
         <div className={classes.textContainer}>
           <p className={classes.type} style={{ color: COLORS.gray }}>
-            {type}
+            {category}
           </p>
           <p
             className={classes.header}

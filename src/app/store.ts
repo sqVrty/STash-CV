@@ -1,11 +1,16 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import { deviceInfoReducer, windowSizeInfoReducer } from "../redux/features";
+import {
+  deviceInfoReducer,
+  windowSizeInfoReducer,
+  workExampleModalInfoReducer,
+} from "../redux/features";
 
 export const store = configureStore({
   reducer: {
     deviceInfo: deviceInfoReducer,
     windowSizeInfo: windowSizeInfoReducer,
+    workExampleModalInfo: workExampleModalInfoReducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware({}).concat([]),
 });

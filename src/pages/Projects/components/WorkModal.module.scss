@@ -1,0 +1,65 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+
+  //   background-color: rgba(0, 0, 0, 0.5);
+  background-color: red;
+
+  .modal {
+    position: fixed;
+    right: auto;
+    bottom: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60vw;
+    max-width: 900px;
+
+    @media (max-width: 600px) {
+      max-height: 70vh;
+      top: auto;
+      bottom: 0;
+      left: 0;
+      transform: none;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      overflow-x: scroll;
+      // white-space: nowrap;
+      width: 100vw;
+    }
+
+    .content {
+      padding: 20px;
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .crossIcon {
+          width: 24px;
+          height: 24px;
+          margin: 0;
+          cursor: pointer;
+          transition: transform 0.2s, filter 0.2s;
+
+          @media (max-width: 600px) {
+            width: 18px;
+            height: 18px;
+          }
+
+          @media (min-width: 800px) {
+            &:hover {
+              transform: scale(1.05);
+              filter: brightness(80%);
+            }
+          }
+        }
+      }
+    }
+  }
+}

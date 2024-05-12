@@ -29,14 +29,14 @@ export default function Projects() {
           <div className={classes.blockContainer}>
             <PreviewWorkBlock
               previewImg="https://ryancv.bslthemes.com/app-developer/wp-content/uploads/sites/19/2020/04/work-r2.jpg"
-              type="Website"
+              category="Website"
               header="Analytics Dashboard Software Tool"
             />
           </div>
           <div className={classes.blockContainer}>
             <PreviewWorkBlock
               previewImg="https://ryancv.bslthemes.com/app-developer/wp-content/uploads/sites/19/2020/04/work2-1.jpg"
-              type="Mobile App"
+              category="Mobile App"
               header="Cryptocurrency Dashboard Application"
             />
           </div>
