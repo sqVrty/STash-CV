@@ -11,6 +11,7 @@ import About from "./pages/About/About";
 import Resume from "./pages/Resume/Resume";
 import Projects from "./pages/Projects/Projects";
 import Modal from "./components/modal/Modal";
+import LanguagesModalContent from "./components/languagesModalContent/LanguagesModalContent";
 
 export default function App() {
   const dispatch = useAppDispatch();
@@ -50,14 +51,10 @@ export default function App() {
         className="root"
         style={isMobileDevice ? { flexDirection: "column" } : {}}
       >
-        <Modal
-          header="Choose language"
-          children={
-            <div>
-              <p>XUY</p>
-            </div>
-          }
-        />
+        <Modal header="Choose the language">
+          <LanguagesModalContent />
+        </Modal>
+
         {isMobileDevice ? (
           <MobileHeader />
         ) : (

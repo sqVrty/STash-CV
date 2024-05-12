@@ -32,28 +32,25 @@ $aqua: rgba(16, 200, 236, 0.8);
       height: 100%;
       top: 0;
       left: 0;
-      border-radius: 20px;
+      border-radius: 15px;
       backdrop-filter: blur(15px);
       z-index: -1;
     }
 
-    .content {
-      padding: 20px;
+    .header {
+      padding: 5px 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-      .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+      .crossIcon {
+        margin-left: 20px;
+        fill: white;
+        cursor: pointer;
+        transition: 0.3s ease-in-out fill;
 
-        .crossIcon {
-          margin-left: 20px;
-          fill: white;
-          cursor: pointer;
-          transition: 0.3s ease-in-out all;
-
-          &:hover {
-            fill: $aqua;
-          }
+        &:hover {
+          fill: $aqua;
         }
       }
     }

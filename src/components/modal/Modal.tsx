@@ -49,18 +49,16 @@ function Modal({ header, children }: { header: string; children: ReactNode }) {
   return isOpen ? (
     <div className={classes.overlay} onClick={handleOverlayClick}>
       <div className={classes.modal} onClick={(e) => e.stopPropagation()}>
-        <div className={classes.content}>
-          <div className={classes.header}>
-            <h2>{header}</h2>
-            <CrossIcon
-              width={25}
-              height={25}
-              onClick={closeModal}
-              className={classes.crossIcon}
-            />
-          </div>
-          {children}
+        <div className={classes.header}>
+          <h2>{header}</h2>
+          <CrossIcon
+            width={25}
+            height={25}
+            onClick={closeModal}
+            className={classes.crossIcon}
+          />
         </div>
+        {children}
       </div>
     </div>
   ) : null;
