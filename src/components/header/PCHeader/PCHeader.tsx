@@ -9,9 +9,10 @@ import {
 import NavigationElement from "./NavigationElement";
 import IconContainer from "./IconContainer";
 import LanguagesModalContent from "../../languagesModalContent/LanguagesModalContent";
+import ContactMeModalContent from "../../contactMeModalContent/ContactMeModalContent";
 
 import {
-  PhoneIcon,
+  ContactMeIcon,
   ProfileIcon,
   ResumeIcon,
   FolderIcon,
@@ -31,14 +32,8 @@ export default function PCHeader() {
         dispatch(setModalHeader("Select a language"));
         dispatch(setModalContent(<LanguagesModalContent />));
       } else if (index === 1) {
-        dispatch(setModalHeader("Header for option 2"));
-        dispatch(
-          setModalContent(
-            <div>
-              <p>xuy</p>
-            </div>
-          )
-        );
+        dispatch(setModalHeader("Contact me"));
+        dispatch(setModalContent(<ContactMeModalContent />));
       }
 
       dispatch(setIsOpen(!isModalOpen));
@@ -77,7 +72,7 @@ export default function PCHeader() {
             stroke={true}
           />
           <IconContainer
-            icon={<PhoneIcon width={40} height={40} />}
+            icon={<ContactMeIcon width={40} height={40} />}
             index={1}
             onClick={handleLanguageConnectMeClicked}
             reversive={true}

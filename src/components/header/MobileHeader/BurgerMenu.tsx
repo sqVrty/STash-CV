@@ -6,7 +6,7 @@ import {
   ProfileIcon,
   ResumeIcon,
   FolderIcon,
-  PhoneIcon,
+  ContactMeIcon,
 } from "../../../assets/svg's";
 
 import classes from "./BurgerMenu.module.scss";
@@ -48,7 +48,7 @@ export default function BurgerMenu({
           />
         </div>
         <div className={classes.contactMe}>
-          <PhoneIcon fill={COLORS.aqua} width={40} height={40} />
+          <ContactMeIcon fill={COLORS.aqua} width={40} height={40} />
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 export { ReactComponent as ProfileIcon } from "./profile.svg";
 export { ReactComponent as SpeedometerIcon } from "./speedometer.svg";
 export { ReactComponent as GlassesIcon } from "./glasses.svg";
-export { ReactComponent as PhoneIcon } from "./phone.svg";
+export { ReactComponent as ContactMeIcon } from "./contactMe.svg";
 export { ReactComponent as TelegramIcon } from "./telegram.svg";
 export { ReactComponent as WhatsAppIcon } from "./whatsapp.svg";
 export { ReactComponent as GitHubIcon } from "./github.svg";
@@ -40,3 +40,4 @@ export { ReactComponent as GoOverIcon } from "./goOver.svg";
 export { ReactComponent as EyeIcon } from "./eye.svg";
 export { ReactComponent as CrossIcon } from "./cross.svg";
 export { ReactComponent as GlobusIcon } from "./globus.svg";
+export { ReactComponent as PhoneIcon } from "./phone.svg";

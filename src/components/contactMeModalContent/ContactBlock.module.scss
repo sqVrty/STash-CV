@@ -1,0 +1,29 @@
+$aqua: rgba(16, 200, 236, 0.1);
+$gray: rgba(140, 140, 140, 1);
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+
+  border: 0.5px solid $gray;
+  border-radius: 15px;
+
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+
+  .socialName {
+    font-style: italic;
+    font-size: 14px;
+  }
+
+  .contact {
+    margin-top: 3px;
+    margin-left: 5px;
+    font-weight: 400;
+    font-size: 16px;
+  }
+}
