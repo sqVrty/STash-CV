@@ -10,6 +10,7 @@ import MobileHeader from "./components/header/MobileHeader/MobileHeader";
 import About from "./pages/About/About";
 import Resume from "./pages/Resume/Resume";
 import Projects from "./pages/Projects/Projects";
+import Modal from "./components/modal/Modal";
 
 export default function App() {
   const dispatch = useAppDispatch();
@@ -49,6 +50,14 @@ export default function App() {
         className="root"
         style={isMobileDevice ? { flexDirection: "column" } : {}}
       >
+        <Modal
+          header="Choose language"
+          children={
+            <div>
+              <p>XUY</p>
+            </div>
+          }
+        />
         {isMobileDevice ? (
           <MobileHeader />
         ) : (
