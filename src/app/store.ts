@@ -4,6 +4,7 @@ import {
   deviceInfoReducer,
   windowSizeInfoReducer,
   workExampleModalInfoReducer,
+  modalReducer,
 } from "../redux/features";
 
 export const store = configureStore({
@@ -11,6 +12,7 @@ export const store = configureStore({
     deviceInfo: deviceInfoReducer,
     windowSizeInfo: windowSizeInfoReducer,
     workExampleModalInfo: workExampleModalInfoReducer,
+    modal: modalReducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware({}).concat([]),
 });

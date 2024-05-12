@@ -39,3 +39,4 @@ export { ReactComponent as FolderIcon } from "./folder.svg";
 export { ReactComponent as GoOverIcon } from "./goOver.svg";
 export { ReactComponent as EyeIcon } from "./eye.svg";
 export { ReactComponent as CrossIcon } from "./cross.svg";
+export { ReactComponent as GlobusIcon } from "./globus.svg";

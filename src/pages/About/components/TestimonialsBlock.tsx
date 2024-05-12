@@ -39,12 +39,14 @@ export default function TestimonialsBlock({
           {post}
         </p>
       </div>
-      <p className={classes.desc} style={{ color: COLORS.gray }}>
-        {review}
-        <div className={classes.quotationMarks}>
+      <div className={classes.descContainer}>
+        <p className={classes.desc} style={{ color: COLORS.gray }}>
+          {review}
+        </p>
+        <div className={classes.quotationMarks} style={{ color: COLORS.gray }}>
           <QuotationMarksIcon fill={COLORS.gray} width={16} height={16} />
         </div>
-      </p>
+      </div>
       <div className={classes.starsRatingContainer}>{starIcons}</div>
     </div>
   );

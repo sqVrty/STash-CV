@@ -1,16 +1,36 @@
+import { useEffect } from "react";
+import { useAppDispatch, useAppSelector } from "../../../app/hooks";
+import { setIsOpen } from "../../../redux/features/modalSlice";
+
 import NavigationElement from "./NavigationElement";
+import IconContainer from "./IconContainer";
 
 import {
   PhoneIcon,
   ProfileIcon,
   ResumeIcon,
   FolderIcon,
+  GlobusIcon,
 } from "../../../assets/svg's";
 
 import classes from "./PCHeader.module.scss";
 import { COLORS } from "./../../../assets/colors";
 
 export default function PCHeader() {
+  const dispatch = useAppDispatch();
+  const isModalOpen = useAppSelector((state) => state.modal.isOpen);
+
+  const handleLanguageFeedbackClicked = (index: number) => {
+    dispatch(setIsOpen(!isModalOpen));
+    // console.log(123);
+  };
+
+  useEffect(() => {
+    dispatch(setIsOpen(!isModalOpen));
+  }, [dispatch]);
+
+  console.log(isModalOpen);
+
   return (
     <div className="PCHeader">
       <div className={classes.container}>
@@ -34,7 +54,20 @@ export default function PCHeader() {
             hintName="Projects"
           />
         </div>
-        <PhoneIcon fill={COLORS.aqua} width={40} height={40} />
+        <div className={classes.languageFeedbackContainer}>
+          <IconContainer
+            icon={<GlobusIcon width={25} height={25} />}
+            index={0}
+            onClick={handleLanguageFeedbackClicked}
+            stroke={true}
+          />
+          <IconContainer
+            icon={<PhoneIcon width={40} height={40} />}
+            index={1}
+            onClick={handleLanguageFeedbackClicked}
+            reversive={true}
+          />
+        </div>
       </div>
     </div>
   );

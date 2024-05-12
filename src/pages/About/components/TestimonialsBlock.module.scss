@@ -35,9 +35,12 @@ $gray: rgba(140, 140, 140, 1);
     }
   }
 
-  .desc {
-    margin-top: 15px;
+  .descContainer {
     display: flex;
+
+    .desc {
+      margin-top: 15px;
+    }
 
     .quotationMarks {
       width: fit-content;
