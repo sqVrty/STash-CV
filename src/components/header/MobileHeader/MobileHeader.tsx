@@ -1,24 +1,42 @@
-import { useState, useEffect } from "react";
+import { useAppDispatch, useAppSelector } from "../../../app/hooks";
+import { setIsOpen } from "../../../redux/features/modalSlice";
+import { useState, useEffect, useCallback } from "react";
 import { TypeAnimation } from "react-type-animation";
 
 import BurgerMenu from "./BurgerMenu";
 
 import { AvatarPhoto } from "../../../assets/img's";
-import { MenuIcon } from "../../../assets/svg's";
+import { MenuIcon, GlobusIcon } from "../../../assets/svg's";
 import { COLORS } from "./../../../assets/colors";
 
 import classes from "./MobileHeader.module.scss";
 
 export default function MobileHeader() {
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const dispatch = useAppDispatch();
+  const isModalOpen = useAppSelector((state) => state.modal.isOpen);
+  const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState<boolean>(false);
+
+  function preventScroll(event: TouchEvent) {
+    event.preventDefault();
+  }
 
   useEffect(() => {
-    document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
+    if (isBurgerMenuOpen) {
+      document.body.style.overflow = "hidden";
+      document.body.addEventListener("touchmove", preventScroll, {
+        passive: false,
+      });
+    }
 
     return () => {
       document.body.style.overflow = "auto";
+      document.body.removeEventListener("touchmove", preventScroll);
     };
-  }, [isMenuOpen]);
+  }, [isBurgerMenuOpen]);
+
+  const handleGlobusClicked = useCallback(() => {
+    dispatch(setIsOpen(!isModalOpen));
+  }, [dispatch]);
 
   return (
     <div className="mobileHeader">
@@ -44,13 +62,24 @@ export default function MobileHeader() {
             </div>
           </div>
           <div className={classes.rightBlock}>
+            {!isBurgerMenuOpen && (
+              <GlobusIcon
+                stroke={COLORS.white}
+                width={24}
+                height={24}
+                onClick={() => handleGlobusClicked()}
+              />
+            )}
             <MenuIcon
-              fill="white"
+              fill={COLORS.white}
               width={24}
               height={24}
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              onClick={() => setIsBurgerMenuOpen(!isBurgerMenuOpen)}
             />
-            <BurgerMenu isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
+            <BurgerMenu
+              isOpen={isBurgerMenuOpen}
+              setIsOpen={setIsBurgerMenuOpen}
+            />
           </div>
         </div>
       </div>

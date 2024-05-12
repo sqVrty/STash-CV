@@ -2,7 +2,7 @@ $gray: rgba(140, 140, 140, 0.4);
 $aqua: rgba(16, 200, 236, 0.8);
 
 .overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -12,7 +12,7 @@ $aqua: rgba(16, 200, 236, 0.8);
   background-color: rgba(0, 0, 0, 0.55);
 
   .modal {
-    position: absolute;
+    position: fixed;
     right: auto;
     bottom: auto;
     top: 50%;

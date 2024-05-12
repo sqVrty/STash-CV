@@ -51,7 +51,7 @@ export default function App() {
         className="root"
         style={isMobileDevice ? { flexDirection: "column" } : {}}
       >
-        <Modal header="Choose the language">
+        <Modal header="Select a language">
           <LanguagesModalContent />
         </Modal>
 
