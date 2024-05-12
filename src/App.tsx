@@ -11,6 +11,9 @@ import About from "./pages/About/About";
 import Resume from "./pages/Resume/Resume";
 import Projects from "./pages/Projects/Projects";
 import Modal from "./components/modal/Modal";
+import WorkExampleModal from "./pages/Projects/components/WorkExampleModal";
+
+import type { IProject } from "./redux/features/workExampleModalInfoSlice";
 
 export default function App() {
   const dispatch = useAppDispatch();
@@ -20,6 +23,9 @@ export default function App() {
   const windowSize = useAppSelector((state) => state.windowSizeInfo.windowSize);
   const modalHeader = useAppSelector((state) => state.modal.modalHeader);
   const modalContent = useAppSelector((state) => state.modal.modalContent);
+  const workExampleModalData = useAppSelector(
+    (state) => state.workExampleModalInfo.data
+  );
 
   useEffect(() => {
     const handleResize = () => {
@@ -53,6 +59,7 @@ export default function App() {
         style={isMobileDevice ? { flexDirection: "column" } : {}}
       >
         <Modal header={modalHeader as string}>{modalContent}</Modal>
+        <WorkExampleModal data={workExampleModalData as IProject} />
 
         {isMobileDevice ? (
           <MobileHeader />

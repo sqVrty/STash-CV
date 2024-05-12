@@ -1,20 +1,17 @@
-import { useCallback, useEffect, MouseEvent, ReactNode } from "react";
-import { useAppSelector, useAppDispatch } from "../../app/hooks";
-import { setIsOpen } from "../../redux/features/modalSlice";
+import { useAppSelector, useAppDispatch } from "../../../app/hooks";
+import { useCallback, useEffect, useState, MouseEvent, ReactNode } from "react";
+import { setIsOpen } from "../../../redux/features/workExampleModalInfoSlice";
 
-import { CrossIcon } from "../../assets/svg's";
+import { COLORS } from "../../../assets/colors";
+import { CrossIcon } from "../../../assets/svg's";
 
-import classes from "./Modal.module.scss";
+import type { IProject } from "../../../redux/features/workExampleModalInfoSlice";
 
-export default function Modal({
-  header,
-  children,
-}: {
-  header: string;
-  children: ReactNode;
-}) {
+import classes from "./WorkExampleModal.module.scss";
+
+export default function WorkExampleModal({ data }: { data: IProject }) {
   const dispatch = useAppDispatch();
-  const isOpen = useAppSelector((state) => state.modal.isOpen);
+  const isOpen = useAppSelector((state) => state.workExampleModalInfo.isOpen);
 
   function preventScroll(event: TouchEvent) {
     event.preventDefault();
@@ -66,16 +63,18 @@ export default function Modal({
   return isOpen ? (
     <div className={classes.overlay} onClick={handleOverlayClick}>
       <div className={classes.modal} onClick={(e) => e.stopPropagation()}>
-        <div className={classes.header}>
-          <h2>{header}</h2>
-          <CrossIcon
-            width={25}
-            height={25}
-            onClick={closeModal}
-            className={classes.crossIcon}
-          />
+        <div className={classes.content}>
+          <div className={classes.header}>
+            <h2>{data.header}</h2>
+            <CrossIcon
+              fill={COLORS.gray}
+              width={40}
+              height={40}
+              onClick={closeModal}
+              className={classes.crossIcon}
+            />
+          </div>
         </div>
-        {children}
       </div>
     </div>
   ) : null;

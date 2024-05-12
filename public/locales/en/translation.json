@@ -1,202 +1,48 @@
 {
-  "global": {
-    "joinClub": "Join the club",
-    "inst": "Instagram",
-    "downloadIn": "Download in"
-  },
-
-  "header": {
-    "h1": "Articles",
-    "h2": "Shop",
-    "h3": "Consultation",
-    "h4": "Portfolios",
-    "h5": "Courses",
-    "other": {
-      "h": "Other",
-      "subH1": "Upcoming events",
-      "subH2": "Podcast"
-    }
-  },
-
-  "footer": {
-    "links": {
-      "a1": "Privacy Policy",
-      "a2": "Terms of Sale",
-      "a3": "List of All Performances and Articles"
-    },
-    "desc": "What is described on this website is my personal experience in the world of investments — it is not investment advice, and none of the transactions or actions described are recommendations to buy. The content of the website is intended for entertainment and informational purposes and should never be used as the basis for making any decision. Make all your financial decisions based on risk level and personal portfolio analysis.",
-    "projectOf": "Project of the Company"
-  },
-
-  "homePage": {
-    "cc": "Closed Club of Investors",
-    "from": "from the Emotional Egghead team",
-    "slogan1": "a club for those who want to change their financial situation",
-    "slogan2": "a fund manager and a former bank executive share their knowledge and deals every day",
-    "section1": {
-      "header": "What can you get"
-    },
-    "section2": {
-      "header": "In addition to this"
-    },
-    "plusesBeingSubData": {
-      "title1": "Access to all webinars",
-      "description1": "in finance, trading, and portfolio management",
-      "title2": "Access to the portfolio",
-      "description2": "of a fund manager and a former bank employee with all the analytics",
-      "title3": "Access to the files",
-      "description3": "used by professionals",
-      "title4": "All our deals",
-      "description4": "live in story format on Instagram",
-      "title5": "Consultation",
-      "description5": "in messaging format",
-      "title6": "Summary of top news",
-      "description6": "and our comments on them every day",
-      "title7": "Paid articles on the website",
-      "description7": "with useful information regarding finances",
-      "title8": "Giveaways",
-      "description8": "of gifts and lottery every month",
-      "title9": "Invest Menu",
-      "description9": "in the format of seminars, movies, meetings. Special prices for events, discounts, and other events",
-      "title10": "Networking and environment of investors",
-      "description10": "that will support and motivate you",
-      "title11": "Support",
-      "description11": "on the path to financial freedom",
-      "title12": "Bonuses",
-      "description12": "from partners"
-    },
-    "section3": {
-      "header": "600+ people have been through our club",
-      "text1": "We have hundreds of positive reviews",
-      "text2": "The club has been around for over 3 years",
-      "text3": "50+ people have been with us since the beginning",
-      "text4": "230 remain with us from month to month"
-    },
-    "section4": {
-      "header": "Club Founder",
-      "title": "Grigory Ilkevich",
-      "text1": "Former Development Manager at SEB Bank",
-      "text2": "Former Retail Banking Manager at Luminor",
-      "text3": "Finfluencer and blogger",
-      "text4": "Investor and entrepreneur"
-    },
-    "section5": {
-      "header": "Courses and portfolios in one app",
-      "text1": "Learn and monitor markets with us anytime, anywhere!",
-      "text2": "Available on",
-      "text3": "and"
-    },
-    "section6": {
-      "header": "Free materials",
-      "freebiesData": {
-        "title1": "The God Father Project",
-        "description1": "bla-bla-bla",
-        "title2": "Child's Portfolio",
-        "description2": "building capital for your child",
-        "title3": "Excel transaction ledger file",
-        "description3": "with all automatic dashboards",
-        "title4": "Introductory webinar",
-        "description4": "How to start investing?"
-      }
-    }
-  },
-
-  "portfolio": {
-    "stock": {
-      "name": "Stocks",
-      "title": "Emotional Egghead Stock Portfolio"
-    },
-    "crypto": {
-      "name": "Cryptocurrency",
-      "title": "Crypto Portfolio"
-    },
-    "realty": {
-      "name": "Real Estate",
-      "title": ""
-    },
-    "baby": {
-      "name": "Child",
-      "title": "Child's Portfolio"
-    },
-    "notExist": "This portfolio does not exist",
-    "switchFillingButtons": {
-      "chart": "Chart",
-      "table": "Table",
-      "donut": "Donut Chart",
-      "trades": "Trades"
-    }
-  },
-
-  "consulting": {
-    "h": "Consultation",
-    "dayNames": {
-      "mo": "Mo",
-      "tu": "Tu",
-      "we": "We",
-      "th": "Th",
-      "fr": "Fr",
-      "sa": "Sa",
-      "su": "Su"
-    },
-    "bookHeader": {
-      "at": "at",
-      "bookOn": "Book On",
-      "toPay": "To Pay",
-      "book": "Book",
-      "successBook": "You have successfully registered for",
-      "gratitude": "Thank you for your order!"
-    },
-    "landing": {
-      "section1": {
-        "h": "Mentoring with Grigory Ilkevich",
-        "title": "Grigory Ilkevich",
-        "quote": "sometimes it's faster to talk to a person directly and get personalized attention than rely solely on general recommendations and standard strategies",
-        "text1": "Former Head of Development at SEB Bank",
-        "text2": "Former Head of Retail Banking at Luminor",
-        "text3": "Finfluencer and Blogger",
-        "text4": "Investor and Entrepreneur"
+  "projectsPage": {
+    "projects": [
+      {
+        "mainImg": "https://ryancv.bslthemes.com/app-developer/wp-content/uploads/sites/19/2020/04/work-r2.jpg",
+        "header": "Analytics Dashboard Software Tool",
+        "category": "Website",
+        "date": "07/08/2018",
+        "client": "Joe Patrick",
+        "text1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ipsum debitis! Consequuntur veniam cumque, possimus itaque rerum quidem nesciunt doloremque quam ipsam aliquid nobis id beatae laboriosam nostrum esse velit optio eos dolores. Nemo autem, esse quos fugit iusto quisquam obcaecati blanditiis corporis ipsum doloremque qui, odit placeat architecto laborum! Officiis voluptatum et vitae modi ipsum recusandae reiciendis est itaque nemo dolores! Cum ratione earum cupiditate error accusamus nam labore rerum accusantium, excepturi ducimus architecto, reiciendis dicta iste eligendi molestias vitae quas velit necessitatibus officiis. Esse minus consequuntur enim inventore deleniti sit odio qui sunt, dicta blanditiis accusamus! Animi, provident?",
+        "imgsArray": [
+          "https://ryancv.bslthemes.com/app-developer/wp-content/uploads/sites/19/2020/04/work-r2.jpg",
+          "https://ryancv.bslthemes.com/app-developer/wp-content/uploads/sites/19/2020/04/work-r2.jpg",
+          "https://ryancv.bslthemes.com/app-developer/wp-content/uploads/sites/19/2020/04/work-r2.jpg"
+        ],
+        "text2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ipsum debitis! Consequuntur veniam cumque, possimus itaque rerum quidem nesciunt doloremque quam ipsam aliquid nobis id beatae laboriosam nostrum esse velit optio eos dolores. Nemo autem, esse quos fugit iusto quisquam obcaecati blanditiis corporis ipsum doloremque qui, odit placeat architecto laborum! Officiis voluptatum et vitae modi ipsum recusandae reiciendis est itaque nemo dolores! Cum ratione earum cupiditate error accusamus nam labore rerum accusantium, excepturi ducimus architecto, reiciendis dicta iste eligendi molestias vitae quas velit necessitatibus officiis. Esse minus consequuntur enim inventore deleniti sit odio qui sunt, dicta blanditiis accusamus! Animi, provident?"
       },
-      "section2": {
-        "h": "What Can I Help With",
-        "questionsHelpData": {
-          "title1": "Strategy Building and Investments",
-          "title2": "Questions regarding mortgage lending and real estate investments",
-          "title3": "How to start your own startup and gather investments?",
-          "title4": "Budgeting and Family Financial Management",
-          "title5": "Opening Interactive Brokers and other brokerage accounts and assistance in their use",
-          "title6": "Tax-related questions"
-        }
+      {
+        "mainImg": "https://ryancv.bslthemes.com/app-developer/wp-content/uploads/sites/19/2020/04/work2-1.jpg",
+        "header": "Cryptocurrency Dashboard Application",
+        "category": "Website",
+        "date": "07/08/2018",
+        "client": "Joe Patrick",
+        "text1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ipsum debitis! Consequuntur veniam cumque, possimus itaque rerum quidem nesciunt doloremque quam ipsam aliquid nobis id beatae laboriosam nostrum esse velit optio eos dolores. Nemo autem, esse quos fugit iusto quisquam obcaecati blanditiis corporis ipsum doloremque qui, odit placeat architecto laborum! Officiis voluptatum et vitae modi ipsum recusandae reiciendis est itaque nemo dolores! Cum ratione earum cupiditate error accusamus nam labore rerum accusantium, excepturi ducimus architecto, reiciendis dicta iste eligendi molestias vitae quas velit necessitatibus officiis. Esse minus consequuntur enim inventore deleniti sit odio qui sunt, dicta blanditiis accusamus! Animi, provident?",
+        "imgsArray": [
+          "https://ryancv.bslthemes.com/app-developer/wp-content/uploads/sites/19/2020/04/work-r2.jpg",
+          "https://ryancv.bslthemes.com/app-developer/wp-content/uploads/sites/19/2020/04/work-r2.jpg",
+          "https://ryancv.bslthemes.com/app-developer/wp-content/uploads/sites/19/2020/04/work-r2.jpg"
+        ],
+        "text2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ipsum debitis! Consequuntur veniam cumque, possimus itaque rerum quidem nesciunt doloremque quam ipsam aliquid nobis id beatae laboriosam nostrum esse velit optio eos dolores. Nemo autem, esse quos fugit iusto quisquam obcaecati blanditiis corporis ipsum doloremque qui, odit placeat architecto laborum! Officiis voluptatum et vitae modi ipsum recusandae reiciendis est itaque nemo dolores! Cum ratione earum cupiditate error accusamus nam labore rerum accusantium, excepturi ducimus architecto, reiciendis dicta iste eligendi molestias vitae quas velit necessitatibus officiis. Esse minus consequuntur enim inventore deleniti sit odio qui sunt, dicta blanditiis accusamus! Animi, provident?"
       },
-      "section3": {
-        "h": "What Format Do They Take",
-        "meetingData": {
-          "title1": "Personal meeting in a home office in a separate room, in a cafe, on zoom, or at your office",
-          "title2": "It's better to plan for two or more hours, on average it takes 3 hours, but it depends on your request",
-          "title3": "I prepare based on your request and prepare materials and a presentation",
-          "title4": "During the dialogue, we discuss the topic or I talk about my experience"
-        }
-      },
-      "section4": {
-        "h": "Reviews"
+      {
+        "mainImg": "https://ryancv.bslthemes.com/app-developer/wp-content/uploads/sites/19/2020/04/work-r2.jpg",
+        "header": "Analytics Dashboard Software Tool",
+        "category": "Website",
+        "date": "07/08/2018",
+        "client": "Joe Patrick",
+        "text1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ipsum debitis! Consequuntur veniam cumque, possimus itaque rerum quidem nesciunt doloremque quam ipsam aliquid nobis id beatae laboriosam nostrum esse velit optio eos dolores. Nemo autem, esse quos fugit iusto quisquam obcaecati blanditiis corporis ipsum doloremque qui, odit placeat architecto laborum! Officiis voluptatum et vitae modi ipsum recusandae reiciendis est itaque nemo dolores! Cum ratione earum cupiditate error accusamus nam labore rerum accusantium, excepturi ducimus architecto, reiciendis dicta iste eligendi molestias vitae quas velit necessitatibus officiis. Esse minus consequuntur enim inventore deleniti sit odio qui sunt, dicta blanditiis accusamus! Animi, provident?",
+        "imgsArray": [
+          "https://ryancv.bslthemes.com/app-developer/wp-content/uploads/sites/19/2020/04/work-r2.jpg",
+          "https://ryancv.bslthemes.com/app-developer/wp-content/uploads/sites/19/2020/04/work-r2.jpg",
+          "https://ryancv.bslthemes.com/app-developer/wp-content/uploads/sites/19/2020/04/work-r2.jpg"
+        ],
+        "text2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ipsum debitis! Consequuntur veniam cumque, possimus itaque rerum quidem nesciunt doloremque quam ipsam aliquid nobis id beatae laboriosam nostrum esse velit optio eos dolores. Nemo autem, esse quos fugit iusto quisquam obcaecati blanditiis corporis ipsum doloremque qui, odit placeat architecto laborum! Officiis voluptatum et vitae modi ipsum recusandae reiciendis est itaque nemo dolores! Cum ratione earum cupiditate error accusamus nam labore rerum accusantium, excepturi ducimus architecto, reiciendis dicta iste eligendi molestias vitae quas velit necessitatibus officiis. Esse minus consequuntur enim inventore deleniti sit odio qui sunt, dicta blanditiis accusamus! Animi, provident?"
       }
-    }
-  },
-
-  "upcomingEvents": {
-    "landing": {
-      "section1": {
-        "h": "From professionals in their field",
-        "advantagesData": {
-          "title1": "Atmosphere",
-          "description1": "We gather in cool places where the food is as good as it should be for real investors.",
-          "title2": "Prepared for you",
-          "description2": "In addition to delicacies, you will find information prepared by professionals. What's happening in the financial markets? Where is the real estate market heading?",
-          "title3": "Networking",
-          "description3": "New acquaintances and group work. Who knows, maybe a millionaire is sitting next to you?",
-          "title4": "Gifts and tournaments",
-          "description4": "We won't let you get bored. Cool prizes from our partners, and meaningful competitive tournaments from us."
-        }
-      }
-    }
+    ]
   }
 }

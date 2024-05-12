@@ -1,23 +1,39 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
+export interface IProject {
+  mainImg: string;
+  header: string;
+  category: string;
+  date: string;
+  client: string;
+  text1: string;
+  imgsArray: string[];
+  text2: string;
+}
+
 interface IWorkExampleModalInfoState {
-  workExampleModalKey: number | null;
+  isOpen: boolean;
+  data: IProject | null;
 }
 
 const initialState: IWorkExampleModalInfoState = {
-  workExampleModalKey: null,
+  isOpen: false,
+  data: null,
 };
 
 const workExampleModalInfoSlice = createSlice({
   name: "workExampleModalInfo",
   initialState,
   reducers: {
-    setWorkExampleModalKey: (state, action: PayloadAction<number>) => {
-      state.workExampleModalKey = action.payload;
+    setIsOpen: (state, action: PayloadAction<boolean>) => {
+      state.isOpen = action.payload;
+    },
+    setData: (state, action: PayloadAction<IProject>) => {
+      state.data = action.payload;
     },
   },
 });
 
-export const { setWorkExampleModalKey } = workExampleModalInfoSlice.actions;
+export const { setIsOpen, setData } = workExampleModalInfoSlice.actions;
 
 export default workExampleModalInfoSlice.reducer;

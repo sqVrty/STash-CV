@@ -1,8 +1,15 @@
-import { useState, MouseEvent } from "react";
+import { useAppDispatch, useAppSelector } from "../../../app/hooks";
+import {
+  setIsOpen,
+  setData,
+} from "../../../redux/features/workExampleModalInfoSlice";
+import { useState, MouseEvent, useCallback } from "react";
 import "animate.css";
 
 import { COLORS } from "../../../assets/colors";
 import { GoOverIcon, EyeIcon } from "../../../assets/svg's";
+
+import type { IProject } from "../../../redux/features/workExampleModalInfoSlice";
 
 import classes from "./PreviewWorkBlock.module.scss";
 
@@ -10,11 +17,17 @@ export default function PreviewWorkBlock({
   previewImg,
   category,
   header,
+  data,
 }: {
   previewImg: string;
   category: string;
   header: string;
+  data: IProject;
 }) {
+  const dispatch = useAppDispatch();
+  const isWorkExampleModalOpen = useAppSelector(
+    (state) => state.workExampleModalInfo.isOpen
+  );
   const [hoverActiveBlock, setHoverActiveBlock] = useState<string | null>(null);
   const [showEyeTimer, setShowEyeTimer] = useState<boolean>(false);
 
@@ -30,12 +43,17 @@ export default function PreviewWorkBlock({
     setTimeout(() => setShowEyeTimer(false), 350);
   };
 
+  const handleBlockClicked = useCallback(() => {
+    dispatch(setData(data));
+    dispatch(setIsOpen(!isWorkExampleModalOpen));
+  }, [dispatch]);
+
   return (
     <div
       className={classes.container}
       onMouseEnter={(e: MouseEvent) => handleMouseEnter(header)}
       onMouseLeave={handleMouseLeave}
-      //   onClick={handleBlockClicked}
+      onClick={handleBlockClicked}
     >
       <div className={classes.imgWrapper}>
         <img

@@ -4,6 +4,8 @@ import { useAppSelector } from "../../app/hooks";
 import TextWithCircle from "../../components/textWithCircle/TextWithCircle";
 import PreviewWorkBlock from "./components/PreviewWorkBlock";
 
+import type { IProject } from "../../redux/features/workExampleModalInfoSlice";
+
 import classes from "./Projects.module.scss";
 
 export default function Projects() {
@@ -11,10 +13,6 @@ export default function Projects() {
   const isMobileDevice = useAppSelector(
     (state) => state.deviceInfo.isMobileDevice
   );
-
-  const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng);
-  };
 
   return (
     <div
@@ -30,26 +28,20 @@ export default function Projects() {
           isMobileDevice ? "mobileContentContainer" : "PCContentContainer"
         }
       >
-        <TextWithCircle
-          //  text="Works"
-          text={t("global.joinClub")}
-          isFirst={true}
-        />
+        <TextWithCircle text="Works" isFirst={true} />
         <div className={classes.workBlocksContainer}>
-          <div className={classes.blockContainer}>
-            <PreviewWorkBlock
-              previewImg="https://ryancv.bslthemes.com/app-developer/wp-content/uploads/sites/19/2020/04/work-r2.jpg"
-              category="Website"
-              header="Analytics Dashboard Software Tool"
-            />
-          </div>
-          <div className={classes.blockContainer}>
-            <PreviewWorkBlock
-              previewImg="https://ryancv.bslthemes.com/app-developer/wp-content/uploads/sites/19/2020/04/work2-1.jpg"
-              category="Mobile App"
-              header="Cryptocurrency Dashboard Application"
-            />
-          </div>
+          {(
+            t("projectsPage.projects", { returnObjects: true }) as IProject[]
+          ).map((data, index) => (
+            <div className={classes.blockContainer} key={index}>
+              <PreviewWorkBlock
+                previewImg={data.mainImg}
+                category={data.header}
+                header={data.category}
+                data={data}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </div>
