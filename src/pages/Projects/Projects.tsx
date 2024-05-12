@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { useAppSelector } from "../../app/hooks";
 
 import TextWithCircle from "../../components/textWithCircle/TextWithCircle";
@@ -6,9 +7,14 @@ import PreviewWorkBlock from "./components/PreviewWorkBlock";
 import classes from "./Projects.module.scss";
 
 export default function Projects() {
+  const { t, i18n } = useTranslation();
   const isMobileDevice = useAppSelector(
     (state) => state.deviceInfo.isMobileDevice
   );
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+  };
 
   return (
     <div
@@ -24,7 +30,11 @@ export default function Projects() {
           isMobileDevice ? "mobileContentContainer" : "PCContentContainer"
         }
       >
-        <TextWithCircle text="Works" isFirst={true} />
+        <TextWithCircle
+          //  text="Works"
+          text={t("global.joinClub")}
+          isFirst={true}
+        />
         <div className={classes.workBlocksContainer}>
           <div className={classes.blockContainer}>
             <PreviewWorkBlock
