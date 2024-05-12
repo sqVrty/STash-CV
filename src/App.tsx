@@ -11,7 +11,6 @@ import About from "./pages/About/About";
 import Resume from "./pages/Resume/Resume";
 import Projects from "./pages/Projects/Projects";
 import Modal from "./components/modal/Modal";
-import LanguagesModalContent from "./components/languagesModalContent/LanguagesModalContent";
 
 export default function App() {
   const dispatch = useAppDispatch();
@@ -19,6 +18,8 @@ export default function App() {
     (state) => state.deviceInfo.isMobileDevice
   );
   const windowSize = useAppSelector((state) => state.windowSizeInfo.windowSize);
+  const modalHeader = useAppSelector((state) => state.modal.modalHeader);
+  const modalContent = useAppSelector((state) => state.modal.modalContent);
 
   useEffect(() => {
     const handleResize = () => {
@@ -51,9 +52,7 @@ export default function App() {
         className="root"
         style={isMobileDevice ? { flexDirection: "column" } : {}}
       >
-        <Modal header="Select a language">
-          <LanguagesModalContent />
-        </Modal>
+        <Modal header={modalHeader as string}>{modalContent}</Modal>
 
         {isMobileDevice ? (
           <MobileHeader />

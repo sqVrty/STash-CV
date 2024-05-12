@@ -1,9 +1,14 @@
 import { useEffect, useCallback } from "react";
 import { useAppDispatch, useAppSelector } from "../../../app/hooks";
-import { setIsOpen } from "../../../redux/features/modalSlice";
+import {
+  setIsOpen,
+  setModalHeader,
+  setModalContent,
+} from "../../../redux/features/modalSlice";
 
 import NavigationElement from "./NavigationElement";
 import IconContainer from "./IconContainer";
+import LanguagesModalContent from "../../languagesModalContent/LanguagesModalContent";
 
 import {
   PhoneIcon,
@@ -22,6 +27,20 @@ export default function PCHeader() {
 
   const handleLanguageConnectMeClicked = useCallback(
     (index: number) => {
+      if (index === 0) {
+        dispatch(setModalHeader("Select a language"));
+        dispatch(setModalContent(<LanguagesModalContent />));
+      } else if (index === 1) {
+        dispatch(setModalHeader("Header for option 2"));
+        dispatch(
+          setModalContent(
+            <div>
+              <p>xuy</p>
+            </div>
+          )
+        );
+      }
+
       dispatch(setIsOpen(!isModalOpen));
     },
     [dispatch]

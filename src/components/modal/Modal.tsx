@@ -51,7 +51,7 @@ function Modal({ header, children }: { header: string; children: ReactNode }) {
       document.addEventListener("keydown", handleEscapeKey);
     }
     return () => {
-      document.body.style.overflow = "auto"; // Ensure body overflow is set to auto when the modal is closed
+      document.body.style.overflow = "auto";
       document.removeEventListener("keydown", handleEscapeKey);
       document.body.removeEventListener("touchmove", preventScroll);
     };
