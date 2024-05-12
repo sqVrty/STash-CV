@@ -10,17 +10,17 @@ export default function ContactMeModalContent() {
     <div className={classes.contactBlocksContainer}>
       <ContactBlock
         socialName="Telegram"
-        icon={<TelegramIcon fill={COLORS.gray} width={20} height={20} />}
+        icon={<TelegramIcon width={20} height={20} />}
         contact="@sqvrty"
       />
       <ContactBlock
         socialName="WhatsApp"
-        icon={<WhatsAppIcon fill={COLORS.gray} width={20} height={20} />}
+        icon={<WhatsAppIcon width={20} height={20} />}
         contact="+7(989)049-17-01"
       />
       <ContactBlock
         socialName="Phone"
-        icon={<PhoneIcon fill={COLORS.gray} width={20} height={20} />}
+        icon={<PhoneIcon width={20} height={20} />}
         contact="+7(989)049-17-01"
       />
     </div>

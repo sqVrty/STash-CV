@@ -18,7 +18,7 @@ export default function PhotoMobileContainer() {
         window.open("https://t.me/sqvrty", "_blank");
         break;
       case "whatsapp":
-        window.open("https://wa.me/375291628018", "_blank");
+        window.open("https://wa.me/79890491701", "_blank");
         break;
       case "github":
         window.open("https://github.com/sqVrty", "_blank");

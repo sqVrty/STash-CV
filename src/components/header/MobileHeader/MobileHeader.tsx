@@ -1,9 +1,14 @@
 import { useAppDispatch, useAppSelector } from "../../../app/hooks";
-import { setIsOpen } from "../../../redux/features/modalSlice";
+import {
+  setIsOpen,
+  setModalHeader,
+  setModalContent,
+} from "../../../redux/features/modalSlice";
 import { useState, useEffect, useCallback } from "react";
 import { TypeAnimation } from "react-type-animation";
 
 import BurgerMenu from "./BurgerMenu";
+import LanguagesModalContent from "../../languagesModalContent/LanguagesModalContent";
 
 import { AvatarPhoto } from "../../../assets/img's";
 import { MenuIcon, GlobusIcon } from "../../../assets/svg's";
@@ -35,6 +40,8 @@ export default function MobileHeader() {
   }, [isBurgerMenuOpen]);
 
   const handleGlobusClicked = useCallback(() => {
+    dispatch(setModalHeader("Select a language"));
+    dispatch(setModalContent(<LanguagesModalContent />));
     dispatch(setIsOpen(!isModalOpen));
   }, [dispatch]);
 
@@ -62,14 +69,12 @@ export default function MobileHeader() {
             </div>
           </div>
           <div className={classes.rightBlock}>
-            {!isBurgerMenuOpen && (
-              <GlobusIcon
-                stroke={COLORS.white}
-                width={24}
-                height={24}
-                onClick={() => handleGlobusClicked()}
-              />
-            )}
+            <GlobusIcon
+              stroke={COLORS.white}
+              width={24}
+              height={24}
+              onClick={() => handleGlobusClicked()}
+            />
             <MenuIcon
               fill={COLORS.white}
               width={24}
@@ -77,8 +82,8 @@ export default function MobileHeader() {
               onClick={() => setIsBurgerMenuOpen(!isBurgerMenuOpen)}
             />
             <BurgerMenu
-              isOpen={isBurgerMenuOpen}
-              setIsOpen={setIsBurgerMenuOpen}
+              isBurgerMenuOpen={isBurgerMenuOpen}
+              setIsBurgerMenuOpen={setIsBurgerMenuOpen}
             />
           </div>
         </div>

@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import React, { ReactElement, useState, MouseEvent } from "react";
 
 import { COLORS } from "../../assets/colors";
 import classes from "./ContactBlock.module.scss";
@@ -12,11 +12,50 @@ export default function ContactBlock({
   icon: ReactElement;
   contact: string;
 }) {
+  const [hoverActiveBlock, setHoverActiveBlock] = useState<string | null>(null);
+
+  const isActiveHover = hoverActiveBlock === socialName;
+
+  const handleMouseEnter = (socialName: string) => {
+    setHoverActiveBlock(socialName);
+  };
+
+  const handleMouseLeave = () => {
+    setHoverActiveBlock(null);
+  };
+
+  const handleSocialClick = (socialName: string) => {
+    switch (socialName) {
+      case "Telegram":
+        window.open("https://t.me/sqvrty", "_blank");
+        break;
+      case "WhatsApp":
+        window.open("https://wa.me/79890491701", "_blank");
+        break;
+      case "Phone":
+        window.open("tel:+79890491701");
+        break;
+      default:
+        break;
+    }
+  };
+
   return (
-    <div className={classes.container}>
+    <div
+      className={classes.container}
+      onMouseEnter={(e: MouseEvent) => handleMouseEnter(socialName)}
+      onMouseLeave={handleMouseLeave}
+      onClick={() => handleSocialClick(socialName)}
+    >
       <div className={classes.header}>
-        {icon}
-        <p className={classes.socialName} style={{ color: COLORS.gray }}>
+        {React.cloneElement(icon, {
+          className: classes.icon,
+          fill: isActiveHover ? COLORS.lightgray : COLORS.gray,
+        })}
+        <p
+          className={classes.socialName}
+          style={{ color: isActiveHover ? COLORS.lightgray : COLORS.gray }}
+        >
           {socialName}
         </p>
       </div>
