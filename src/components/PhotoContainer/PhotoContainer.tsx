@@ -35,7 +35,7 @@ export default function PhotoContainer() {
     <div className={classes.photoContainer}>
       <img src={MyPhoto} className={classes.photo} />
       <div className={classes.infoContainer}>
-        <h1 className={classes.name}>Ren Nolan</h1>
+        <h1 className={classes.name}>Tashlikovich Sergei</h1>
         <TypeAnimation
           sequence={[
             "Developer",

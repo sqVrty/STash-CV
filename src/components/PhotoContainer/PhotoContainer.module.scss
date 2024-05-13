@@ -5,8 +5,9 @@ $aqua: rgba(16, 200, 236, 0.8);
   position: relative;
   display: flex;
   justify-content: center;
+  aspect-ratio: 5/8;
   height: 100vh;
-  width: 35vw;
+  max-width: 35vw;
   box-shadow: 0px 0px 50px black;
 
   .photo {
@@ -18,10 +19,19 @@ $aqua: rgba(16, 200, 236, 0.8);
     position: absolute;
     display: flex;
     flex-direction: column;
-    bottom: 7.5%;
+    bottom: 0;
     gap: 20px;
 
+    width: 100%;
+    height: 30%;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.75);
+
     .name {
+      margin-top: 4%;
+      max-width: 70%;
+      align-self: center;
+      text-align: center;
       font-size: 50px;
       font-weight: bold;
     }
