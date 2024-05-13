@@ -94,6 +94,13 @@ export default function WorkExampleModal({ data }: { data: IProject }) {
             <div className={classes.screenShotsCarouselContainer}>
               <ScreenShotsCarousel data={data.imgsArray} />
             </div>
+            <p className={classes.desc} style={{ color: COLORS.gray }}>
+              {data.text2}
+            </p>
+            <div
+              className={classes.line}
+              style={{ backgroundColor: COLORS.gray }}
+            />
           </div>
         </div>
       </div>
