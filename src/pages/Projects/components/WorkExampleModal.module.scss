@@ -25,6 +25,14 @@ $aqua: rgba(16, 200, 236, 0.8);
 
     background-color: rgb(30, 30, 30);
 
+    @media (max-width: 600px) {
+      width: 100vw;
+    }
+
+    @media (min-width: 601px) and (max-width: 1000px) {
+      width: 65vw;
+    }
+
     &::-webkit-scrollbar {
       -webkit-appearance: none;
       width: 5px;

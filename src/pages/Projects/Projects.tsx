@@ -36,8 +36,8 @@ export default function Projects() {
             <div className={classes.blockContainer} key={index}>
               <PreviewWorkBlock
                 previewImg={data.mainImg}
-                category={data.header}
-                header={data.category}
+                category={data.category}
+                header={data.header}
                 data={data}
               />
             </div>

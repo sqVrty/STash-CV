@@ -14,10 +14,17 @@ import classes from "./WorkExampleModal.module.scss";
 
 export default function WorkExampleModal({ data }: { data: IProject }) {
   const dispatch = useAppDispatch();
+  const isMobileDevice = useAppSelector(
+    (state) => state.deviceInfo.isMobileDevice
+  );
+  const windowSize = useAppSelector((state) => state.windowSizeInfo.windowSize);
   const isOpen = useAppSelector((state) => state.workExampleModalInfo.isOpen);
 
   function preventScroll(event: TouchEvent) {
-    event.preventDefault();
+    const modal = document.getElementById("modal");
+    if (modal && !modal.contains(event.target as Node)) {
+      event.preventDefault();
+    }
   }
 
   const openModal = useCallback(() => {
@@ -65,7 +72,12 @@ export default function WorkExampleModal({ data }: { data: IProject }) {
 
   return isOpen ? (
     <div className={classes.overlay} onClick={handleOverlayClick}>
-      <div className={classes.modal} onClick={(e) => e.stopPropagation()}>
+      <div
+        id="modal"
+        className={classes.modal}
+        style={isMobileDevice ? { height: windowSize.height + "px" } : {}}
+        onClick={(e) => e.stopPropagation()}
+      >
         <div className={classes.mainImgContainer}>
           <img src={data.mainImg} className={classes.mainImg} />
           <CrossIcon
