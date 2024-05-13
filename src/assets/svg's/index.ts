@@ -41,3 +41,5 @@ export { ReactComponent as EyeIcon } from "./eye.svg";
 export { ReactComponent as CrossIcon } from "./cross.svg";
 export { ReactComponent as GlobusIcon } from "./globus.svg";
 export { ReactComponent as PhoneIcon } from "./phone.svg";
+export { ReactComponent as LeftArrowIcon } from "./leftArrow.svg";
+export { ReactComponent as RightArrowIcon } from "./rightArrow.svg";

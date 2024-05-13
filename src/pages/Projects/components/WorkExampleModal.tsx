@@ -3,6 +3,7 @@ import { useCallback, useEffect, useState, MouseEvent, ReactNode } from "react";
 import { setIsOpen } from "../../../redux/features/workExampleModalInfoSlice";
 
 import InfoListBlock from "./InfoListBlock";
+import ScreenShotsCarousel from "./ScreenShotsCarousel";
 
 import { COLORS } from "../../../assets/colors";
 import { CrossIcon } from "../../../assets/svg's";
@@ -90,6 +91,9 @@ export default function WorkExampleModal({ data }: { data: IProject }) {
             <p className={classes.desc} style={{ color: COLORS.gray }}>
               {data.text1}
             </p>
+            <div className={classes.screenShotsCarouselContainer}>
+              <ScreenShotsCarousel data={data.imgsArray} />
+            </div>
           </div>
         </div>
       </div>
