@@ -2,6 +2,8 @@ import { useAppSelector, useAppDispatch } from "../../../app/hooks";
 import { useCallback, useEffect, useState, MouseEvent, ReactNode } from "react";
 import { setIsOpen } from "../../../redux/features/workExampleModalInfoSlice";
 
+import InfoListBlock from "./InfoListBlock";
+
 import { COLORS } from "../../../assets/colors";
 import { CrossIcon } from "../../../assets/svg's";
 
@@ -63,16 +65,31 @@ export default function WorkExampleModal({ data }: { data: IProject }) {
   return isOpen ? (
     <div className={classes.overlay} onClick={handleOverlayClick}>
       <div className={classes.modal} onClick={(e) => e.stopPropagation()}>
-        <div className={classes.content}>
-          <div className={classes.header}>
-            <h2>{data.header}</h2>
-            <CrossIcon
-              fill={COLORS.gray}
-              width={40}
-              height={40}
-              onClick={closeModal}
-              className={classes.crossIcon}
-            />
+        <div className={classes.mainImgContainer}>
+          <img src={data.mainImg} className={classes.mainImg} />
+          <CrossIcon
+            width={30}
+            height={30}
+            className={classes.crossIcon}
+            onClick={closeModal}
+          />
+          <div className={classes.contentContainer}>
+            <h1 className={classes.header}>{data.header}</h1>
+            <p className={classes.categoty} style={{ color: COLORS.gray }}>
+              {data.category}
+            </p>
+            <div className={classes.infoListContainer}>
+              <InfoListBlock fieldName="Date" answer={data.date} />
+              <InfoListBlock fieldName="Client" answer={data.client} />
+              <InfoListBlock
+                fieldName="Category"
+                answer={data.category}
+                isLastElement
+              />
+            </div>
+            <p className={classes.desc} style={{ color: COLORS.gray }}>
+              {data.text1}
+            </p>
           </div>
         </div>
       </div>
