@@ -10,7 +10,7 @@ import { TypeAnimation } from "react-type-animation";
 import BurgerMenu from "./BurgerMenu";
 import LanguagesModalContent from "../../languagesModalContent/LanguagesModalContent";
 
-import { AvatarPhoto } from "../../../assets/img's";
+import { MyAvatar } from "../../../assets/img's";
 import { MenuIcon, GlobusIcon } from "../../../assets/svg's";
 import { COLORS } from "./../../../assets/colors";
 
@@ -50,9 +50,9 @@ export default function MobileHeader() {
       <div className={classes.container}>
         <div className={classes.paddingContainer}>
           <div className={classes.leftBlock}>
-            <img src={AvatarPhoto} className={classes.avatarImage} />
+            <img src={MyAvatar} className={classes.avatarImage} />
             <div className={classes.textContainer}>
-              <p className={classes.name}>Ren Nolan</p>
+              <p className={classes.name}>Tashlikovich Sergei</p>
               <TypeAnimation
                 sequence={[
                   "Developer",
