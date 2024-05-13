@@ -1,112 +1,74 @@
-import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useAppSelector, useAppDispatch } from "../../../app/hooks";
+import {
+  setIsOpen,
+  setModalHeader,
+  setModalContent,
+} from "../../../redux/features/modalSlice";
+import { useCallback } from "react";
+
+import NavigationElement from "./NavigationElement";
+import ContactMeModalContent from "../../contactMeModalContent/ContactMeModalContent";
 
 import {
   ProfileIcon,
-  SpeedometerIcon,
-  GlassesIcon,
-  PhoneIcon,
+  ResumeIcon,
+  FolderIcon,
+  ContactMeIcon,
 } from "../../../assets/svg's";
 
 import classes from "./BurgerMenu.module.scss";
 import { COLORS } from "./../../../assets/colors";
 
-type IconMapType = {
-  [key: string]: string;
-};
-
-function getWindowDimensions() {
-  const { innerWidth: width, innerHeight: height } = window;
-  return {
-    width,
-    height,
-  };
-}
-
 export default function BurgerMenu({
-  isOpen,
-  setIsOpen,
+  isBurgerMenuOpen,
+  setIsBurgerMenuOpen,
 }: {
-  isOpen: boolean;
-  setIsOpen: (val: boolean) => void;
+  isBurgerMenuOpen: boolean;
+  setIsBurgerMenuOpen: (val: boolean) => void;
 }) {
-  const location = useLocation();
-  const [activeIcon, setActiveIcon] = useState<string>("");
-  const [windowDimensions, setWindowDimensions] = useState(
-    getWindowDimensions()
-  );
+  const dispatch = useAppDispatch();
+  const isModalOpen = useAppSelector((state) => state.modal.isOpen);
+  const windowSize = useAppSelector((state) => state.windowSizeInfo.windowSize);
 
-  useEffect(() => {
-    function handleResize() {
-      setWindowDimensions(getWindowDimensions());
-    }
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  useEffect(() => {
-    const { pathname } = location;
-
-    const iconMap: IconMapType = {
-      "/": "profile",
-      "/skills": "skills",
-      "/experience": "experience",
-    };
-
-    setActiveIcon(iconMap[pathname]);
-  }, [location]);
-
-  const handleLinkClicked = () => {
-    setIsOpen(false);
-  };
+  const handleContactMeClicked = useCallback(() => {
+    dispatch(setModalHeader("Contact me"));
+    dispatch(setModalContent(<ContactMeModalContent />));
+    dispatch(setIsOpen(!isModalOpen));
+  }, [dispatch]);
 
   return (
-    <div className={`${classes.container} ${isOpen && classes.open}`}>
+    <div className={`${classes.container} ${isBurgerMenuOpen && classes.open}`}>
       <div
         className={classes.content}
-        style={{ height: windowDimensions.height - 120 + "px" }}
+        style={{ height: windowSize.height - 120 + "px" }}
       >
         <div className={classes.navigationContainer}>
-          <Link
-            to="/"
-            className={classes.iconContainer}
-            onClick={handleLinkClicked}
-          >
-            <ProfileIcon
-              className={`${classes.icon} ${
-                activeIcon === "profile" && classes.activeIcon
-              }`}
-            />
-            <p>Профиль</p>
-          </Link>
-          <Link
-            to="/skills"
-            className={classes.iconContainer}
-            onClick={handleLinkClicked}
-          >
-            <SpeedometerIcon
-              className={`${classes.icon} ${
-                activeIcon === "skills" && classes.activeIcon
-              }`}
-            />
-            <p>Навыки</p>
-          </Link>
-          <Link
-            to="/experience"
-            className={classes.iconContainer}
-            onClick={handleLinkClicked}
-          >
-            <GlassesIcon
-              className={`${classes.icon} ${
-                activeIcon === "experience" && classes.activeIcon
-              }`}
-            />
-            <p>Опыт работы</p>
-          </Link>
+          <NavigationElement
+            path="/"
+            icon={<ProfileIcon width={25} height={25} />}
+            name="About"
+            setIsOpen={setIsBurgerMenuOpen}
+          />
+          <NavigationElement
+            path="/resume"
+            icon={<ResumeIcon width={25} height={25} />}
+            name="Resume"
+            setIsOpen={setIsBurgerMenuOpen}
+          />
+          <NavigationElement
+            path="/projects"
+            icon={<FolderIcon width={25} height={25} />}
+            name="Projects"
+            setIsOpen={setIsBurgerMenuOpen}
+          />
         </div>
         <div className={classes.contactMe}>
-          <PhoneIcon fill={COLORS.aqua} width={40} height={40} />
+          <ContactMeIcon
+            fill={COLORS.aqua}
+            width={40}
+            height={40}
+            onClick={handleContactMeClicked}
+          />
         </div>
       </div>
     </div>

@@ -7,6 +7,8 @@ import { store } from "./app/store";
 
 import "./index.scss";
 
+import "./i18n";
+
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );

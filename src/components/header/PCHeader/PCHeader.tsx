@@ -1,35 +1,45 @@
-import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useEffect, useCallback } from "react";
+import { useAppDispatch, useAppSelector } from "../../../app/hooks";
+import {
+  setIsOpen,
+  setModalHeader,
+  setModalContent,
+} from "../../../redux/features/modalSlice";
+
+import NavigationElement from "./NavigationElement";
+import IconContainer from "./IconContainer";
+import LanguagesModalContent from "../../languagesModalContent/LanguagesModalContent";
+import ContactMeModalContent from "../../contactMeModalContent/ContactMeModalContent";
 
 import {
+  ContactMeIcon,
   ProfileIcon,
-  SpeedometerIcon,
-  GlassesIcon,
-  PhoneIcon,
+  ResumeIcon,
+  FolderIcon,
+  GlobusIcon,
 } from "../../../assets/svg's";
 
 import classes from "./PCHeader.module.scss";
 import { COLORS } from "./../../../assets/colors";
 
-type IconMapType = {
-  [key: string]: string;
-};
-
 export default function PCHeader() {
-  const location = useLocation();
-  const [activeIcon, setActiveIcon] = useState<string>("");
+  const dispatch = useAppDispatch();
+  const isModalOpen = useAppSelector((state) => state.modal.isOpen);
 
-  useEffect(() => {
-    const { pathname } = location;
+  const handleLanguageConnectMeClicked = useCallback(
+    (index: number) => {
+      if (index === 0) {
+        dispatch(setModalHeader("Select a language"));
+        dispatch(setModalContent(<LanguagesModalContent />));
+      } else if (index === 1) {
+        dispatch(setModalHeader("Contact me"));
+        dispatch(setModalContent(<ContactMeModalContent />));
+      }
 
-    const iconMap: IconMapType = {
-      "/": "profile",
-      "/skills": "skills",
-      "/experience": "experience",
-    };
-
-    setActiveIcon(iconMap[pathname]);
-  }, [location]);
+      dispatch(setIsOpen(!isModalOpen));
+    },
+    [dispatch]
+  );
 
   return (
     <div className="PCHeader">
@@ -38,29 +48,36 @@ export default function PCHeader() {
           ST
         </h1>
         <div className={classes.navigationContainer}>
-          <Link to="/" className={classes.iconContainer}>
-            <ProfileIcon
-              className={`${classes.icon} ${
-                activeIcon === "profile" && classes.activeIcon
-              }`}
-            />
-          </Link>
-          <Link to="/skills" className={classes.iconContainer}>
-            <SpeedometerIcon
-              className={`${classes.icon} ${
-                activeIcon === "skills" && classes.activeIcon
-              }`}
-            />
-          </Link>
-          <Link to="/experience" className={classes.iconContainer}>
-            <GlassesIcon
-              className={`${classes.icon} ${
-                activeIcon === "experience" && classes.activeIcon
-              }`}
-            />
-          </Link>
+          <NavigationElement
+            path="/"
+            icon={<ProfileIcon width={25} height={25} />}
+            hintName="About"
+          />
+          <NavigationElement
+            path="/resume"
+            icon={<ResumeIcon width={25} height={25} />}
+            hintName="Resume"
+          />
+          <NavigationElement
+            path="/projects"
+            icon={<FolderIcon width={25} height={25} />}
+            hintName="Projects"
+          />
         </div>
-        <PhoneIcon fill={COLORS.aqua} width={40} height={40} />
+        <div className={classes.languageConnectMeContainer}>
+          <IconContainer
+            icon={<GlobusIcon width={25} height={25} />}
+            index={0}
+            onClick={handleLanguageConnectMeClicked}
+            stroke={true}
+          />
+          <IconContainer
+            icon={<ContactMeIcon width={40} height={40} />}
+            index={1}
+            onClick={handleLanguageConnectMeClicked}
+            reversive={true}
+          />
+        </div>
       </div>
     </div>
   );

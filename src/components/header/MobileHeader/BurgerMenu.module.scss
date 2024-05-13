@@ -26,23 +26,6 @@ $aqua: rgba(16, 200, 236, 0.8);
       display: flex;
       flex-direction: column;
       gap: 20px;
-
-      .iconContainer {
-        display: flex;
-        text-decoration: none;
-        align-items: center;
-        gap: 10px;
-
-        .icon {
-          fill: $lightgray;
-          width: 25px;
-          height: 25px;
-
-          &.activeIcon {
-            fill: $aqua;
-          }
-        }
-      }
     }
 
     .contactMe {

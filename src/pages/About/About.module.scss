@@ -1,0 +1,145 @@
+$aqua: rgba(16, 200, 236, 0.8);
+$gray: rgba(100, 100, 100, 0.5);
+
+.heyContainer {
+  display: flex;
+  flex-direction: column;
+
+  .greeting {
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+
+  .aboutDataContainer {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+
+    @media (max-width: 600px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .question {
+      font-weight: 400;
+
+      .dots {
+        letter-spacing: 2.5px;
+      }
+
+      .answer {
+        margin-left: 7.5px;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+
+    .crossContainer {
+      padding: 15px;
+      border-bottom: 1px solid $gray;
+
+      &:last-child {
+        border: none;
+      }
+    }
+  }
+
+  @media (min-width: 601px) {
+    .crossContainer {
+      display: flex;
+      padding: 15px;
+
+      &:nth-child(odd) {
+        border-right: 1px solid $gray;
+        padding-left: 0px;
+      }
+
+      &:nth-child(-n + 2) {
+        border-bottom: 1px solid $gray;
+      }
+    }
+  }
+}
+
+.testimonials {
+  .swiper {
+    overflow: visible;
+    margin-right: 15px;
+
+    .swiperSlide {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+
+  .pagination {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    :global(.swiper-pagination-bullet) {
+      background-color: transparent;
+      border: 0.5px solid $aqua;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      opacity: 1;
+    }
+
+    :global(.swiper-pagination-bullet-active) {
+      background-color: $aqua;
+      border: 0.5px solid $aqua;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.factsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-bottom: 25px;
+
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 600px) {
+    .delimiterContainer {
+      display: flex;
+      padding: 15px;
+
+      &:nth-child(odd) {
+        border-right: 1px solid $gray;
+        padding-left: 0px;
+      }
+
+      &:nth-child(-n + 2) {
+        border-bottom: 1px solid $gray;
+      }
+    }
+  }
+
+  @media (min-width: 601px) {
+    .delimiterContainer {
+      display: flex;
+      padding: 15px;
+
+      &:not(:first-child) {
+        border-left: 1px solid $gray;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+$gray: rgba(140, 140, 140, 1);
+$darkgray: rgba(100, 100, 100, 1);
+$aqua: rgba(16, 200, 236, 0.8);
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  padding-top: 15px;
+  width: 100px;
+
+  border: 0.5px solid $gray;
+  border-radius: 15px;
+
+  .percentages {
+    margin-top: 5px;
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .name {
+    margin-top: 20px;
+    font-weight: 400;
+    text-align: center;
+  }
+}

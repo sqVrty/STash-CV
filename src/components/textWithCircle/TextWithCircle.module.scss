@@ -1,0 +1,42 @@
+$aqua: rgba(16, 200, 236, 0.35);
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 30px;
+  margin-top: 50px;
+
+  &.first {
+    margin-top: 0;
+  }
+
+  .textContainer {
+    position: relative;
+    height: 32px;
+
+    .text {
+      font-size: 26px;
+      font-weight: 500;
+      margin-left: 10px;
+    }
+
+    .circle {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+
+      box-shadow: 0 0 5px 3px $aqua;
+      background-color: $aqua;
+    }
+  }
+
+  .line {
+    margin-top: 20px;
+    width: 100%;
+    height: 1px;
+  }
+}

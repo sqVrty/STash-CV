@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: column;
+
+  .textContainer {
+    display: flex;
+    align-items: center;
+
+    .fieldName {
+      padding: 1px 7px;
+      font-size: 16px;
+    }
+
+    .answer {
+      margin-left: auto;
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
+
+  .line {
+    margin-top: 5px;
+    width: 100%;
+    height: 0.7px;
+  }
+}

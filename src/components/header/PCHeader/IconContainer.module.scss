@@ -1,0 +1,15 @@
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    height: 55px;
+  }
+
+  .icon {
+    transition: 0.3s ease-in-out all;
+  }
+}

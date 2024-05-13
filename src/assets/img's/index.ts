@@ -1,1 +1,5 @@
-export { default as MyPhoto } from "./photo_2024-05-01 00.55.38.jpeg";
+export { default as MyPhoto } from "./myPhoto.jpeg";
+export { default as AvatarPhoto } from "./avatar.png";
+export { default as EmotionalEggheadLogo } from "./emotionalEgghead.png";
+export { default as BMSTULogo } from "./bmstu.png";
+export { default as InginiriumLogo } from "./inginirium.png";
