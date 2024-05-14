@@ -30,7 +30,7 @@ export default function Projects() {
           isMobileDevice ? "mobileContentContainer" : "PCContentContainer"
         }
       >
-        <TextWithCircle text="Works" isFirst={true} />
+        <TextWithCircle text={t("projectsPage.h")} isFirst={true} />
         <div className={classes.workBlocksContainer}>
           {(
             t("projectsPage.projects", { returnObjects: true }) as IProject[]

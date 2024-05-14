@@ -1,5 +1,6 @@
-import { useAppSelector, useAppDispatch } from "../../../app/hooks";
 import { useCallback, useEffect, useState, MouseEvent, ReactNode } from "react";
+import { useTranslation } from "react-i18next";
+import { useAppSelector, useAppDispatch } from "../../../app/hooks";
 import { setIsOpen } from "../../../redux/features/workExampleModalInfoSlice";
 
 import InfoListBlock from "./InfoListBlock";
@@ -13,6 +14,7 @@ import type { IProject } from "../../../redux/features/workExampleModalInfoSlice
 import classes from "./WorkExampleModal.module.scss";
 
 export default function WorkExampleModal({ data }: { data: IProject }) {
+  const { t, i18n } = useTranslation();
   const dispatch = useAppDispatch();
   const isMobileDevice = useAppSelector(
     (state) => state.deviceInfo.isMobileDevice
@@ -79,7 +81,10 @@ export default function WorkExampleModal({ data }: { data: IProject }) {
         onClick={(e) => e.stopPropagation()}
       >
         <div className={classes.mainImgContainer}>
-          <img src={data.mainImg} className={classes.mainImg} />
+          <img
+            src={require("../../../assets/img's/" + data.mainImg)}
+            className={classes.mainImg}
+          />
           <CrossIcon
             width={30}
             height={30}
@@ -92,10 +97,16 @@ export default function WorkExampleModal({ data }: { data: IProject }) {
               {data.category}
             </p>
             <div className={classes.infoListContainer}>
-              <InfoListBlock fieldName="Date" answer={data.date} />
-              <InfoListBlock fieldName="Client" answer={data.client} />
               <InfoListBlock
-                fieldName="Category"
+                fieldName={t("projectsPage.workExampleModal.dateH")}
+                answer={data.date}
+              />
+              <InfoListBlock
+                fieldName={t("projectsPage.workExampleModal.clientH")}
+                answer={data.client}
+              />
+              <InfoListBlock
+                fieldName={t("projectsPage.workExampleModal.categoryH")}
                 answer={data.category}
                 isLastElement
               />

@@ -10,13 +10,18 @@ $aqua: rgba(16, 200, 236, 0.8);
       margin-top: auto;
       margin-bottom: auto;
 
+      &.mobileScreenshot {
+        @media (min-width: 800px) {
+          width: 45%;
+        }
+      }
+
       :global(.swiper-slide-shadow-left),
       :global(.swiper-slide-shadow-right) {
         display: none;
       }
 
       .imageContainer {
-        overflow: hidden;
         width: 100%;
         height: auto;
 
