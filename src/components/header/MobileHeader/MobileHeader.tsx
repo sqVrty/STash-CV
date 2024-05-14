@@ -22,6 +22,11 @@ export default function MobileHeader() {
   const dispatch = useAppDispatch();
   const isModalOpen = useAppSelector((state) => state.modal.isOpen);
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState<boolean>(false);
+  const [animationKey, setAnimationKey] = useState<number>(0);
+
+  useEffect(() => {
+    setAnimationKey((prevKey) => prevKey + 1);
+  }, [i18n.language]);
 
   function preventScroll(event: TouchEvent) {
     event.preventDefault();
@@ -56,6 +61,7 @@ export default function MobileHeader() {
             <div className={classes.textContainer}>
               <p className={classes.name}>{t("photoContainer.name")}</p>
               <TypeAnimation
+                key={animationKey}
                 sequence={(
                   t("photoContainer.typesOfWork", {
                     returnObjects: true,

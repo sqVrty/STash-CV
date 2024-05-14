@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { TypeAnimation } from "react-type-animation";
 
@@ -14,6 +15,11 @@ import classes from "./PhotoContainer.module.scss";
 
 export default function PhotoContainer() {
   const { t, i18n } = useTranslation();
+  const [animationKey, setAnimationKey] = useState<number>(0);
+
+  useEffect(() => {
+    setAnimationKey((prevKey) => prevKey + 1);
+  }, [i18n.language]);
 
   const handleSocialClick = (social: string) => {
     switch (social) {
@@ -40,6 +46,7 @@ export default function PhotoContainer() {
       <div className={classes.infoContainer}>
         <h1 className={classes.name}>{t("photoContainer.name")}</h1>
         <TypeAnimation
+          key={animationKey}
           sequence={(
             t("photoContainer.typesOfWork", {
               returnObjects: true,
