@@ -1,8 +1,32 @@
 {
+  "header": {
+    "navigation": {
+      "about": "About",
+      "resume": "Resume",
+      "projects": "Projects"
+    }
+  },
+  "modals": {
+    "lngModal": {
+      "h": "Select a language"
+    },
+    "contactModal": {
+      "h": "Contact me",
+      "phone": "Phone"
+    }
+  },
+  "photoContainer": {
+    "name": "Tashlikovich Sergei",
+    "typesOfWork": [
+      "FrontEnd Developer",
+      "Application Developer",
+      "UI/UX Designer"
+    ]
+  },
   "projectsPage": {
     "projects": [
       {
-        "mainImg": "https://ryancv.bslthemes.com/app-developer/wp-content/uploads/sites/19/2020/04/work-r2.jpg",
+        "mainImg": "site.jpeg",
         "header": "Analytics Dashboard Software Tool",
         "category": "Website",
         "date": "07/08/2018",
@@ -19,7 +43,7 @@
         "text2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ipsum debitis! Consequuntur veniam cumque, possimus itaque rerum quidem nesciunt doloremque quam ipsam aliquid nobis id beatae laboriosam nostrum esse velit optio eos dolores. Nemo autem, esse quos fugit iusto quisquam obcaecati blanditiis corporis ipsum doloremque qui, odit placeat architecto laborum! Officiis voluptatum et vitae modi ipsum recusandae reiciendis est itaque nemo dolores! Cum ratione earum cupiditate error accusamus nam labore rerum accusantium, excepturi ducimus architecto, reiciendis dicta iste eligendi molestias vitae quas velit necessitatibus officiis. Esse minus consequuntur enim inventore deleniti sit odio qui sunt, dicta blanditiis accusamus! Animi, provident?"
       },
       {
-        "mainImg": "https://ryancv.bslthemes.com/app-developer/wp-content/uploads/sites/19/2020/04/work2-1.jpg",
+        "mainImg": "app.jpeg",
         "header": "Cryptocurrency Dashboard Application",
         "category": "Website",
         "date": "07/08/2018",
@@ -33,7 +57,7 @@
         "text2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ipsum debitis! Consequuntur veniam cumque, possimus itaque rerum quidem nesciunt doloremque quam ipsam aliquid nobis id beatae laboriosam nostrum esse velit optio eos dolores. Nemo autem, esse quos fugit iusto quisquam obcaecati blanditiis corporis ipsum doloremque qui, odit placeat architecto laborum! Officiis voluptatum et vitae modi ipsum recusandae reiciendis est itaque nemo dolores! Cum ratione earum cupiditate error accusamus nam labore rerum accusantium, excepturi ducimus architecto, reiciendis dicta iste eligendi molestias vitae quas velit necessitatibus officiis. Esse minus consequuntur enim inventore deleniti sit odio qui sunt, dicta blanditiis accusamus! Animi, provident?"
       },
       {
-        "mainImg": "https://ryancv.bslthemes.com/app-developer/wp-content/uploads/sites/19/2020/04/work-r2.jpg",
+        "mainImg": "site.jpeg",
         "header": "Analytics Dashboard Software Tool",
         "category": "Website",
         "date": "07/08/2018",

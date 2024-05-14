@@ -1,0 +1,26 @@
+{
+  "header": {
+    "navigation": {
+      "about": "Обо мне",
+      "resume": "Резюме",
+      "projects": "Проекты"
+    }
+  },
+  "modals": {
+    "lngModal": {
+      "h": "Выберите язык"
+    },
+    "contactModal": {
+      "h": "Свяжитесь со мной",
+      "phone": "Телефон"
+    }
+  },
+  "photoContainer": {
+    "name": "Ташликович Сергей",
+    "typesOfWork": [
+      "FrontEnd Разработчик",
+      "Разработчик Приложений",
+      "Дизайнер UI/UX"
+    ]
+  }
+}

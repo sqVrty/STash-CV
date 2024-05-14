@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { useAppDispatch, useAppSelector } from "../../../app/hooks";
 import {
   setIsOpen,
@@ -17,6 +18,7 @@ import { COLORS } from "./../../../assets/colors";
 import classes from "./MobileHeader.module.scss";
 
 export default function MobileHeader() {
+  const { t, i18n } = useTranslation();
   const dispatch = useAppDispatch();
   const isModalOpen = useAppSelector((state) => state.modal.isOpen);
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState<boolean>(false);
@@ -40,7 +42,7 @@ export default function MobileHeader() {
   }, [isBurgerMenuOpen]);
 
   const handleGlobusClicked = useCallback(() => {
-    dispatch(setModalHeader("Select a language"));
+    dispatch(setModalHeader(t("modals.lngModal.h")));
     dispatch(setModalContent(<LanguagesModalContent />));
     dispatch(setIsOpen(!isModalOpen));
   }, [dispatch]);
@@ -52,16 +54,17 @@ export default function MobileHeader() {
           <div className={classes.leftBlock}>
             <img src={MyAvatar} className={classes.avatarImage} />
             <div className={classes.textContainer}>
-              <p className={classes.name}>Tashlikovich Sergei</p>
+              <p className={classes.name}>{t("photoContainer.name")}</p>
               <TypeAnimation
-                sequence={[
-                  "Developer",
-                  3000,
-                  "Application Developer",
-                  3000,
-                  "UI/UX Designer",
-                  3000,
-                ]}
+                sequence={(
+                  t("photoContainer.typesOfWork", {
+                    returnObjects: true,
+                  }) as string[]
+                ).reduce((acc: any, currentValue: string, index: number) => {
+                  acc.push(currentValue);
+                  acc.push(3000);
+                  return acc;
+                }, [])}
                 className={classes.career}
                 style={{ color: COLORS.aqua }}
                 repeat={Infinity}

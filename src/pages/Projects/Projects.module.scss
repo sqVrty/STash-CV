@@ -4,8 +4,9 @@ $gray: rgba(100, 100, 100, 0.5);
 .workBlocksContainer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  padding-bottom: 25px;
   // justify-items: center;
-  align-items: start;
+  // align-items: start;
   // height: fit-content;
 
   @media (max-width: 600px) {
