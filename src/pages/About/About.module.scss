@@ -23,12 +23,14 @@ $gray: rgba(100, 100, 100, 0.5);
 
     .question {
       font-weight: 400;
+      text-transform: uppercase;
 
       .dots {
         letter-spacing: 2.5px;
       }
 
       .answer {
+        text-transform: none;
         margin-left: 7.5px;
         font-weight: 300;
       }

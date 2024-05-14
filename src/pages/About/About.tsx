@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { useRef, useState, useEffect } from "react";
 import "animate.css";
 import { useAppSelector } from "../../app/hooks";
@@ -15,7 +16,11 @@ import FactBlock from "./components/FactBlock";
 import PhotoMobileContainer from "../../components/photoMobileContainer/PhotoMobileContainer";
 
 import { COLORS } from "../../assets/colors";
-import { AvatarPhoto } from "../../assets/img's";
+import {
+  GrigoriAvatar,
+  RabkinAvatar,
+  PodelnikovAvatar,
+} from "../../assets/img's";
 import {
   ReactIcon,
   AppStoreIcon,
@@ -30,6 +35,8 @@ import {
 import classes from "./About.module.scss";
 
 export default function About() {
+  const { t, i18n } = useTranslation();
+
   const isMobileDevice = useAppSelector(
     (state) => state.deviceInfo.isMobileDevice
   );
@@ -63,35 +70,38 @@ export default function About() {
           }
         >
           <div className={classes.heyContainer}>
-            <TextWithCircle text="About Me" isFirst={true} />
-            <p className={classes.greeting}>hey, there 👋</p>
+            <TextWithCircle text={t("aboutPage.aboutBlock.h")} isFirst={true} />
+            <p className={classes.greeting}>
+              {t("aboutPage.aboutBlock.greeting")} 👋
+            </p>
             <p style={{ color: COLORS.gray }}>
-              I'm Benjamin, a Software developer and Data scientist with over 8+
-              years of experience, specialising in Java and React. Also I
-              proficient at using tools and programming languages such as Python
-              or SQL to manipulate and analyze data.
+              {t("aboutPage.aboutBlock.desc")}
             </p>
             <div className={classes.aboutDataContainer}>
               <p className={classes.question}>
-                AGE: <span className={classes.dots}>....</span>
+                {t("aboutPage.aboutBlock.ageQ")}:{" "}
+                <span className={classes.dots}>....</span>
                 <span className={classes.answer} style={{ color: COLORS.gray }}>
-                  28
+                  19
                 </span>
               </p>
               <p className={classes.question}>
-                LOCATION: <span className={classes.dots}>....</span>
+                {t("aboutPage.aboutBlock.locationQ")}:{" "}
+                <span className={classes.dots}>....</span>
                 <span className={classes.answer} style={{ color: COLORS.gray }}>
-                  California, USA
+                  {t("aboutPage.aboutBlock.locationA")}
                 </span>
               </p>
               <p className={classes.question}>
-                LANGUAGES: <span className={classes.dots}>....</span>
+                {t("aboutPage.aboutBlock.lngsQ")}:{" "}
+                <span className={classes.dots}>....</span>
                 <span className={classes.answer} style={{ color: COLORS.gray }}>
-                  English, Russian
+                  {t("aboutPage.aboutBlock.lngsA")}
                 </span>
               </p>
               <p className={classes.question}>
-                STACK: <span className={classes.dots}>....</span>
+                {t("aboutPage.aboutBlock.stackQ")}:{" "}
+                <span className={classes.dots}>....</span>
                 <span className={classes.answer} style={{ color: COLORS.gray }}>
                   React + TypeScript
                 </span>
@@ -99,13 +109,13 @@ export default function About() {
             </div>
           </div>
 
-          <TextWithCircle text="My Services" />
+          <TextWithCircle text={t("aboutPage.servicesBlock.h")} />
           <div className={classes.servicesGrid}>
             <div className={classes.crossContainer}>
               <ServiceBlock
                 icon={<ReactIcon fill={COLORS.aqua} width={40} height={40} />}
-                header="Web Development"
-                desc="Modern and mobile-ready website that will help you reach all of your marketing."
+                header={t("aboutPage.servicesBlock.block1.h")}
+                desc={t("aboutPage.servicesBlock.block1.desc")}
               />
             </div>
             <div className={classes.crossContainer}>
@@ -113,27 +123,27 @@ export default function About() {
                 icon={
                   <AppStoreIcon fill={COLORS.aqua} width={40} height={40} />
                 }
-                header="App Development"
-                desc="End-to-end organization, ui/ux design, optimization, and maintenance of your mobile app project."
+                header={t("aboutPage.servicesBlock.block2.h")}
+                desc={t("aboutPage.servicesBlock.block2.desc")}
               />
             </div>
             <div className={classes.crossContainer}>
               <ServiceBlock
                 icon={<BrushIcon fill={COLORS.aqua} width={40} height={40} />}
-                header="UI/UX Design"
-                desc="End-to-end organization, ui/ux design, optimization, and maintenance of your mobile app project."
+                header={t("aboutPage.servicesBlock.block3.h")}
+                desc={t("aboutPage.servicesBlock.block3.desc")}
               />
             </div>
             <div className={classes.crossContainer}>
               <ServiceBlock
                 icon={<GitHubIcon fill={COLORS.aqua} width={40} height={40} />}
-                header="Version Control"
-                desc="Proficient in using version control systems like Git to manage codebase efficiently, facilitating collaboration and tracking changes across projects."
+                header={t("aboutPage.servicesBlock.block4.h")}
+                desc={t("aboutPage.servicesBlock.block4.desc")}
               />
             </div>
           </div>
 
-          <TextWithCircle text="Testimonials" />
+          <TextWithCircle text={t("aboutPage.testimonialsBlock.h")} />
           <div className={classes.testimonials}>
             <Swiper
               slidesPerView={windowSize.width < 600 ? 1 : 2}
@@ -147,43 +157,43 @@ export default function About() {
             >
               <SwiperSlide className={classes.swiperSlide}>
                 <TestimonialsBlock
-                  img={AvatarPhoto}
-                  name="Robert Chase"
-                  post="CEO"
-                  review="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quisquam numquam quod, illo quis eligendi nobis officiis voluptatum sed!"
+                  img={GrigoriAvatar}
+                  name={t("aboutPage.testimonialsBlock.block1.name")}
+                  post={t("aboutPage.testimonialsBlock.block1.post")}
+                  review={t("aboutPage.testimonialsBlock.block1.review")}
+                  stars={5}
+                />
+              </SwiperSlide>
+              <SwiperSlide className={classes.swiperSlide}>
+                <TestimonialsBlock
+                  img={RabkinAvatar}
+                  name={t("aboutPage.testimonialsBlock.block2.name")}
+                  post={t("aboutPage.testimonialsBlock.block2.post")}
+                  review={t("aboutPage.testimonialsBlock.block2.review")}
                   stars={4}
                 />
               </SwiperSlide>
               <SwiperSlide className={classes.swiperSlide}>
                 <TestimonialsBlock
-                  img={AvatarPhoto}
-                  name="Robert Chase"
-                  post="CEO"
-                  review="Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores reprehenderit nesciunt dolores commodi quibusdam reiciendis! Sequi corporis tenetur ut molestias ratione dolore adipisci neque a accusantium dolorem tempora nam saepe itaque commodi obcaecati non repellendus sint, vel quae, laborum sed laudantium laboriosam excepturi. Sint repudiandae ipsam repellat similique voluptatibus rerum."
-                  stars={4}
-                />
-              </SwiperSlide>
-              <SwiperSlide className={classes.swiperSlide}>
-                <TestimonialsBlock
-                  img={AvatarPhoto}
-                  name="Robert Chase"
-                  post="CEO"
-                  review="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quisquam numquam quod, illo quis eligendi nobis officiis voluptatum sed!"
-                  stars={4}
+                  img={PodelnikovAvatar}
+                  name={t("aboutPage.testimonialsBlock.block3.name")}
+                  post={t("aboutPage.testimonialsBlock.block3.post")}
+                  review={t("aboutPage.testimonialsBlock.block3.review")}
+                  stars={5}
                 />
               </SwiperSlide>
             </Swiper>
             <div ref={paginationRef} className={classes.pagination} />
           </div>
 
-          <TextWithCircle text="Fun Facts" />
+          <TextWithCircle text={t("aboutPage.factsBlock.h")} />
           <div className={classes.factsContainer}>
             <div className={classes.delimiterContainer}>
               <FactBlock
                 icon={
                   <LaptopIcon stroke={COLORS.aqua} width={35} height={35} />
                 }
-                text="3 Laptopes Changed"
+                text={t("aboutPage.factsBlock.block1.h")}
               />
             </div>
             <div className={classes.delimiterContainer}>
@@ -191,7 +201,7 @@ export default function About() {
                 icon={
                   <DumbbellsIcon fill={COLORS.aqua} width={35} height={35} />
                 }
-                text="Sports Enthusiast"
+                text={t("aboutPage.factsBlock.block2.h")}
               />
             </div>
             <div className={classes.delimiterContainer}>
@@ -199,7 +209,7 @@ export default function About() {
                 icon={
                   <CoffeeCapIcon fill={COLORS.aqua} width={35} height={35} />
                 }
-                text="1 000+ Cups Of Coffee"
+                text={t("aboutPage.factsBlock.block3.h")}
               />
             </div>
             <div className={classes.delimiterContainer}>
@@ -207,7 +217,7 @@ export default function About() {
                 icon={
                   <MusicRecordIcon fill={COLORS.aqua} width={35} height={35} />
                 }
-                text="100+ Albumes Listened"
+                text={t("aboutPage.factsBlock.block4.h")}
               />
             </div>
           </div>

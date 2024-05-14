@@ -6,6 +6,7 @@
       "projects": "Projects"
     }
   },
+
   "modals": {
     "lngModal": {
       "h": "Select a language"
@@ -15,6 +16,7 @@
       "phone": "Phone"
     }
   },
+
   "photoContainer": {
     "name": "Tashlikovich Sergei",
     "typesOfWork": [
@@ -23,6 +25,73 @@
       "UI/UX Designer"
     ]
   },
+
+  "aboutPage": {
+    "aboutBlock": {
+      "h": "About Me",
+      "greeting": "hey, there",
+      "desc": "I'm Sergei, and I'm all about Frontend development. With two years under my best, I've done my skills to specialize in JavaScript and React. I thrive on creating sleek, user-friendly interface that make navigating the web a breeze. Collaboration is key for me — I love bouncing ideas around to push our projects to new levels of innovation. Let's build something awesome together!",
+      "ageQ": "Age",
+      "locationQ": "Location",
+      "lngsQ": "Languages",
+      "stackQ": "Stack",
+      "locationA": "Moscow, Russia",
+      "lngsA": "English, Russian"
+    },
+    "servicesBlock": {
+      "h": "My Services",
+      "block1": {
+        "h": "Web Development",
+        "desc": "Modern and mobile-ready website that will help you reach all of your marketing."
+      },
+      "block2": {
+        "h": "App Development",
+        "desc": "End-to-end organization, ui/ux design, optimization, and maintenance of your mobile app project."
+      },
+      "block3": {
+        "h": "UI/UX Design",
+        "desc": "Expert in creating user-friendly interfaces that prioritize user experience. Proficient in UI/UX design principles, wireframing, and prototyping to deliver engaging digital solutions."
+      },
+      "block4": {
+        "h": "Version Control",
+        "desc": "Proficient in using version control systems like Git to manage codebase efficiently, facilitating collaboration and tracking changes across projects."
+      }
+    },
+    "testimonialsBlock": {
+      "h": "Testimonials",
+      "block1": {
+        "name": "Grigori Ilkevits",
+        "post": "CEO",
+        "review": "Just a quick note to say a big thanks for your stellar work on our investors club website and mobile app. Your attention to detail and user-friendly designs have really taken our platform to the next level. Your professionalism and timely delivery haven't done unnoticed either."
+      },
+      "block2": {
+        "name": "Dmitry Rabkin",
+        "post": "Lead Developer",
+        "review": "Sergei has been crucial to our dormitory software project as a FrontEnd developer. Their dedication to crafting intuitive interface and responsive design has greatly enhanced our products usability. With a proactive problem-solving approach, Sergei ensures smooth collaboration. A valuable asset to our team."
+      },
+      "block3": {
+        "name": "Lev Podelnikov",
+        "post": "Customer",
+        "review": "Working with our FrontEnd developer on our business card website was an absolute pleasure. His expertise in design and user experience was evident from the start. Sergei flawlessly brought our vision to life with a visually stunning and functional website. Communication was excellent, and he ensured every detail was perfect. Highly recommended!"
+      }
+    },
+    "factsBlock": {
+      "h": "Fun Facts",
+      "block1": {
+        "h": "3 Laptopes Changed"
+      },
+      "block2": {
+        "h": "Sports Enthusiast"
+      },
+      "block3": {
+        "h": "1 000+ Cups Of Coffee"
+      },
+      "block4": {
+        "h": "100+ Albumes Listened"
+      }
+    }
+  },
+
   "projectsPage": {
     "projects": [
       {

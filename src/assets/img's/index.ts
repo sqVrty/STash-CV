@@ -4,3 +4,6 @@ export { default as AvatarPhoto } from "./avatar.png";
 export { default as EmotionalEggheadLogo } from "./emotionalEgghead.png";
 export { default as BMSTULogo } from "./bmstu.png";
 export { default as InginiriumLogo } from "./inginirium.png";
+export { default as GrigoriAvatar } from "./grigori.jpeg";
+export { default as RabkinAvatar } from "./rabkin.jpeg";
+export { default as PodelnikovAvatar } from "./podelnikov.jpeg";
