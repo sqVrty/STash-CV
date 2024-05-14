@@ -92,6 +92,80 @@
     }
   },
 
+  "resumePage": {
+    "h": "Resume",
+    "expBlock": {
+      "h": "Experience",
+      "block1": {
+        "period": "2023-2024",
+        "post": "FrontEnd/Application Developer",
+        "cpName": "EmotionalEgghead",
+        "desc": "creating custom components, designing UI/UX, implementing navigation, developing personal user profiles, integrating graphics, utilizing various libraries, ensuring performance and responsiveness, testing for compatibility, and collaborating with the team."
+      },
+      "block2": {
+        "period": "2022-2023",
+        "post": "FrontEnd Developer",
+        "cpName": "Electronic Education from BMSTU",
+        "desc": "developed software for dormitories, collaborated with team members, ensured user-friendly interfaces, conducted testing and debugging, provided technical support."
+      },
+      "block3": {
+        "period": "2022",
+        "post": "JavaScript teacher",
+        "cpName": "Inginirium",
+        "desc": "taught fundamental concepts, facilitated hands on coding exercises, integrated real-world projects, emphasized problem-solving skills."
+      },
+      "block4": {
+        "period": "2021-2023",
+        "post": "Freelancer",
+        "cpName": "Kwork",
+        "desc": "designing layouts, coding HTML/CSS, implementing JavaScript functionalities, ensuring responsiveness, collaborating with clients, meeting deadlines, providing maintenance support."
+      }
+    },
+    "eduBlock": {
+      "h": "Education",
+      "block1": {
+        "period": "2022 - Present",
+        "name": "Bauman Moscow State Technical University",
+        "city": "Moscow",
+        "desc": "data structures, algorithms, programming paradigms, software engineering principles, database management systems, computer networks, operating systems, web development, object-oriented programming, computer architecture, discrete mathematics."
+      },
+      "block2": {
+        "period": "2011 - 2022",
+        "name": "Gymnasium No. 7",
+        "city": "Minsk",
+        "desc": "understanding hardware components, architecture, CPU, memory, input/output system,markup language for creating web pages, structure content with elements, use tags for formatting, applying algorithms, logic, and computational thinking to tackle mathematical challenges."
+      }
+    },
+    "progSkillsBlock": {
+      "h": "Programming Skills"
+    },
+    "generalSkillsBlock": {
+      "h": "General Skills",
+      "codingH": "Coding",
+      "lngsBlock": {
+        "h": "Languages",
+        "en": "English",
+        "ru": "Russian",
+        "by": "Belarusian"
+      },
+      "platformsH": "Platforms",
+      "knowledgeBlock": {
+        "h": "Knowledge",
+        "knowledgesArr": [
+          "JavaScript Frameworks/Libraries",
+          "Git and GitHub",
+          "Containerization with Docker",
+          "NGINX Configuration",
+          "Responsive Design",
+          "Browser Developer Tools",
+          "Integrating with third-party API's",
+          "Object-Oriented Programming (OOP)",
+          "Communication and collaboration"
+        ]
+      }
+    }
+  },
+
   "projectsPage": {
     "projects": [
       {
