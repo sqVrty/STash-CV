@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { useAppSelector, useAppDispatch } from "../../../app/hooks";
 import {
   setIsOpen,
@@ -26,12 +27,13 @@ export default function BurgerMenu({
   isBurgerMenuOpen: boolean;
   setIsBurgerMenuOpen: (val: boolean) => void;
 }) {
+  const { t, i18n } = useTranslation();
   const dispatch = useAppDispatch();
   const isModalOpen = useAppSelector((state) => state.modal.isOpen);
   const windowSize = useAppSelector((state) => state.windowSizeInfo.windowSize);
 
   const handleContactMeClicked = useCallback(() => {
-    dispatch(setModalHeader("Contact me"));
+    dispatch(setModalHeader(t("modals.contactModal.h")));
     dispatch(setModalContent(<ContactMeModalContent />));
     dispatch(setIsOpen(!isModalOpen));
   }, [dispatch]);
@@ -46,19 +48,19 @@ export default function BurgerMenu({
           <NavigationElement
             path="/"
             icon={<ProfileIcon width={25} height={25} />}
-            name="About"
+            name={t("header.navigation.about")}
             setIsOpen={setIsBurgerMenuOpen}
           />
           <NavigationElement
             path="/resume"
             icon={<ResumeIcon width={25} height={25} />}
-            name="Resume"
+            name={t("header.navigation.resume")}
             setIsOpen={setIsBurgerMenuOpen}
           />
           <NavigationElement
             path="/projects"
             icon={<FolderIcon width={25} height={25} />}
-            name="Projects"
+            name={t("header.navigation.projects")}
             setIsOpen={setIsBurgerMenuOpen}
           />
         </div>

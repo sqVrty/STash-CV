@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import "animate.css";
 import { useAppSelector } from "../../app/hooks";
 
@@ -39,6 +40,7 @@ import {
 import classes from "./Resume.module.scss";
 
 export default function Resume() {
+  const { t, i18n } = useTranslation();
   const isMobileDevice = useAppSelector(
     (state) => state.deviceInfo.isMobileDevice
   );
@@ -57,51 +59,50 @@ export default function Resume() {
           isMobileDevice ? "mobileContentContainer" : "PCContentContainer"
         }
       >
-        <TextWithCircle text="Resume" isFirst={true} />
+        <TextWithCircle text={t("resumePage.h")} isFirst={true} />
         <div className={classes.textWithIconsContainer}>
           <div className={classes.textWithIconContainer1}>
             <TextWithIcon
               icon={<SuitcaseIcon fill={COLORS.aqua} width={35} height={35} />}
-              text="Experience"
+              text={t("resumePage.expBlock.h")}
             />
             <div className={classes.expAndEduBlock}>
               <ExperienceBlock
-                period="2013 - Present"
-                isPresent={true}
-                post="Software Engineer"
-                cpName="Google Inc."
+                period={t("resumePage.expBlock.block1.period")}
+                post={t("resumePage.expBlock.block1.post")}
+                cpName={t("resumePage.expBlock.block1.cpName")}
                 logo={EmotionalEggheadLogo}
-                desc="applied the engineering design process to design, develop, test, maintain, and evaluate software."
+                desc={t("resumePage.expBlock.block1.desc")}
               />
-              <div className={`${classes.dot} ${classes.present}`} />
+              <div className={classes.dot} />
             </div>
             <div className={classes.expAndEduBlock}>
               <ExperienceBlock
-                period="2011 - 2012"
-                post="Data Scientist"
-                cpName="Upwork Inc."
+                period={t("resumePage.expBlock.block2.period")}
+                post={t("resumePage.expBlock.block2.post")}
+                cpName={t("resumePage.expBlock.block2.cpName")}
                 logo={BMSTULogo}
-                desc="applied the engineering design process to design, develop, test, maintain, and evaluate software."
+                desc={t("resumePage.expBlock.block2.desc")}
               />
               <div className={`${classes.dot}`} />
             </div>
             <div className={classes.expAndEduBlock}>
               <ExperienceBlock
-                period="2011 - 2012"
-                post="Data Scientist"
-                cpName="Upwork Inc."
+                period={t("resumePage.expBlock.block3.period")}
+                post={t("resumePage.expBlock.block3.post")}
+                cpName={t("resumePage.expBlock.block3.cpName")}
                 logo={InginiriumLogo}
-                desc="applied the engineering design process to design, develop, test, maintain, and evaluate software."
+                desc={t("resumePage.expBlock.block3.desc")}
               />
               <div className={`${classes.dot}`} />
             </div>
             <div className={classes.expAndEduBlock}>
               <ExperienceBlock
-                period="2011 - 2012"
-                post="Data Scientist"
-                cpName="Upwork Inc."
+                period={t("resumePage.expBlock.block4.period")}
+                post={t("resumePage.expBlock.block4.post")}
+                cpName={t("resumePage.expBlock.block4.cpName")}
                 logo={KworkIcon}
-                desc="applied the engineering design process to design, develop, test, maintain, and evaluate software."
+                desc={t("resumePage.expBlock.block4.desc")}
               />
               <div className={`${classes.dot}`} />
             </div>
@@ -109,31 +110,31 @@ export default function Resume() {
           <div className={classes.textWithIconContainer2}>
             <TextWithIcon
               icon={<EducationIcon fill={COLORS.aqua} width={35} height={35} />}
-              text="Education"
+              text={t("resumePage.eduBlock.h")}
             />
             <div className={classes.expAndEduBlock}>
               <EducationBlock
-                period="2022 - Present"
+                period={t("resumePage.eduBlock.block1.period")}
                 isPresent={true}
-                name="Bauman Moscow State Technical University"
-                city="Moscow"
-                desc="applied the engineering design process to design, develop, test, maintain, and evaluate software."
+                name={t("resumePage.eduBlock.block1.name")}
+                city={t("resumePage.eduBlock.block1.city")}
+                desc={t("resumePage.eduBlock.block1.desc")}
               />
               <div className={`${classes.dot} ${classes.present}`} />
             </div>
             <div className={classes.expAndEduBlock}>
               <EducationBlock
-                period="2011 - 2022"
-                name="Gymnasium No. 7"
-                city="Minsk"
-                desc="applied the engineering design process to design, develop, test, maintain, and evaluate software."
+                period={t("resumePage.eduBlock.block2.period")}
+                name={t("resumePage.eduBlock.block2.name")}
+                city={t("resumePage.eduBlock.block2.city")}
+                desc={t("resumePage.eduBlock.block2.desc")}
               />
               <div className={`${classes.dot}`} />
             </div>
           </div>
         </div>
 
-        <TextWithCircle text="Programming Skills" />
+        <TextWithCircle text={t("resumePage.progSkillsBlock.h")} />
         <div
           className={`${classes.progSkillsContainer} ${
             isMobileDevice && classes.mobile
@@ -145,28 +146,28 @@ export default function Resume() {
             name="JavaScript"
           />
           <CircleSkillBlock
-            icon={<ReduxIcon width={40} height={40} />}
-            percentage={9}
-            name="Redux"
-          />
-          <CircleSkillBlock
             icon={<HTMLIcon width={40} height={40} />}
-            percentage={40}
+            percentage={80}
             name="HTML 5"
           />
           <CircleSkillBlock
+            icon={<ReduxIcon width={40} height={40} />}
+            percentage={75}
+            name="Redux"
+          />
+          <CircleSkillBlock
             icon={<DockerIcon width={40} height={40} />}
-            percentage={40}
+            percentage={90}
             name="Docker"
           />
         </div>
 
-        <TextWithCircle text="General Skills" />
+        <TextWithCircle text={t("resumePage.generalSkillsBlock.h")} />
         <div className={classes.textWithIconsContainer}>
           <div className={classes.textWithIconContainer1}>
             <TextWithIcon
               icon={<CodingIcon fill={COLORS.aqua} width={35} height={35} />}
-              text="Coding"
+              text={t("resumePage.generalSkillsBlock.codingH")}
             />
             <div className={classes.lineSkillBlocksContainer}>
               <LineSkillBlock
@@ -194,25 +195,25 @@ export default function Resume() {
           <div className={classes.textWithIconContainer2}>
             <TextWithIcon
               icon={<LanguagesIcon fill={COLORS.aqua} width={35} height={35} />}
-              text="Languages"
+              text={t("resumePage.generalSkillsBlock.lngsBlock.h")}
             />
             <div className={classes.lineSkillBlocksContainer}>
               <LineSkillBlock
                 icon={<UKIcon width={35} height={35} />}
-                name="English"
+                name={t("resumePage.generalSkillsBlock.lngsBlock.en")}
                 percentage={75}
                 circled={true}
               />
               <LineSkillBlock
                 icon={<RussiaIcon width={35} height={35} />}
-                name="Russian"
+                name={t("resumePage.generalSkillsBlock.lngsBlock.ru")}
                 percentage={90}
                 circled={true}
               />
               <LineSkillBlock
                 icon={<BelarusIcon width={35} height={35} />}
-                name="Belarusian"
-                percentage={35}
+                name={t("resumePage.generalSkillsBlock.lngsBlock.by")}
+                percentage={20}
                 circled={true}
               />
             </div>
@@ -225,7 +226,7 @@ export default function Resume() {
           <div className={classes.textWithIconContainer1}>
             <TextWithIcon
               icon={<GearsIcon fill={COLORS.aqua} width={35} height={35} />}
-              text="Platforms"
+              text={t("resumePage.generalSkillsBlock.platformsH")}
             />
             <div className={classes.platformsBlocksContainer}>
               <PlatformBlock percentage={90} name="Visual Studio Code" />
@@ -237,10 +238,20 @@ export default function Resume() {
           <div className={classes.textWithIconContainer2}>
             <TextWithIcon
               icon={<ListIcon stroke={COLORS.aqua} width={35} height={35} />}
-              text="Knowledge"
+              text={t("resumePage.generalSkillsBlock.knowledgeBlock.h")}
             />
             <div className={classes.knowledgeBlocksContainer}>
-              <KnowledgeBlock text="JavaScript Frameworks/Libraries" />
+              {(
+                t(
+                  "resumePage.generalSkillsBlock.knowledgeBlock.knowledgesArr",
+                  {
+                    returnObjects: true,
+                  }
+                ) as string[]
+              ).map((text, index) => (
+                <KnowledgeBlock key={index} text={text} />
+              ))}
+              {/* <KnowledgeBlock text="JavaScript Frameworks/Libraries" />
               <KnowledgeBlock text="Git and GitHub" />
               <KnowledgeBlock text="Containerization with Docker" />
               <KnowledgeBlock text="NGINX Configuration" />
@@ -248,7 +259,7 @@ export default function Resume() {
               <KnowledgeBlock text="Browser Developer Tools" />
               <KnowledgeBlock text="Integrating with third-party API's" />
               <KnowledgeBlock text="Object-Oriented Programming (OOP)" />
-              <KnowledgeBlock text="Communication and collaboration" />
+              <KnowledgeBlock text="Communication and collaboration" /> */}
             </div>
           </div>
         </div>

@@ -19,6 +19,9 @@ export default function LanguagesModalContent() {
 
   const handleLanguageClicked = (lng: string) => {
     i18n.changeLanguage(lng);
+    // setTimeout(() => {
+    //   window.location.reload();
+    // }, 500);
   };
 
   return (

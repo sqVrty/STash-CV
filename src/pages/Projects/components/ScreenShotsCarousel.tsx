@@ -62,9 +62,17 @@ export default function ScreenShotsCarousel({ data }: { data: string[] }) {
         className={classes.swiperContainer}
       >
         {data.map((img, index) => (
-          <SwiperSlide className={classes.swiperSlide} key={index}>
+          <SwiperSlide
+            className={`${classes.swiperSlide} ${
+              img.includes("EmotionalApp") && classes.mobileScreenshot
+            }`}
+            key={index}
+          >
             <div className={classes.imageContainer}>
-              <img src={img} className={classes.image} />
+              <img
+                src={require("../../../assets/img's/" + img)}
+                className={classes.image}
+              />
             </div>
           </SwiperSlide>
         ))}

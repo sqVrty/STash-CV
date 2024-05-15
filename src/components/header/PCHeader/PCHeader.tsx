@@ -1,4 +1,5 @@
 import { useEffect, useCallback } from "react";
+import { useTranslation } from "react-i18next";
 import { useAppDispatch, useAppSelector } from "../../../app/hooks";
 import {
   setIsOpen,
@@ -23,16 +24,17 @@ import classes from "./PCHeader.module.scss";
 import { COLORS } from "./../../../assets/colors";
 
 export default function PCHeader() {
+  const { t, i18n } = useTranslation();
   const dispatch = useAppDispatch();
   const isModalOpen = useAppSelector((state) => state.modal.isOpen);
 
   const handleLanguageConnectMeClicked = useCallback(
     (index: number) => {
       if (index === 0) {
-        dispatch(setModalHeader("Select a language"));
+        dispatch(setModalHeader(t("modals.lngModal.h")));
         dispatch(setModalContent(<LanguagesModalContent />));
       } else if (index === 1) {
-        dispatch(setModalHeader("Contact me"));
+        dispatch(setModalHeader(t("modals.contactModal.h")));
         dispatch(setModalContent(<ContactMeModalContent />));
       }
 
@@ -51,17 +53,17 @@ export default function PCHeader() {
           <NavigationElement
             path="/"
             icon={<ProfileIcon width={25} height={25} />}
-            hintName="About"
+            hintName={t("header.navigation.about")}
           />
           <NavigationElement
             path="/resume"
             icon={<ResumeIcon width={25} height={25} />}
-            hintName="Resume"
+            hintName={t("header.navigation.resume")}
           />
           <NavigationElement
             path="/projects"
             icon={<FolderIcon width={25} height={25} />}
-            hintName="Projects"
+            hintName={t("header.navigation.projects")}
           />
         </div>
         <div className={classes.languageConnectMeContainer}>

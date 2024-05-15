@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { TypeAnimation } from "react-type-animation";
 
 import { COLORS } from "../../assets/colors";
@@ -12,6 +14,13 @@ import {
 import classes from "./PhotoContainer.module.scss";
 
 export default function PhotoContainer() {
+  const { t, i18n } = useTranslation();
+  const [animationKey, setAnimationKey] = useState<number>(0);
+
+  useEffect(() => {
+    setAnimationKey((prevKey) => prevKey + 1);
+  }, [i18n.language]);
+
   const handleSocialClick = (social: string) => {
     switch (social) {
       case "telegram":
@@ -35,16 +44,18 @@ export default function PhotoContainer() {
     <div className={classes.photoContainer}>
       <img src={MyPhoto} className={classes.photo} />
       <div className={classes.infoContainer}>
-        <h1 className={classes.name}>Ren Nolan</h1>
+        <h1 className={classes.name}>{t("photoContainer.name")}</h1>
         <TypeAnimation
-          sequence={[
-            "Developer",
-            3000,
-            "Application Developer",
-            3000,
-            "UI/UX Designer",
-            3000,
-          ]}
+          key={animationKey}
+          sequence={(
+            t("photoContainer.typesOfWork", {
+              returnObjects: true,
+            }) as string[]
+          ).reduce((acc: any, currentValue: string, index: number) => {
+            acc.push(currentValue);
+            acc.push(3000);
+            return acc;
+          }, [])}
           className={classes.career}
           style={{ color: COLORS.aqua }}
           repeat={Infinity}

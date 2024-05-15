@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { useAppDispatch, useAppSelector } from "../../../app/hooks";
 import {
   setIsOpen,
@@ -10,16 +11,22 @@ import { TypeAnimation } from "react-type-animation";
 import BurgerMenu from "./BurgerMenu";
 import LanguagesModalContent from "../../languagesModalContent/LanguagesModalContent";
 
-import { AvatarPhoto } from "../../../assets/img's";
+import { MyAvatar } from "../../../assets/img's";
 import { MenuIcon, GlobusIcon } from "../../../assets/svg's";
 import { COLORS } from "./../../../assets/colors";
 
 import classes from "./MobileHeader.module.scss";
 
 export default function MobileHeader() {
+  const { t, i18n } = useTranslation();
   const dispatch = useAppDispatch();
   const isModalOpen = useAppSelector((state) => state.modal.isOpen);
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState<boolean>(false);
+  const [animationKey, setAnimationKey] = useState<number>(0);
+
+  useEffect(() => {
+    setAnimationKey((prevKey) => prevKey + 1);
+  }, [i18n.language]);
 
   function preventScroll(event: TouchEvent) {
     event.preventDefault();
@@ -40,7 +47,7 @@ export default function MobileHeader() {
   }, [isBurgerMenuOpen]);
 
   const handleGlobusClicked = useCallback(() => {
-    dispatch(setModalHeader("Select a language"));
+    dispatch(setModalHeader(t("modals.lngModal.h")));
     dispatch(setModalContent(<LanguagesModalContent />));
     dispatch(setIsOpen(!isModalOpen));
   }, [dispatch]);
@@ -50,18 +57,20 @@ export default function MobileHeader() {
       <div className={classes.container}>
         <div className={classes.paddingContainer}>
           <div className={classes.leftBlock}>
-            <img src={AvatarPhoto} className={classes.avatarImage} />
+            <img src={MyAvatar} className={classes.avatarImage} />
             <div className={classes.textContainer}>
-              <p className={classes.name}>Ren Nolan</p>
+              <p className={classes.name}>{t("photoContainer.name")}</p>
               <TypeAnimation
-                sequence={[
-                  "Developer",
-                  3000,
-                  "Application Developer",
-                  3000,
-                  "UI/UX Designer",
-                  3000,
-                ]}
+                key={animationKey}
+                sequence={(
+                  t("photoContainer.typesOfWork", {
+                    returnObjects: true,
+                  }) as string[]
+                ).reduce((acc: any, currentValue: string, index: number) => {
+                  acc.push(currentValue);
+                  acc.push(3000);
+                  return acc;
+                }, [])}
                 className={classes.career}
                 style={{ color: COLORS.aqua }}
                 repeat={Infinity}
