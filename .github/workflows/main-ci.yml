@@ -26,8 +26,7 @@ jobs:
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
-          password: ${{ secrets.
-            }}
+          password: ${{ secrets.SSH_PASSWORD }}
           script: |
             cd ${{ secrets.PROJECT_FOLDER }};
             git checkout main;
