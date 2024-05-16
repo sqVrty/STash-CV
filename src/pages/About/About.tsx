@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { useRef, useState, useEffect } from "react";
 import "animate.css";
 import { useAppSelector } from "../../app/hooks";
+import SwiperCore from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
@@ -43,6 +44,13 @@ export default function About() {
   const windowSize = useAppSelector((state) => state.windowSizeInfo.windowSize);
 
   const paginationRef = useRef(null);
+  const [swiper, setSwiper] = useState<SwiperCore | null>(null);
+
+  useEffect(() => {
+    if (swiper) {
+      swiper.update();
+    }
+  }, [swiper]);
 
   return (
     <>
@@ -146,6 +154,7 @@ export default function About() {
           <TextWithCircle text={t("aboutPage.testimonialsBlock.h")} />
           <div className={classes.testimonials}>
             <Swiper
+              onSwiper={setSwiper}
               slidesPerView={windowSize.width < 600 ? 1 : 2}
               spaceBetween={30}
               pagination={{
