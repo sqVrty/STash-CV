@@ -1,0 +1,235 @@
+{
+  "header": {
+    "navigation": {
+      "about": "About",
+      "resume": "Resume",
+      "projects": "Projects"
+    }
+  },
+
+  "modals": {
+    "lngModal": {
+      "h": "Select a language"
+    },
+    "contactModal": {
+      "h": "Contact me",
+      "phone": "Phone"
+    }
+  },
+
+  "photoContainer": {
+    "name": "Tashlikovich Sergei",
+    "typesOfWork": [
+      "FrontEnd Developer",
+      "Application Developer",
+      "UI/UX Designer"
+    ]
+  },
+
+  "aboutPage": {
+    "aboutBlock": {
+      "h": "About Me",
+      "greeting": "hey, there",
+      "desc": "I'm Sergei, and I'm all about Frontend development. With two years under my best, I've done my skills to specialize in JavaScript and React. I thrive on creating sleek, user-friendly interface that make navigating the web a breeze. Collaboration is key for me — I love bouncing ideas around to push our projects to new levels of innovation. Let's build something awesome together!",
+      "ageQ": "Age",
+      "locationQ": "Location",
+      "lngsQ": "Languages",
+      "stackQ": "Stack",
+      "locationA": "Moscow, Russia",
+      "lngsA": "English, Russian"
+    },
+    "servicesBlock": {
+      "h": "My Services",
+      "block1": {
+        "h": "Web Development",
+        "desc": "Modern and mobile-ready website that will help you reach all of your marketing."
+      },
+      "block2": {
+        "h": "App Development",
+        "desc": "End-to-end organization, ui/ux design, optimization, and maintenance of your mobile app project."
+      },
+      "block3": {
+        "h": "UI/UX Design",
+        "desc": "Expert in creating user-friendly interfaces that prioritize user experience. Proficient in UI/UX design principles, wireframing, and prototyping to deliver engaging digital solutions."
+      },
+      "block4": {
+        "h": "Version Control",
+        "desc": "Proficient in using version control systems like Git to manage codebase efficiently, facilitating collaboration and tracking changes across projects."
+      }
+    },
+    "testimonialsBlock": {
+      "h": "Testimonials",
+      "block1": {
+        "name": "Grigori Ilkevits",
+        "post": "CEO",
+        "review": "Just a quick note to say a big thanks for your stellar work on our investors club website and mobile app. Your attention to detail and user-friendly designs have really taken our platform to the next level. Your professionalism and timely delivery haven't done unnoticed either."
+      },
+      "block2": {
+        "name": "Dmitry Rabkin",
+        "post": "Lead Developer",
+        "review": "Sergei has been crucial to our dormitory software project as a FrontEnd developer. Their dedication to crafting intuitive interface and responsive design has greatly enhanced our products usability. With a proactive problem-solving approach, Sergei ensures smooth collaboration. A valuable asset to our team."
+      },
+      "block3": {
+        "name": "Lev Podelnikov",
+        "post": "Customer",
+        "review": "Working with our FrontEnd developer on our business card website was an absolute pleasure. His expertise in design and user experience was evident from the start. Sergei flawlessly brought our vision to life with a visually stunning and functional website. Communication was excellent, and he ensured every detail was perfect. Highly recommended!"
+      }
+    },
+    "factsBlock": {
+      "h": "Fun Facts",
+      "block1": {
+        "h": "3 Laptopes Changed"
+      },
+      "block2": {
+        "h": "Sports Enthusiast"
+      },
+      "block3": {
+        "h": "1 000+ Cups Of Coffee"
+      },
+      "block4": {
+        "h": "100+ Albumes Listened"
+      }
+    }
+  },
+
+  "resumePage": {
+    "h": "Resume",
+    "expBlock": {
+      "h": "Experience",
+      "block1": {
+        "period": "2023-2024",
+        "post": "FrontEnd/Application Developer",
+        "cpName": "EmotionalEgghead",
+        "desc": "creating custom components, designing UI/UX, implementing navigation, developing personal user profiles, integrating graphics, utilizing various libraries, ensuring performance and responsiveness, testing for compatibility, and collaborating with the team."
+      },
+      "block2": {
+        "period": "2022-2023",
+        "post": "FrontEnd Developer",
+        "cpName": "Electronic Education from BMSTU",
+        "desc": "developed software for dormitories, collaborated with team members, ensured user-friendly interfaces, conducted testing and debugging, provided technical support."
+      },
+      "block3": {
+        "period": "2022",
+        "post": "JavaScript teacher",
+        "cpName": "Inginirium",
+        "desc": "taught fundamental concepts, facilitated hands on coding exercises, integrated real-world projects, emphasized problem-solving skills."
+      },
+      "block4": {
+        "period": "2021-2023",
+        "post": "Freelancer",
+        "cpName": "Kwork",
+        "desc": "designing layouts, coding HTML/CSS, implementing JavaScript functionalities, ensuring responsiveness, collaborating with clients, meeting deadlines, providing maintenance support."
+      }
+    },
+    "eduBlock": {
+      "h": "Education",
+      "block1": {
+        "period": "2022 - Present",
+        "name": "Bauman Moscow State Technical University",
+        "city": "Moscow",
+        "desc": "data structures, algorithms, programming paradigms, software engineering principles, database management systems, computer networks, operating systems, web development, object-oriented programming, computer architecture, discrete mathematics."
+      },
+      "block2": {
+        "period": "2011 - 2022",
+        "name": "Gymnasium No. 7",
+        "city": "Minsk",
+        "desc": "understanding hardware components, architecture, CPU, memory, input/output system,markup language for creating web pages, structure content with elements, use tags for formatting, applying algorithms, logic, and computational thinking to tackle mathematical challenges."
+      }
+    },
+    "progSkillsBlock": {
+      "h": "Programming Skills"
+    },
+    "generalSkillsBlock": {
+      "h": "General Skills",
+      "codingH": "Coding",
+      "lngsBlock": {
+        "h": "Languages",
+        "en": "English",
+        "ru": "Russian",
+        "by": "Belarusian"
+      },
+      "platformsH": "Platforms",
+      "knowledgeBlock": {
+        "h": "Knowledge",
+        "knowledgesArr": [
+          "JavaScript Frameworks/Libraries",
+          "Git and GitHub",
+          "Containerization with Docker",
+          "NGINX Configuration",
+          "Responsive Design",
+          "Browser Developer Tools",
+          "Integrating with third-party API's",
+          "Object-Oriented Programming (OOP)",
+          "Communication and collaboration"
+        ]
+      }
+    }
+  },
+
+  "projectsPage": {
+    "h": "Works",
+    "projects": [
+      {
+        "mainImg": "/workExamples/EmotionalSite/previewImg.jpeg",
+        "header": "Closed Investors Club",
+        "category": "Website",
+        "date": "07/11/2023",
+        "client": "Grigori Ilkevits",
+        "text1": "Welcome to the closed club investors website, meticulously crafted by yours truly. As the sole FrontEnd developer behind its creation, I poured my passion for user experience and innovation into every line of code.\n\nOne of the key features of the website is its plethora of custom components, meticulously designed to cater to the unique needs of our exclusive community of investors. From interactive dashboards to sleek landing pages, each element was handcrafted to seamlessly blend functionality with aesthetic appeal.\n\nIncorporating data visualization was a cornerstone of the development process. Leveraging cutting-edge technologies like React, Redux, and TypeScript, I orchestrated the integration of datasets and the creation of dynamic graphs, empowering our users to gain deep insights into market trends and investment opportunities.",
+        "imgsArray": [
+          "/workExamples/EmotionalSite/photo1.jpeg",
+          "/workExamples/EmotionalSite/photo2.jpeg",
+          "/workExamples/EmotionalSite/photo3.jpeg",
+          "/workExamples/EmotionalSite/photo4.jpeg",
+          "/workExamples/EmotionalSite/photo5.jpeg",
+          "/workExamples/EmotionalSite/photo6.jpeg",
+          "/workExamples/EmotionalSite/photo7.jpeg",
+          "/workExamples/EmotionalSite/photo8.jpeg",
+          "/workExamples/EmotionalSite/photo9.jpeg",
+          "/workExamples/EmotionalSite/photo10.jpeg",
+          "/workExamples/EmotionalSite/photo11.jpeg"
+        ],
+        "text2": "Furthermore, the website seamlessly integrates with third-party APIs, enriching the user experience with real-time data and ensuring that our members have access to the latest information at their fingertips.\n\nIn essence, the closed club investors website stands as a testament to the power of FrontEnd development in transforming concepts into reality. It's not just a platform; it's a gateway to unparalleled investment experiences, meticulously crafted by yours truly."
+      },
+      {
+        "mainImg": "/workExamples/EmotionalApp/previewImg.jpeg",
+        "header": "Closed Investors Club",
+        "category": "Mobile App",
+        "date": "16/02/2024",
+        "client": "Grigori Ilkevits",
+        "text1": "Introducing the companion mobile app to our closed club investors website, meticulously crafted to bring the power of investment insights directly to the palm of your hand. As the developer behind its creation, I seamlessly extended our digital ecosystem to mobile platforms, harnessing the flexibility and performance of React Native with the convenience of the Expo library.\n\nMuch like its web counterpart, our mobile app boasts a wealth of custom components designed to deliver a seamless and intuitive user experience. From interactive charts to personalized notifications, every feature is optimized for effortless navigation and maximum engagement.\n\nBuilding on the foundation of our website, I ensured a consistent visual identity and feature set across both platforms, allowing our members to seamlessly transition between desktop and mobile environments without missing a beat.",
+        "imgsArray": [
+          "/workExamples/EmotionalApp/photo1.jpeg",
+          "/workExamples/EmotionalApp/photo2.jpeg",
+          "/workExamples/EmotionalApp/photo3.jpeg",
+          "/workExamples/EmotionalApp/photo4.jpeg",
+          "/workExamples/EmotionalApp/photo5.jpeg",
+          "/workExamples/EmotionalApp/photo6.jpeg",
+          "/workExamples/EmotionalApp/photo7.jpeg"
+        ],
+        "text2": "Through the integration of real-time data feeds and third-party APIs, our mobile app delivers up-to-the-minute market insights directly to your device, empowering investors to stay informed and make informed decisions on the go.\n\nWhether you're checking your portfolio, analyzing market trends, or connecting with fellow investors, our mobile app is your indispensable companion in the world of investment. It's not just an app; it's your gateway to unlocking the full potential of our closed club investors community, meticulously crafted with React Native and Expo."
+      },
+      {
+        "mainImg": "/workExamples/ThisSite/previewImg.jpeg",
+        "header": "Site-Card",
+        "category": "Website",
+        "date": "20/04/2024",
+        "client": "Sergei Tashlikovich",
+        "text1": "Welcome to my CV card-website, meticulously crafted by yours truly. As a passionate FrontEnd developer, I poured my creativity and expertise into every aspect of this project.\n\nFrom conceptualizing the design to implementing seamless animations, I strived to create an immersive user experience. Each interactive component was thoughtfully designed to accommodate a wealth of information without overwhelming the user.\n\nRecognizing the importance of accessibility, I ensured the website was fully responsive, with an adaptive layout optimized for mobile devices. Additionally, I leveraged the i18n library to seamlessly integrate multilingual support, making the site accessible to a global audience.",
+        "imgsArray": [
+          "/workExamples/ThisSite/photo1.jpeg",
+          "/workExamples/ThisSite/photo2.jpeg",
+          "/workExamples/ThisSite/photo3.jpeg",
+          "/workExamples/ThisSite/photo4.jpeg",
+          "/workExamples/ThisSite/photo5.jpeg"
+        ],
+        "text2": "Behind the scenes, I utilized a robust stack comprising React, Redux, and TypeScript. These cutting-edge technologies not only empowered me to bring my vision to life but also laid the foundation for a scalable and maintainable codebase.\n\nIn summary, my CV card-website is a testament to my skills as a FrontEnd developer, showcasing my ability to blend creativity with technical proficiency to deliver an exceptional digital experience."
+      }
+    ],
+    "workExampleModal": {
+      "dateH": "Date",
+      "clientH": "Client",
+      "categoryH": "Category"
+    }
+  }
+}
