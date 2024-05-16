@@ -11,7 +11,7 @@ import LineSkillBlock from "./components/LineSkillBlock";
 import PlatformBlock from "./components/PlatformBlock";
 import KnowledgeBlock from "./components/KnowledgeBlock";
 
-import { COLORS } from "../../assets/colors";
+import { COLORS } from "../../../public/assets/colors";
 import {
   SuitcaseIcon,
   EducationIcon,
@@ -30,12 +30,12 @@ import {
   BelarusIcon,
   GearsIcon,
   ListIcon,
-} from "../../assets/svg's";
+} from "../../../public/assets/svg's";
 import {
   BMSTULogo,
   InginiriumLogo,
   EmotionalEggheadLogo,
-} from "../../assets/img's";
+} from "../../../public/assets/img's";
 
 import classes from "./Resume.module.scss";
 

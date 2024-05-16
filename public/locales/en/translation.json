@@ -170,58 +170,58 @@
     "h": "Works",
     "projects": [
       {
-        "mainImg": "workExamples/EmotionalSite/previewImg.jpeg",
+        "mainImg": "/assets/img's/workExamples/EmotionalSite/previewImg.jpeg",
         "header": "Closed Investors Club",
         "category": "Website",
         "date": "07/11/2023",
         "client": "Grigori Ilkevits",
         "text1": "Welcome to the closed club investors website, meticulously crafted by yours truly. As the sole FrontEnd developer behind its creation, I poured my passion for user experience and innovation into every line of code.\n\nOne of the key features of the website is its plethora of custom components, meticulously designed to cater to the unique needs of our exclusive community of investors. From interactive dashboards to sleek landing pages, each element was handcrafted to seamlessly blend functionality with aesthetic appeal.\n\nIncorporating data visualization was a cornerstone of the development process. Leveraging cutting-edge technologies like React, Redux, and TypeScript, I orchestrated the integration of datasets and the creation of dynamic graphs, empowering our users to gain deep insights into market trends and investment opportunities.",
         "imgsArray": [
-          "workExamples/EmotionalSite/photo1.jpeg",
-          "workExamples/EmotionalSite/photo2.jpeg",
-          "workExamples/EmotionalSite/photo3.jpeg",
-          "workExamples/EmotionalSite/photo4.jpeg",
-          "workExamples/EmotionalSite/photo5.jpeg",
-          "workExamples/EmotionalSite/photo6.jpeg",
-          "workExamples/EmotionalSite/photo7.jpeg",
-          "workExamples/EmotionalSite/photo8.jpeg",
-          "workExamples/EmotionalSite/photo9.jpeg",
-          "workExamples/EmotionalSite/photo10.jpeg",
-          "workExamples/EmotionalSite/photo11.jpeg"
+          "/assets/img's/workExamples/EmotionalSite/photo1.jpeg",
+          "/assets/img's/workExamples/EmotionalSite/photo2.jpeg",
+          "/assets/img's/workExamples/EmotionalSite/photo3.jpeg",
+          "/assets/img's/workExamples/EmotionalSite/photo4.jpeg",
+          "/assets/img's/workExamples/EmotionalSite/photo5.jpeg",
+          "/assets/img's/workExamples/EmotionalSite/photo6.jpeg",
+          "/assets/img's/workExamples/EmotionalSite/photo7.jpeg",
+          "/assets/img's/workExamples/EmotionalSite/photo8.jpeg",
+          "/assets/img's/workExamples/EmotionalSite/photo9.jpeg",
+          "/assets/img's/workExamples/EmotionalSite/photo10.jpeg",
+          "/assets/img's/workExamples/EmotionalSite/photo11.jpeg"
         ],
         "text2": "Furthermore, the website seamlessly integrates with third-party APIs, enriching the user experience with real-time data and ensuring that our members have access to the latest information at their fingertips.\n\nIn essence, the closed club investors website stands as a testament to the power of FrontEnd development in transforming concepts into reality. It's not just a platform; it's a gateway to unparalleled investment experiences, meticulously crafted by yours truly."
       },
       {
-        "mainImg": "workExamples/EmotionalApp/previewImg.jpeg",
+        "mainImg": "/assets/img's/workExamples/EmotionalApp/previewImg.jpeg",
         "header": "Closed Investors Club",
         "category": "Mobile App",
         "date": "16/02/2024",
         "client": "Grigori Ilkevits",
         "text1": "Introducing the companion mobile app to our closed club investors website, meticulously crafted to bring the power of investment insights directly to the palm of your hand. As the developer behind its creation, I seamlessly extended our digital ecosystem to mobile platforms, harnessing the flexibility and performance of React Native with the convenience of the Expo library.\n\nMuch like its web counterpart, our mobile app boasts a wealth of custom components designed to deliver a seamless and intuitive user experience. From interactive charts to personalized notifications, every feature is optimized for effortless navigation and maximum engagement.\n\nBuilding on the foundation of our website, I ensured a consistent visual identity and feature set across both platforms, allowing our members to seamlessly transition between desktop and mobile environments without missing a beat.",
         "imgsArray": [
-          "workExamples/EmotionalApp/photo1.jpeg",
-          "workExamples/EmotionalApp/photo2.jpeg",
-          "workExamples/EmotionalApp/photo3.jpeg",
-          "workExamples/EmotionalApp/photo4.jpeg",
-          "workExamples/EmotionalApp/photo5.jpeg",
-          "workExamples/EmotionalApp/photo6.jpeg",
-          "workExamples/EmotionalApp/photo7.jpeg"
+          "/assets/img's/workExamples/EmotionalApp/photo1.jpeg",
+          "/assets/img's/workExamples/EmotionalApp/photo2.jpeg",
+          "/assets/img's/workExamples/EmotionalApp/photo3.jpeg",
+          "/assets/img's/workExamples/EmotionalApp/photo4.jpeg",
+          "/assets/img's/workExamples/EmotionalApp/photo5.jpeg",
+          "/assets/img's/workExamples/EmotionalApp/photo6.jpeg",
+          "/assets/img's/workExamples/EmotionalApp/photo7.jpeg"
         ],
         "text2": "Through the integration of real-time data feeds and third-party APIs, our mobile app delivers up-to-the-minute market insights directly to your device, empowering investors to stay informed and make informed decisions on the go.\n\nWhether you're checking your portfolio, analyzing market trends, or connecting with fellow investors, our mobile app is your indispensable companion in the world of investment. It's not just an app; it's your gateway to unlocking the full potential of our closed club investors community, meticulously crafted with React Native and Expo."
       },
       {
-        "mainImg": "workExamples/ThisSite/previewImg.jpeg",
+        "mainImg": "/assets/img's/workExamples/ThisSite/previewImg.jpeg",
         "header": "Site-Card",
         "category": "Website",
         "date": "20/04/2024",
         "client": "Sergei Tashlikovich",
         "text1": "Welcome to my CV card-website, meticulously crafted by yours truly. As a passionate FrontEnd developer, I poured my creativity and expertise into every aspect of this project.\n\nFrom conceptualizing the design to implementing seamless animations, I strived to create an immersive user experience. Each interactive component was thoughtfully designed to accommodate a wealth of information without overwhelming the user.\n\nRecognizing the importance of accessibility, I ensured the website was fully responsive, with an adaptive layout optimized for mobile devices. Additionally, I leveraged the i18n library to seamlessly integrate multilingual support, making the site accessible to a global audience.",
         "imgsArray": [
-          "workExamples/ThisSite/photo1.jpeg",
-          "workExamples/ThisSite/photo2.jpeg",
-          "workExamples/ThisSite/photo3.jpeg",
-          "workExamples/ThisSite/photo4.jpeg",
-          "workExamples/ThisSite/photo5.jpeg"
+          "/assets/img's/workExamples/ThisSite/photo1.jpeg",
+          "/assets/img's/workExamples/ThisSite/photo2.jpeg",
+          "/assets/img's/workExamples/ThisSite/photo3.jpeg",
+          "/assets/img's/workExamples/ThisSite/photo4.jpeg",
+          "/assets/img's/workExamples/ThisSite/photo5.jpeg"
         ],
         "text2": "Behind the scenes, I utilized a robust stack comprising React, Redux, and TypeScript. These cutting-edge technologies not only empowered me to bring my vision to life but also laid the foundation for a scalable and maintainable codebase.\n\nIn summary, my CV card-website is a testament to my skills as a FrontEnd developer, showcasing my ability to blend creativity with technical proficiency to deliver an exceptional digital experience."
       }

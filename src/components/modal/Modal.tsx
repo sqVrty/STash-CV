@@ -2,7 +2,7 @@ import { useCallback, useEffect, MouseEvent, ReactNode } from "react";
 import { useAppSelector, useAppDispatch } from "../../app/hooks";
 import { setIsOpen } from "../../redux/features/modalSlice";
 
-import { CrossIcon } from "../../assets/svg's";
+import { CrossIcon } from "../../../public/assets/svg's";
 
 import classes from "./Modal.module.scss";
 

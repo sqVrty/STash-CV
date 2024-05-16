@@ -15,12 +15,12 @@ import TestimonialsBlock from "./components/TestimonialsBlock";
 import FactBlock from "./components/FactBlock";
 import PhotoMobileContainer from "../../components/photoMobileContainer/PhotoMobileContainer";
 
-import { COLORS } from "../../assets/colors";
+import { COLORS } from "../../../public/assets/colors";
 import {
   GrigoriAvatar,
   RabkinAvatar,
   PodelnikovAvatar,
-} from "../../assets/img's";
+} from "../../../public/assets/img's";
 import {
   ReactIcon,
   AppStoreIcon,
@@ -30,7 +30,7 @@ import {
   LaptopIcon,
   DumbbellsIcon,
   CoffeeCapIcon,
-} from "../../assets/svg's";
+} from "../../../public/assets/svg's";
 
 import classes from "./About.module.scss";
 

@@ -6,8 +6,10 @@ import {
 import { useState, MouseEvent, useCallback } from "react";
 import "animate.css";
 
-import { COLORS } from "../../../assets/colors";
-import { GoOverIcon, EyeIcon } from "../../../assets/svg's";
+import { getImageURL } from "../../../utils/getImageUrl";
+
+import { COLORS } from "../../../../public/assets/colors";
+import { GoOverIcon, EyeIcon } from "../../../../public/assets/svg's";
 
 import type { IProject } from "../../../redux/features/workExampleModalInfoSlice";
 
@@ -47,6 +49,8 @@ export default function PreviewWorkBlock({
     dispatch(setData(data));
     dispatch(setIsOpen(!isWorkExampleModalOpen));
   }, [dispatch]);
+
+  console.log(previewImg);
 
   return (
     <div

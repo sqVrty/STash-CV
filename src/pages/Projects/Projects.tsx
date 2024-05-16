@@ -1,8 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useAppSelector } from "../../app/hooks";
 
-import { MyAvatar } from "../../assets/img's";
-
 import TextWithCircle from "../../components/textWithCircle/TextWithCircle";
 import PreviewWorkBlock from "./components/PreviewWorkBlock";
 
@@ -37,7 +35,7 @@ export default function Projects() {
           ).map((data, index) => (
             <div className={classes.blockContainer} key={index}>
               <PreviewWorkBlock
-                previewImg={require("../../assets/img's/" + data.mainImg)}
+                previewImg={data.mainImg}
                 category={data.category}
                 header={data.header}
                 data={data}

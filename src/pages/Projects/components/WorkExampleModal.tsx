@@ -6,8 +6,8 @@ import { setIsOpen } from "../../../redux/features/workExampleModalInfoSlice";
 import InfoListBlock from "./InfoListBlock";
 import ScreenShotsCarousel from "./ScreenShotsCarousel";
 
-import { COLORS } from "../../../assets/colors";
-import { CrossIcon } from "../../../assets/svg's";
+import { COLORS } from "../../../../public/assets/colors";
+import { CrossIcon } from "../../../../public/assets/svg's";
 
 import type { IProject } from "../../../redux/features/workExampleModalInfoSlice";
 
@@ -81,10 +81,7 @@ export default function WorkExampleModal({ data }: { data: IProject }) {
         onClick={(e) => e.stopPropagation()}
       >
         <div className={classes.mainImgContainer}>
-          <img
-            src={require("../../../assets/img's/" + data.mainImg)}
-            className={classes.mainImg}
-          />
+          <img src={data.mainImg} className={classes.mainImg} />
           <CrossIcon
             width={30}
             height={30}

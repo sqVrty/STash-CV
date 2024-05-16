@@ -11,9 +11,9 @@ import { TypeAnimation } from "react-type-animation";
 import BurgerMenu from "./BurgerMenu";
 import LanguagesModalContent from "../../languagesModalContent/LanguagesModalContent";
 
-import { MyAvatar } from "../../../assets/img's";
-import { MenuIcon, GlobusIcon } from "../../../assets/svg's";
-import { COLORS } from "./../../../assets/colors";
+import { MyAvatar } from "../../../../public/assets/img's";
+import { MenuIcon, GlobusIcon } from "../../../../public/assets/svg's";
+import { COLORS } from "../../../../public/assets/colors";
 
 import classes from "./MobileHeader.module.scss";
 

@@ -1,7 +1,7 @@
 import { useAppSelector } from "../../../app/hooks";
 import { ReactElement } from "react";
 
-import { COLORS } from "../../../assets/colors";
+import { COLORS } from "../../../../public/assets/colors";
 
 import classes from "./LineSkillBlock.module.scss";
 

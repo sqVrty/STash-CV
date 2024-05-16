@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 
-import { COLORS } from "../../assets/colors";
+import { COLORS } from "../../../public/assets/colors";
 
 import classes from "./TextWithIcon.module.scss";
 

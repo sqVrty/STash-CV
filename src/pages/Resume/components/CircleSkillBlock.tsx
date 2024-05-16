@@ -5,7 +5,7 @@ import {
 } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
-import { COLORS } from "../../../assets/colors";
+import { COLORS } from "../../../../public/assets/colors";
 
 import classes from "./CircleSkillBlock.module.scss";
 

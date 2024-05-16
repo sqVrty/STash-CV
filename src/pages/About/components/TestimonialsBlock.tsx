@@ -1,5 +1,5 @@
-import { COLORS } from "../../../assets/colors";
-import { QuotationMarksIcon, StarIcon } from "../../../assets/svg's";
+import { COLORS } from "../../../../public/assets/colors";
+import { QuotationMarksIcon, StarIcon } from "../../../../public/assets/svg's";
 
 import classes from "./TestimonialsBlock.module.scss";
 
