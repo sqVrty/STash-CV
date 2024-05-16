@@ -1,6 +1,6 @@
-import { CheckIcon } from "../../../assets/svg's";
+import { CheckIcon } from "../../../../public/assets/svg's";
 
-import { COLORS } from "../../../assets/colors";
+import { COLORS } from "../../../../public/assets/colors";
 
 import classes from "./KnowledgeBlock.module.scss";
 

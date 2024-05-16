@@ -1,5 +1,5 @@
 import React, { ReactElement, useState, MouseEvent } from "react";
-import { COLORS } from "../../../assets/colors";
+import { COLORS } from "../../../../public/assets/colors";
 import classes from "./IconContainer.module.scss";
 
 export default function IconContainer({

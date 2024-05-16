@@ -15,7 +15,7 @@ import {
   Autoplay,
 } from "swiper/modules";
 
-import { LeftArrowIcon, RightArrowIcon } from "../../../assets/svg's";
+import { LeftArrowIcon, RightArrowIcon } from "../../../../public/assets/svg's";
 
 import classes from "./ScreenShotsCarousel.module.scss";
 
@@ -69,10 +69,7 @@ export default function ScreenShotsCarousel({ data }: { data: string[] }) {
             key={index}
           >
             <div className={classes.imageContainer}>
-              <img
-                src={require("../../../assets/img's/" + img)}
-                className={classes.image}
-              />
+              <img src={img} className={classes.image} />
             </div>
           </SwiperSlide>
         ))}

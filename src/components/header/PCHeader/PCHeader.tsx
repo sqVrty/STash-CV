@@ -18,10 +18,10 @@ import {
   ResumeIcon,
   FolderIcon,
   GlobusIcon,
-} from "../../../assets/svg's";
+} from "../../../../public/assets/svg's";
 
 import classes from "./PCHeader.module.scss";
-import { COLORS } from "./../../../assets/colors";
+import { COLORS } from "../../../../public/assets/colors";
 
 export default function PCHeader() {
   const { t, i18n } = useTranslation();

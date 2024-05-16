@@ -15,10 +15,10 @@ import {
   ResumeIcon,
   FolderIcon,
   ContactMeIcon,
-} from "../../../assets/svg's";
+} from "../../../../public/assets/svg's";
 
 import classes from "./BurgerMenu.module.scss";
-import { COLORS } from "./../../../assets/colors";
+import { COLORS } from "../../../../public/assets/colors";
 
 export default function BurgerMenu({
   isBurgerMenuOpen,

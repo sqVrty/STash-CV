@@ -2,14 +2,14 @@ import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { TypeAnimation } from "react-type-animation";
 
-import { COLORS } from "../../assets/colors";
-import { MyPhoto } from "../../assets/img's";
+import { COLORS } from "../../../public/assets/colors";
+import { MyPhoto } from "../../../public/assets/img's";
 import {
   TelegramIcon,
   WhatsAppIcon,
   GitHubIcon,
   InstagramIcon,
-} from "../../assets/svg's";
+} from "../../../public/assets/svg's";
 
 import classes from "./PhotoMobileContainer.module.scss";
 

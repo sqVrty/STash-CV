@@ -2,8 +2,12 @@ import { useTranslation } from "react-i18next";
 
 import ContactBlock from "./ContactBlock";
 
-import { COLORS } from "../../assets/colors";
-import { TelegramIcon, WhatsAppIcon, PhoneIcon } from "../../assets/svg's";
+import { COLORS } from "../../../public/assets/colors";
+import {
+  TelegramIcon,
+  WhatsAppIcon,
+  PhoneIcon,
+} from "../../../public/assets/svg's";
 
 import classes from "./ContactMeModalContent.module.scss";
 

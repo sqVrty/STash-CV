@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
-import { UKIcon, RussiaIcon } from "../../assets/svg's";
+import { UKIcon, RussiaIcon } from "../../../public/assets/svg's";
 
 import classes from "./LanguagesModalContent.module.scss";
 
