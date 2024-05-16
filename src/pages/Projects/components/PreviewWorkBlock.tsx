@@ -6,8 +6,6 @@ import {
 import { useState, MouseEvent, useCallback } from "react";
 import "animate.css";
 
-import { getImageURL } from "../../../utils/getImageUrl";
-
 import { COLORS } from "../../../../public/assets/colors";
 import { GoOverIcon, EyeIcon } from "../../../../public/assets/svg's";
 
