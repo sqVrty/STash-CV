@@ -16,9 +16,9 @@ http {
 
         # URL certbot'a, где он будет слушать входящие
         # подключения во время выдачи SSL
-        # location /.well-known/acme-challenge/ {
-        #     # адрес certbot'a в Docker Compose на Linux
-        #     proxy_pass http://${NGINX_LOCAL_HOST}:6000;
-        # }
+        location ~ /.well-known/acme-challenge/ {
+            # адрес certbot'a в Docker Compose на Linux
+            proxy_pass http://${NGINX_LOCAL_HOST}:6000;
+        }
     }
 }
