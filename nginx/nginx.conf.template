@@ -27,8 +27,8 @@ http {
         server_name ${NGINX_DOMEN} www.${NGINX_DOMEN};
         server_tokens off;
 
-        ssl_certificate /etc/letsencrypt/live/example.org/fullchain.pem;
-        ssl_certificate_key /etc/letsencrypt/live/example.org/privkey.pem;
+        ssl_certificate /etc/letsencrypt/live/${NGINX_DOMEN}/fullchain.pem;
+        ssl_certificate_key /etc/letsencrypt/live/${NGINX_DOMEN}/privkey.pem;
         include /etc/letsencrypt/options-ssl-nginx.conf;
         ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
 
