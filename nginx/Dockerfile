@@ -6,4 +6,4 @@ COPY ./nginx/nginx.conf.template /etc/nginx/nginx.conf.template
 RUN apk add --no-cache gettext
 
 # Substitute environment variables and run Nginx
-CMD ["sh", "-c", "envsubst '${NGINX_DOMEN}' < /etc/nginx/nginx.conf.template > /etc/nginx/nginx.conf && nginx -g 'daemon off;'"]
+CMD ["sh", "-c", "envsubst '${NGINX_DOMEN}' < /etc/nginx/nginx.conf.template > /etc/nginx/nginx.conf && while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g 'daemon off;'"]
