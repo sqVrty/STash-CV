@@ -1,7 +1,8 @@
 #!/bin/bash
 
-if ! [ -x "$(command -v docker-compose)" ]; then
-  echo 'Error: docker-compose is not installed.' >&2
+# Check if docker compose is installed
+if ! docker compose version &> /dev/null; then
+  echo 'Error: docker compose is not installed.' >&2
   exit 1
 fi
 
