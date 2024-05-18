@@ -14,6 +14,11 @@ export default defineConfig({
     // this sets a default port to 3000
     port: 3000,
   },
+  preview: {
+    open: false, // Prevents the browser from opening during preview
+    host: true, // Makes the preview available on the network
+    port: 3000,
+  },
   css: {
     preprocessorOptions: {
       scss: {

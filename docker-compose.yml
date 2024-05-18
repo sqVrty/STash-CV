@@ -1,4 +1,12 @@
 services:
+  client:
+    container_name: client
+    ports:
+      - "3000:80"
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+
   nginx:
     container_name: nginx
     # tty: true
@@ -15,6 +23,8 @@ services:
       context: .
       dockerfile: ./nginx/Dockerfile
     restart: always
+    depends_on:
+      - client
 
   certbot:
     container_name: certbot
