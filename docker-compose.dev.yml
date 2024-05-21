@@ -16,6 +16,8 @@ services:
       - .env
     volumes:
       - ./nginx/dev/nginx.conf.dev.template:/etc/nginx/nginx.conf.template
+      - ./data/certbot/conf:/etc/letsencrypt
+      - ./data/certbot/www:/var/www/certbot
     build:
       context: .
       dockerfile: ./nginx/dev/Dockerfile.dev
