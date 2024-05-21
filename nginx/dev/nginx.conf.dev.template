@@ -16,5 +16,9 @@ http {
         location / {
             proxy_pass http://client;
         }
+
+        location /.well-known/acme-challenge/ {
+            root /var/www/certbot;
+        }
     }
 }

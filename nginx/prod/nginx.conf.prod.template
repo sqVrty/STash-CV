@@ -1,7 +1,8 @@
 worker_processes auto;
 
+events {}
+
 http {
-    events {}
 
     upstream client {
         server client:3000;
