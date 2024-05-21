@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../../app/hooks";
 import {
   setIsOpen,
@@ -56,7 +57,7 @@ export default function MobileHeader() {
     <div className="mobileHeader">
       <div className={classes.container}>
         <div className={classes.paddingContainer}>
-          <div className={classes.leftBlock}>
+          <Link to="/" className={classes.leftBlock}>
             <img src={MyAvatar} className={classes.avatarImage} />
             <div className={classes.textContainer}>
               <p className={classes.name}>{t("photoContainer.name")}</p>
@@ -76,7 +77,7 @@ export default function MobileHeader() {
                 repeat={Infinity}
               />
             </div>
-          </div>
+          </Link>
           <div className={classes.rightBlock}>
             <GlobusIcon
               stroke={COLORS.white}
