@@ -63,10 +63,14 @@ p {
 .root {
   display: flex;
   min-height: 100vh;
+  max-width: 1600px;
+  // max-height: 900px;
+  height: fit-content;
   width: fit-content;
   overflow: hidden;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
+  // margin-top: auto;
+  // margin-bottom: auto;
 }
 
 .PCHeaderAndPhotoContainer {
@@ -77,6 +81,7 @@ p {
 
 .PCHeader {
   height: 85vh;
+  max-height: 900px;
   width: 50px;
   padding: 30px 15px;
   margin-top: auto;
@@ -99,6 +104,7 @@ p {
 .content {
   width: 45vw;
   height: 85vh;
+  max-height: 900px;
   padding: 30px 15px;
   margin-top: auto;
   margin-bottom: auto;
