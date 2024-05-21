@@ -30,7 +30,7 @@
     "aboutBlock": {
       "h": "About Me",
       "greeting": "hey, there",
-      "desc": "I'm Sergei, and I'm all about Frontend development. With two years under my best, I've done my skills to specialize in JavaScript and React. I thrive on creating sleek, user-friendly interface that make navigating the web a breeze. Collaboration is key for me — I love bouncing ideas around to push our projects to new levels of innovation. Let's build something awesome together!",
+      "desc": "I'm Sergei, and I'm all about Frontend development. With two years under my best, I've done my skills to specialize in JavaScript and React. I thrive on creating sleek, user-friendly interface that make navigating the web a breeze. Collaboration is key for me — I love bouncing ideas around to push our projects to new levels of innovation.",
       "ageQ": "Age",
       "locationQ": "Location",
       "lngsQ": "Languages",

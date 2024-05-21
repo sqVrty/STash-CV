@@ -32,5 +32,5 @@ jobs:
             git checkout main;
             git pull;
             ${{ secrets.SSH_PASSPHRASE }};
-            docker compose up -d --build;
+            docker compose -f docker-compose.prod.yml up -d --build;
             docker system prune --all --force;

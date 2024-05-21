@@ -4,9 +4,9 @@ $aqua: rgba(16, 200, 236, 0.8);
 .photoContainer {
   position: relative;
   display: flex;
+  align-self: center;
   justify-content: center;
-  aspect-ratio: 5/8;
-  height: 100vh;
+  max-height: 1000px;
   max-width: 35vw;
   box-shadow: 0px 0px 50px black;
 
