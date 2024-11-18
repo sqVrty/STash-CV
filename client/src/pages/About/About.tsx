@@ -52,6 +52,20 @@ export default function About() {
     }
   }, [swiper]);
 
+  const myBdDate = new Date("2004-11-12");
+  const todayDate = new Date();
+
+  let myAge = todayDate.getFullYear() - myBdDate.getFullYear();
+
+  const hasNotHadBirthdayThisYear =
+    todayDate.getMonth() < myBdDate.getMonth() ||
+    (todayDate.getMonth() === myBdDate.getMonth() &&
+      todayDate.getDate() < myBdDate.getDate());
+
+  if (hasNotHadBirthdayThisYear) {
+    myAge--;
+  }
+
   return (
     <>
       {isMobileDevice && <PhotoMobileContainer />}
@@ -90,7 +104,7 @@ export default function About() {
                 {t("aboutPage.aboutBlock.ageQ")}:{" "}
                 <span className={classes.dots}>....</span>
                 <span className={classes.answer} style={{ color: COLORS.gray }}>
-                  19
+                  {myAge}
                 </span>
               </p>
               <p className={classes.question}>
