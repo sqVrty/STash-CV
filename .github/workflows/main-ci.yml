@@ -30,6 +30,6 @@ jobs:
           script: |
             cd ${{ secrets.PROJECT_FOLDER }};
             git checkout main;
-            git pull;
+            GIT_SSH_COMMAND="ssh -o IdentitiesOnly=yes -i ~/.ssh/id_ed25519" git pull;
             docker compose -f docker-compose.prod.yml up -d --build;
             docker system prune --all --force;
