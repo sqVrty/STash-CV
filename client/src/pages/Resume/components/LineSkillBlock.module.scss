@@ -66,5 +66,16 @@ $darkgray: rgba(100, 100, 100, 1);
         font-size: 18px;
       }
     }
+
+    .descContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+
+      .descItem {
+        font-size: 14px;
+        color: $gray;
+      }
+    }
   }
 }

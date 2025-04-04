@@ -31,6 +31,9 @@ import {
   LaptopIcon,
   DumbbellsIcon,
   CoffeeCapIcon,
+  ZapIcon,
+  BricksIcon,
+  HighSpeedTrainIcon,
 } from "../../assets/svg's";
 
 import classes from "./About.module.scss";
@@ -96,9 +99,12 @@ export default function About() {
             <p className={classes.greeting}>
               {t("aboutPage.aboutBlock.greeting")} 👋
             </p>
-            <p style={{ color: COLORS.gray }}>
-              {t("aboutPage.aboutBlock.desc")}
-            </p>
+            <p
+              style={{ color: COLORS.gray }}
+              dangerouslySetInnerHTML={{
+                __html: t("aboutPage.aboutBlock.desc"),
+              }}
+            />
             <div className={classes.aboutDataContainer}>
               <p className={classes.question}>
                 {t("aboutPage.aboutBlock.ageQ")}:{" "}
@@ -213,24 +219,24 @@ export default function About() {
           <div className={classes.factsContainer}>
             <div className={classes.delimiterContainer}>
               <FactBlock
-                icon={
-                  <LaptopIcon stroke={COLORS.aqua} width={35} height={35} />
-                }
+                icon={<ZapIcon fill={COLORS.aqua} width={35} height={35} />}
                 text={t("aboutPage.factsBlock.block1.h")}
               />
             </div>
             <div className={classes.delimiterContainer}>
               <FactBlock
-                icon={
-                  <DumbbellsIcon fill={COLORS.aqua} width={35} height={35} />
-                }
+                icon={<BricksIcon fill={COLORS.aqua} width={35} height={35} />}
                 text={t("aboutPage.factsBlock.block2.h")}
               />
             </div>
             <div className={classes.delimiterContainer}>
               <FactBlock
                 icon={
-                  <CoffeeCapIcon fill={COLORS.aqua} width={35} height={35} />
+                  <HighSpeedTrainIcon
+                    fill={COLORS.aqua}
+                    width={35}
+                    height={35}
+                  />
                 }
                 text={t("aboutPage.factsBlock.block3.h")}
               />
@@ -238,7 +244,7 @@ export default function About() {
             <div className={classes.delimiterContainer}>
               <FactBlock
                 icon={
-                  <MusicRecordIcon fill={COLORS.aqua} width={35} height={35} />
+                  <DumbbellsIcon fill={COLORS.aqua} width={35} height={35} />
                 }
                 text={t("aboutPage.factsBlock.block4.h")}
               />

@@ -33,7 +33,12 @@ export default function ContactBlock({
         window.open("https://wa.me/79890491701", "_blank");
         break;
       case "Phone":
+      case "Телефон":
         window.open("tel:+79890491701");
+        break;
+      case "Mail":
+      case "Почта":
+        window.open(`mailto:sergeu-tash@yandex.ru?subject=Feedback`);
         break;
       default:
         break;

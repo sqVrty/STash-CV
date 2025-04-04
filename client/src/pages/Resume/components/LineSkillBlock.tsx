@@ -10,11 +10,13 @@ export default function LineSkillBlock({
   name,
   percentage,
   circled,
+  desc,
 }: {
   icon: ReactElement;
   name: string;
   percentage: number;
   circled?: boolean;
+  desc?: string[];
 }) {
   const isMobileDevice = useAppSelector(
     (state) => state.deviceInfo.isMobileDevice
@@ -69,6 +71,13 @@ export default function LineSkillBlock({
             {percentage}%
           </p>
         </div>
+        {desc && (
+          <div className={classes.descContainer}>
+            {desc.map((item) => (
+              <p className={classes.descItem}>{item}</p>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

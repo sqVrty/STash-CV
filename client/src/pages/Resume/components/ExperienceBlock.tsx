@@ -35,9 +35,13 @@ export default function ExperienceBlock({
         </div>
         <img className={classes.logo} src={logo} />
       </div>
-      <p className={classes.description} style={{ color: COLORS.gray }}>
-        {desc}
-      </p>
+      <p
+        className={classes.description}
+        style={{ color: COLORS.gray }}
+        dangerouslySetInnerHTML={{
+          __html: desc,
+        }}
+      />
     </div>
   );
 }

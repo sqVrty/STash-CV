@@ -13,7 +13,8 @@
     },
     "contactModal": {
       "h": "Contact me",
-      "phone": "Phone"
+      "phone": "Phone",
+      "mail": "Mail"
     }
   },
 
@@ -30,7 +31,7 @@
     "aboutBlock": {
       "h": "About Me",
       "greeting": "hey, there",
-      "desc": "I'm Sergei, and I'm all about Frontend development. With two years under my best, I've done my skills to specialize in JavaScript and React. I thrive on creating sleek, user-friendly interface that make navigating the web a breeze. Collaboration is key for me — I love bouncing ideas around to push our projects to new levels of innovation.",
+      "desc": "My name is Sergei, my experience in Frontend development is more than 3 years. My main stack is React, TypeScript, Redux (including Redux Toolkit and Thunk), as well as Next.js and React Native for mobile development.<br/><br/>I pay special attention to optimizing website performance (Lighthouse, SEO), writing tests, and developing complex custom components. In my work, I actively use UI libraries (Ant Design, MUI, Mantine UI, PrimeReact) and experience working with various APIs (REST, GraphQL, third-party services).<br/><br/>To demonstrate my skills and completed projects, I created this business card website :) It was developed on my main work stack and serves as an example of my capabilities.<br/><br/>I am sure that my experience and skills will be useful to your team. I will be glad to discuss my candidacy and answer any questions during the interview.",
       "ageQ": "Age",
       "locationQ": "Location",
       "lngsQ": "Languages",

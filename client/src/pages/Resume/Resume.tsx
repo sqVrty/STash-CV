@@ -30,6 +30,17 @@ import {
   BelarusIcon,
   GearsIcon,
   ListIcon,
+  NextJSIcon,
+  NginxIcon,
+  ProgrammingLanguagesIcon,
+  ConductorIcon,
+  LipstickIcon,
+  CraneIcon,
+  ChemistryIcon,
+  MultilanguageIcon,
+  DevopsIcon,
+  GraphIcon,
+  ApiIcon,
 } from "../../assets/svg's";
 import {
   BMSTULogo,
@@ -38,6 +49,21 @@ import {
 } from "../../assets/img's";
 
 import classes from "./Resume.module.scss";
+
+const GLOBAL_PROGRAMMING_SKILLS_ICONS_MAP = {
+  ProgrammingLanguagesIcon,
+  ConductorIcon,
+  LipstickIcon,
+  CraneIcon,
+  ChemistryIcon,
+};
+
+const PROGRAMMING_SKILLS_ICONS_MAP = {
+  MultilanguageIcon,
+  DevopsIcon,
+  GraphIcon,
+  ApiIcon,
+};
 
 export default function Resume() {
   const { t, i18n } = useTranslation();
@@ -140,26 +166,28 @@ export default function Resume() {
             isMobileDevice && classes.mobile
           }`}
         >
-          <CircleSkillBlock
-            icon={<JavascriptIcon width={40} height={40} />}
-            percentage={90}
-            name="JavaScript"
-          />
-          <CircleSkillBlock
-            icon={<HTMLIcon width={40} height={40} />}
-            percentage={80}
-            name="HTML 5"
-          />
-          <CircleSkillBlock
-            icon={<ReduxIcon width={40} height={40} />}
-            percentage={75}
-            name="Redux"
-          />
-          <CircleSkillBlock
-            icon={<DockerIcon width={40} height={40} />}
-            percentage={90}
-            name="Docker"
-          />
+          {(
+            t("resumePage.progSkillsBlock.categories", {
+              returnObjects: true,
+            }) as Array<{
+              title: string;
+              percentage: number;
+              iconName: keyof typeof GLOBAL_PROGRAMMING_SKILLS_ICONS_MAP;
+              items: string[];
+            }>
+          ).map((category, index) => {
+            const IconComponent =
+              GLOBAL_PROGRAMMING_SKILLS_ICONS_MAP[category.iconName];
+            return (
+              <CircleSkillBlock
+                icon={<IconComponent width={40} height={40} />}
+                percentage={category.percentage}
+                name={category.title}
+                desc={category.items}
+                key={index}
+              />
+            );
+          })}
         </div>
 
         <TextWithCircle text={t("resumePage.generalSkillsBlock.h")} />
@@ -167,29 +195,31 @@ export default function Resume() {
           <div className={classes.textWithIconContainer1}>
             <TextWithIcon
               icon={<CodingIcon fill={COLORS.aqua} width={35} height={35} />}
-              text={t("resumePage.generalSkillsBlock.codingH")}
+              text={t("resumePage.generalSkillsBlock.codingBlock.h")}
             />
             <div className={classes.lineSkillBlocksContainer}>
-              <LineSkillBlock
-                icon={<ReactColoredIcon width={35} height={35} />}
-                name="React"
-                percentage={82}
-              />
-              <LineSkillBlock
-                icon={<ReactColoredIcon width={35} height={35} />}
-                name="React Native"
-                percentage={69}
-              />
-              <LineSkillBlock
-                icon={<TypeScriptIcon width={35} height={35} />}
-                name="TypeScript"
-                percentage={90}
-              />
-              <LineSkillBlock
-                icon={<ScssIcon width={35} height={35} />}
-                name="SCSS"
-                percentage={94}
-              />
+              {(
+                t("resumePage.generalSkillsBlock.codingBlock.categories", {
+                  returnObjects: true,
+                }) as Array<{
+                  title: string;
+                  percentage: number;
+                  iconName: keyof typeof PROGRAMMING_SKILLS_ICONS_MAP;
+                  items: string[];
+                }>
+              ).map((category, index) => {
+                const IconComponent =
+                  PROGRAMMING_SKILLS_ICONS_MAP[category.iconName];
+                return (
+                  <LineSkillBlock
+                    icon={<IconComponent width={40} height={40} />}
+                    percentage={category.percentage}
+                    name={category.title}
+                    desc={category.items}
+                    key={index}
+                  />
+                );
+              })}
             </div>
           </div>
           <div className={classes.textWithIconContainer2}>
@@ -251,15 +281,6 @@ export default function Resume() {
               ).map((text, index) => (
                 <KnowledgeBlock key={index} text={text} />
               ))}
-              {/* <KnowledgeBlock text="JavaScript Frameworks/Libraries" />
-              <KnowledgeBlock text="Git and GitHub" />
-              <KnowledgeBlock text="Containerization with Docker" />
-              <KnowledgeBlock text="NGINX Configuration" />
-              <KnowledgeBlock text="Responsive Design" />
-              <KnowledgeBlock text="Browser Developer Tools" />
-              <KnowledgeBlock text="Integrating with third-party API's" />
-              <KnowledgeBlock text="Object-Oriented Programming (OOP)" />
-              <KnowledgeBlock text="Communication and collaboration" /> */}
             </div>
           </div>
         </div>

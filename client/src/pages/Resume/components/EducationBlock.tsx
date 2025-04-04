@@ -30,9 +30,13 @@ export default function EducationBlock({
           {city}
         </p>
       </div>
-      <p className={classes.description} style={{ color: COLORS.gray }}>
-        {desc}
-      </p>
+      <p
+        className={classes.description}
+        style={{ color: COLORS.gray }}
+        dangerouslySetInnerHTML={{
+          __html: desc,
+        }}
+      />
     </div>
   );
 }
