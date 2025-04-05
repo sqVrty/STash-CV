@@ -1,0 +1,61 @@
+.swiper-carousel-modal {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+
+  .image-wrapper-modal-carousel {
+    // background-color: blue;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .slide-image-modal-carousel {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: contain !important;
+      user-select: none;
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    margin-top: 0;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    color: white;
+    transition: 0.2s;
+    opacity: 0;
+    visibility: hidden;
+    user-select: none;
+
+    &.swiper-button-disabled {
+      display: none;
+    }
+
+    &::after {
+      font-size: 16px;
+    }
+
+    &:hover {
+      background-color: rgba(49, 49, 49, 0.3);
+    }
+  }
+
+  &:hover {
+    .swiper-button-prev,
+    .swiper-button-next {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .swiper-button-prev {
+    left: 0;
+  }
+
+  .swiper-button-next {
+    right: 0;
+  }
+}

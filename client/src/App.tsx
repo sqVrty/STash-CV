@@ -12,6 +12,7 @@ import Resume from "./pages/Resume/Resume";
 import Projects from "./pages/Projects/Projects";
 import Modal from "./components/modal/Modal";
 import WorkExampleModal from "./pages/Projects/components/WorkExampleModal";
+import ImagesFullScreenPreviewModal from "./components/imagesFullScreenPreviewModal/imagesFullScreenPreviewModal";
 
 import type { IProject } from "./redux/features/workExampleModalInfoSlice";
 
@@ -25,6 +26,12 @@ export default function App() {
   const modalContent = useAppSelector((state) => state.modal.modalContent);
   const workExampleModalData = useAppSelector(
     (state) => state.workExampleModalInfo.data
+  );
+  const imagesFullScreenPreviewModalImages = useAppSelector(
+    (state) => state.imagesFullScreenPreview.images
+  );
+  const imagesFullScreenPreviewModalActiveIndex = useAppSelector(
+    (state) => state.imagesFullScreenPreview.activeIndex
   );
 
   useEffect(() => {
@@ -60,6 +67,10 @@ export default function App() {
       >
         <Modal header={modalHeader as string}>{modalContent}</Modal>
         <WorkExampleModal data={workExampleModalData as IProject} />
+        <ImagesFullScreenPreviewModal
+          images={imagesFullScreenPreviewModalImages as string[]}
+          activeIndex={imagesFullScreenPreviewModalActiveIndex}
+        />
 
         {isMobileDevice ? (
           <MobileHeader />

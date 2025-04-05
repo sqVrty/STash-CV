@@ -48,8 +48,6 @@ export default function PreviewWorkBlock({
     dispatch(setIsOpen(!isWorkExampleModalOpen));
   }, [dispatch]);
 
-  console.log(previewImg);
-
   return (
     <div
       className={classes.container}

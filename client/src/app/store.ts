@@ -5,6 +5,7 @@ import {
   windowSizeInfoReducer,
   workExampleModalInfoReducer,
   modalReducer,
+  imagesFullScreenPreviewModalReducer,
 } from "../redux/features";
 
 export const store = configureStore({
@@ -13,6 +14,7 @@ export const store = configureStore({
     windowSizeInfo: windowSizeInfoReducer,
     workExampleModalInfo: workExampleModalInfoReducer,
     modal: modalReducer,
+    imagesFullScreenPreview: imagesFullScreenPreviewModalReducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware({}).concat([]),
 });
