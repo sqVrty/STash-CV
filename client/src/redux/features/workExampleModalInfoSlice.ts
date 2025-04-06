@@ -6,6 +6,7 @@ export interface IProject {
   category: string;
   date: string;
   client: string;
+  link: string;
   text1: string;
   imgsArray: string[];
   text2: string;

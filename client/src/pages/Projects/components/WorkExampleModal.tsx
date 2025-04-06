@@ -105,6 +105,10 @@ export default function WorkExampleModal({ data }: { data: IProject }) {
               <InfoListBlock
                 fieldName={t("projectsPage.workExampleModal.categoryH")}
                 answer={data.category}
+              />
+              <InfoListBlock
+                fieldName={t("projectsPage.workExampleModal.linkH")}
+                answer={data.link}
                 isLastElement
               />
             </div>

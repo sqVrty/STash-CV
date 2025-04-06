@@ -1,3 +1,6 @@
+$aqua: rgba(16, 200, 236, 0.8);
+$lightgray: rgba(211, 211, 211, 1);
+
 .container {
   display: flex;
   flex-direction: column;
@@ -15,6 +18,15 @@
       margin-left: auto;
       font-size: 18px;
       font-weight: 400;
+
+      &.answerLink {
+        color: $aqua;
+        transition: 0.2s all ease-in-out;
+
+        &:hover {
+          color: $lightgray;
+        }
+      }
     }
   }
 
