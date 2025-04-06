@@ -36,7 +36,7 @@ export default function ContactBlock({
       case "Телефон":
         window.open("tel:+79890491701");
         break;
-      case "Mail":
+      case "Email":
       case "Почта":
         window.open(`mailto:sergeu-tash@yandex.ru?subject=Feedback`);
         break;

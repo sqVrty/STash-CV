@@ -1,7 +1,7 @@
 {
   "header": {
     "navigation": {
-      "about": "About",
+      "about": "About Me",
       "resume": "Resume",
       "projects": "Projects"
     }
@@ -9,29 +9,25 @@
 
   "modals": {
     "lngModal": {
-      "h": "Select a language"
+      "h": "Select Language"
     },
     "contactModal": {
-      "h": "Contact me",
+      "h": "Contact Me",
       "phone": "Phone",
-      "mail": "Mail"
+      "mail": "Email"
     }
   },
 
   "photoContainer": {
-    "name": "Tashlikovich Sergei",
-    "typesOfWork": [
-      "FrontEnd Developer",
-      "Application Developer",
-      "UI/UX Designer"
-    ]
+    "name": "Sergey Tashlikovich",
+    "typesOfWork": ["FrontEnd Developer", "App Developer", "UI/UX Designer"]
   },
 
   "aboutPage": {
     "aboutBlock": {
       "h": "About Me",
-      "greeting": "hey, there",
-      "desc": "My name is Sergei, my experience in Frontend development is more than 3 years. My main stack is React, TypeScript, Redux (including Redux Toolkit and Thunk), as well as Next.js and React Native for mobile development.<br/><br/>I pay special attention to optimizing website performance (Lighthouse, SEO), writing tests, and developing complex custom components. In my work, I actively use UI libraries (Ant Design, MUI, Mantine UI, PrimeReact) and experience working with various APIs (REST, GraphQL, third-party services).<br/><br/>To demonstrate my skills and completed projects, I created this business card website :) It was developed on my main work stack and serves as an example of my capabilities.<br/><br/>I am sure that my experience and skills will be useful to your team. I will be glad to discuss my candidacy and answer any questions during the interview.",
+      "greeting": "hello",
+      "desc": "My name is Sergey, and I have over 3 years of experience in Frontend development. My main stack includes React, TypeScript, Redux (including Redux Toolkit and Thunk), as well as Next.js and React Native for mobile development.<br/><br/>I pay special attention to website performance optimization (Lighthouse, SEO), writing tests, and developing complex user components. In my work, I actively use UI libraries (Ant Design, MUI, Mantine UI, PrimeReact) and have experience working with various APIs (REST, GraphQL, third-party services).<br/><br/>I created this portfolio website to showcase my skills and completed projects :) It's built using my main work stack and serves as an example of my capabilities.<br/><br/>I'm confident that my experience and skills will be valuable to your team. I'd be happy to discuss my candidacy and answer any questions during an interview.",
       "ageQ": "Age",
       "locationQ": "Location",
       "lngsQ": "Languages",
@@ -40,55 +36,55 @@
       "lngsA": "English, Russian"
     },
     "servicesBlock": {
-      "h": "My Services",
+      "h": "What I Can Do",
       "block1": {
         "h": "Web Development",
-        "desc": "Modern and mobile-ready website that will help you reach all of your marketing."
+        "desc": "SPA and SSR applications on React/Next.js. I create adaptive layouts (CSS Modules, SCSS, Tailwind), optimize loading (Lighthouse ≥90). Experience with REST/GraphQL APIs."
       },
       "block2": {
-        "h": "App Development",
-        "desc": "End-to-end organization, ui/ux design, optimization, and maintenance of your mobile app project."
+        "h": "Frontend Development",
+        "desc": "React + TypeScript, state management (Redux/Zustand/Effector). Worked with Material UI, Ant Design, Prime React. Build projects with Vite/Webpack. Testing: Jest + React Testing Library."
       },
       "block3": {
-        "h": "UI/UX Design",
-        "desc": "Expert in creating user-friendly interfaces that prioritize user experience. Proficient in UI/UX design principles, wireframing, and prototyping to deliver engaging digital solutions."
+        "h": "UI/UX Practice",
+        "desc": "Prototypes in Figma, adaptive grids, micro-interactions (Framer Motion). Knowledge of WCAG principles. Can explain why 'beautiful' ≠ 'convenient'."
       },
       "block4": {
-        "h": "Version Control",
-        "desc": "Proficient in using version control systems like Git to manage codebase efficiently, facilitating collaboration and tracking changes across projects."
+        "h": "Code Work",
+        "desc": "Git (branches, rebase, conflicts), Code Review, ESLint/Prettier. Task decomposition in Jira/YouTrack. Docker for local dev environment."
       }
     },
     "testimonialsBlock": {
       "h": "Testimonials",
       "block1": {
-        "name": "Grigori Ilkevits",
-        "post": "CEO",
-        "review": "Just a quick note to say a big thanks for your stellar work on our investors club website and mobile app. Your attention to detail and user-friendly designs have really taken our platform to the next level. Your professionalism and timely delivery haven't done unnoticed either."
+        "name": "Grigory Ilkevich",
+        "post": "CEO of Investment Club",
+        "review": "Sergey made a website and app for us - and for six months now I haven't heard a single 'where's the button?' from our investors. The design is convenient, the code is fire, and most importantly: he suggested many features we hadn't even thought about. Works like Swiss watches, only cheaper 😄"
       },
       "block2": {
         "name": "Dmitry Rabkin",
-        "post": "Lead Developer",
-        "review": "Sergei has been crucial to our dormitory software project as a FrontEnd developer. Their dedication to crafting intuitive interface and responsive design has greatly enhanced our products usability. With a proactive problem-solving approach, Sergei ensures smooth collaboration. A valuable asset to our team."
+        "post": "Team Lead",
+        "review": "Sergey was hired to the team with doubts - 'Another frontender...'. But within a month everyone was asking: 'Where's that Sergey? Let him fix our module too.' Made the interface so logical that even our accountant figured it out without instructions. A rare case when a developer thinks about the user BEFORE being reminded."
       },
       "block3": {
         "name": "Lev Podelnikov",
-        "post": "Customer",
-        "review": "Working with our FrontEnd developer on our business card website was an absolute pleasure. His expertise in design and user experience was evident from the start. Sergei flawlessly brought our vision to life with a visually stunning and functional website. Communication was excellent, and he ensured every detail was perfect. Highly recommended!"
+        "post": "Business Card Service Owner",
+        "review": "Ordered a business card site... got a 'wow' site. Sergey managed to include animations that don't lag, adaptivity for all phones (tested on grandpa's Nokia!), and even a dark theme - though we didn't ask for it. Now all clients ask: 'Who's your designer?'. Too bad he can't be cloned 🤷‍♂️"
       }
     },
     "factsBlock": {
-      "h": "Fun Facts",
+      "h": "Interesting Facts",
       "block1": {
-        "h": "3 Laptopes Changed"
+        "h": "Optimized page load: 2s → 0.8s"
       },
       "block2": {
-        "h": "Sports Enthusiast"
+        "h": "Developed SPA on React from scratch"
       },
       "block3": {
-        "h": "1 000+ Cups Of Coffee"
+        "h": "Sped up deployment by 40% (Vite)"
       },
       "block4": {
-        "h": "100+ Albumes Listened"
+        "h": "Pump not just code but also muscles"
       }
     }
   },
@@ -96,53 +92,129 @@
   "resumePage": {
     "h": "Resume",
     "expBlock": {
-      "h": "Experience",
+      "h": "Work Experience",
       "block1": {
         "period": "2023-2024",
-        "post": "FrontEnd/Application Developer",
+        "post": "Frontend Developer (React/Next.js)",
         "cpName": "EmotionalEgghead",
-        "desc": "creating custom components, designing UI/UX, implementing navigation, developing personal user profiles, integrating graphics, utilizing various libraries, ensuring performance and responsiveness, testing for compatibility, and collaborating with the team."
+        "desc": "Developed SPA on Next.js from scratch (50+ pages): SSR/SSG for SEO, dynamic routes, multilingualism (i18n).<br/><br/>Key implementations: role system with JWT authorization, video platform with custom player, interactive dashboards with charts (Chart.js).<br/><br/>Performance optimization: reduced TTI by 35% via code splitting + lazy loading, decreased bundle size by 30% (analysis via Webpack Bundle Analyzer), configured API request caching (SWR).<br/><br/>Processes and collaboration: set up CI/CD (GitHub Actions), close work with CEO: proposed business logic solutions (increased conversion by 20%), received offer to become product co-owner for significant contribution.<br/><br/>Stack: Next.js, React, TypeScript, Redux Toolkit, Redux Thunk, MUI, CSS Modules"
       },
       "block2": {
         "period": "2022-2023",
-        "post": "FrontEnd Developer",
-        "cpName": "Electronic Education from BMSTU",
-        "desc": "developed software for dormitories, collaborated with team members, ensured user-friendly interfaces, conducted testing and debugging, provided technical support."
+        "post": "Frontend Developer",
+        "cpName": "Bauman Moscow State Technical University (E-Education)",
+        "desc": "Developed interfaces for dormitory management system.<br/><br/>Key tasks: teamwork with 3 frontenders (code review, git flow), legacy code refactoring, TypeScript implementation, dev/prod environment separation setup.<br/><br/>Stack: React, JavaScript/TypeScript, Prime React, SCSS, GitLab CI"
       },
       "block3": {
         "period": "2022",
-        "post": "JavaScript teacher",
-        "cpName": "Inginirium",
-        "desc": "taught fundamental concepts, facilitated hands on coding exercises, integrated real-world projects, emphasized problem-solving skills."
+        "post": "JavaScript Teacher",
+        "cpName": "Engineeringum",
+        "desc": "Taught beginner courses: JavaScript basics and algorithms, DOM and browser APIs, practical task development on real cases.<br/><br/>Achievements: improved skills in explaining complex concepts simply, developed interactive examples"
       },
       "block4": {
-        "period": "2021-2023",
+        "period": "2022-2023",
         "post": "Freelancer",
-        "cpName": "Kwork",
-        "desc": "designing layouts, coding HTML/CSS, implementing JavaScript functionalities, ensuring responsiveness, collaborating with clients, meeting deadlines, providing maintenance support."
+        "cpName": "Kwork / Upwork",
+        "desc": "Commercial projects: landing pages and SPAs on Vue/React, experiments with Three.js for 3D graphics.<br/><br/>Acquired skills: working with client requirements and deadlines, quick learning of new technologies.<br/><br/>Stack: Vue 2/3, React, JavaScript, Tailwind ..."
       }
     },
     "eduBlock": {
       "h": "Education",
       "block1": {
-        "period": "2022 - Present",
+        "period": "2022 - present",
         "name": "Bauman Moscow State Technical University",
         "city": "Moscow",
-        "desc": "data structures, algorithms, programming paradigms, software engineering principles, database management systems, computer networks, operating systems, web development, object-oriented programming, computer architecture, discrete mathematics."
+        "desc": "In-depth computer science: OOP and SOLID principles, algorithms and data structures (hash tables, graphs, trees, O-notation complexity).<br/>Applied mathematics: working with matrices, linear regression, data interpolation/extrapolation (implementation in JavaScript/TypeScript).<br/>Low-level knowledge: computer architecture, memory work, performance optimization.<br/>Network technologies: HTTP/HTTPS, WebSockets, REST API principles.<br/>Parallel programming: multithreading, asynchrony (Event Loop)."
       },
       "block2": {
         "period": "2011 - 2022",
-        "name": "Gymnasium No. 7",
+        "name": "Gymnasium №7",
         "city": "Minsk",
-        "desc": "understanding hardware components, architecture, CPU, memory, input/output system,markup language for creating web pages, structure content with elements, use tags for formatting, applying algorithms, logic, and computational thinking to tackle mathematical challenges."
+        "desc": "Basic programming skills in C++ and Python.<br/>Robotics: microcontroller programming (Arduino, LEGO Mindstorms).<br/>Introduction to Linux systems and PC hardware.<br/>Participation in math and computer science olympiads."
       }
     },
     "progSkillsBlock": {
-      "h": "Programming Skills"
+      "h": "Programming Skills",
+      "categories": [
+        {
+          "title": "Languages & Frameworks",
+          "percentage": 77,
+          "iconName": "ProgrammingLanguagesIcon",
+          "items": [
+            "JavaScript (ES6+), TypeScript",
+            "React.js, Next.js",
+            "Vue.js"
+          ]
+        },
+        {
+          "title": "State Management",
+          "percentage": 72,
+          "iconName": "ConductorIcon",
+          "items": [
+            "Redux (Toolkit / RTK Query), Zustand, Effector",
+            "SWR (for API caching)"
+          ]
+        },
+        {
+          "title": "Styling & UI",
+          "percentage": 89,
+          "iconName": "LipstickIcon",
+          "items": [
+            "CSS3, CSS Modules / SCSS",
+            "Tailwind CSS",
+            "Libraries: Material-UI (MUI), Ant Design, Mantine UI, PrimeReact",
+            "Custom (self-made) components"
+          ]
+        },
+        {
+          "title": "Tools",
+          "percentage": 62,
+          "iconName": "CraneIcon",
+          "items": ["Webpack, Vite", "ESLint, Prettier"]
+        },
+        {
+          "title": "Testing",
+          "percentage": 51,
+          "iconName": "ChemistryIcon",
+          "items": ["Jest, React Testing Library (RTL)"]
+        }
+      ]
     },
     "generalSkillsBlock": {
       "h": "General Skills",
-      "codingH": "Coding",
+      "codingBlock": {
+        "h": "Programming",
+        "categories": [
+          {
+            "title": "API Work",
+            "percentage": 74,
+            "iconName": "ApiIcon",
+            "items": ["REST API, Axios / Fetch"]
+          },
+          {
+            "title": "Graphics & Visualization",
+            "percentage": 84,
+            "iconName": "GraphIcon",
+            "items": [
+              "D3.js, Chart.js",
+              "Animate.css, Framer Motion",
+              "Swiper.js"
+            ]
+          },
+          {
+            "title": "Infrastructure & DevOps",
+            "percentage": 58,
+            "iconName": "DevopsIcon",
+            "items": ["Docker", "CI/CD", "Nginx"]
+          },
+          {
+            "title": "Localization",
+            "percentage": 90,
+            "iconName": "MultilanguageIcon",
+            "items": ["i18n"]
+          }
+        ]
+      },
       "lngsBlock": {
         "h": "Languages",
         "en": "English",
@@ -153,15 +225,20 @@
       "knowledgeBlock": {
         "h": "Knowledge",
         "knowledgesArr": [
-          "JavaScript Frameworks/Libraries",
-          "Git and GitHub",
-          "Containerization with Docker",
-          "NGINX Configuration",
-          "Responsive Design",
-          "Browser Developer Tools",
-          "Integrating with third-party API's",
-          "Object-Oriented Programming (OOP)",
-          "Communication and collaboration"
+          "Advanced JavaScript/TypeScript (ES6+)",
+          "React.js, Next.js and their ecosystem",
+          "State management (Redux, Zustand, Effector)",
+          "Modern CSS methodologies (CSS Modules, SCSS, Tailwind)",
+          "Performance optimization (Webpack, Vite, Lazy Loading)",
+          "Testing (Jest, React Testing Library)",
+          "REST API and GraphQL work",
+          "CI/CD and automation (GitHub Actions, GitLab CI)",
+          "Accessibility principles (a11y) and semantic markup",
+          "Working with design systems (Material UI, Ant Design)",
+          "Internationalization (i18n)",
+          "Algorithms and data structures",
+          "SOLID principles and clean code",
+          "Working in Agile/Scrum teams"
         ]
       }
     }
@@ -172,11 +249,12 @@
     "projects": [
       {
         "mainImg": "/workExamples/EmotionalSite/previewImg.jpeg",
-        "header": "Closed Investors Club",
+        "header": "Private Investment Club",
         "category": "Website",
         "date": "07/11/2023",
-        "client": "Grigori Ilkevits",
-        "text1": "Welcome to the closed club investors website, meticulously crafted by yours truly. As the sole FrontEnd developer behind its creation, I poured my passion for user experience and innovation into every line of code.\n\nOne of the key features of the website is its plethora of custom components, meticulously designed to cater to the unique needs of our exclusive community of investors. From interactive dashboards to sleek landing pages, each element was handcrafted to seamlessly blend functionality with aesthetic appeal.\n\nIncorporating data visualization was a cornerstone of the development process. Leveraging cutting-edge technologies like React, Redux, and TypeScript, I orchestrated the integration of datasets and the creation of dynamic graphs, empowering our users to gain deep insights into market trends and investment opportunities.",
+        "client": "Grigory Ilkevich",
+        "link": "project not completed (client cancellation)",
+        "text1": "Large-scale Next.js application with 50+ pages and the following key technologies:\n\n- Full-fledged JWT authorization with token storage in localStorage\n- Role-based access system (RBAC) with different permission levels\n- Multilingualism with i18n (Russian/English/Estonian)\n- Component architecture: custom components + adapted Material UI\n- Comprehensive data visualization with Chart.js (line charts, doughnut charts)\n- Interactive tables with dataset filtering\n- State management: Redux + Redux Thunk for async operations\n- Optimizations: SWR for caching, lazy loading, SSR\n- Testing: Jest unit tests\n- SEO: Lighthouse optimization\n- Custom build setup via Webpack\n- CI/CD: Docker + Nginx setup, automatic deployment via GitHub Actions",
         "imgsArray": [
           "/workExamples/EmotionalSite/photo1.jpeg",
           "/workExamples/EmotionalSite/photo2.jpeg",
@@ -190,15 +268,16 @@
           "/workExamples/EmotionalSite/photo10.jpeg",
           "/workExamples/EmotionalSite/photo11.jpeg"
         ],
-        "text2": "Furthermore, the website seamlessly integrates with third-party APIs, enriching the user experience with real-time data and ensuring that our members have access to the latest information at their fingertips.\n\nIn essence, the closed club investors website stands as a testament to the power of FrontEnd development in transforming concepts into reality. It's not just a platform; it's a gateway to unparalleled investment experiences, meticulously crafted by yours truly."
+        "text2": "Key achievements:\n\n1. Implemented high-load authorization system with JWT and role model\n2. Optimized performance via SSR and code-splitting (Lazy Loading)\n3. Created comprehensive dashboard analytics with interactive Chart.js visualizations\n4. Set up full CI/CD pipeline with Docker containerization\n5. Achieved 90+ Lighthouse scores on all key metrics\n6. Implemented multilingualism with dynamic translation loading\n\nStack: Next.js 14, TypeScript, Redux Toolkit, RTK Query, Material UI v5, Chart.js 4, i18next, Jest, Docker, Nginx"
       },
       {
         "mainImg": "/workExamples/EmotionalApp/previewImg.jpeg",
-        "header": "Closed Investors Club",
+        "header": "Private Investment Club",
         "category": "Mobile App",
         "date": "16/02/2024",
-        "client": "Grigori Ilkevits",
-        "text1": "Introducing the companion mobile app to our closed club investors website, meticulously crafted to bring the power of investment insights directly to the palm of your hand. As the developer behind its creation, I seamlessly extended our digital ecosystem to mobile platforms, harnessing the flexibility and performance of React Native with the convenience of the Expo library.\n\nMuch like its web counterpart, our mobile app boasts a wealth of custom components designed to deliver a seamless and intuitive user experience. From interactive charts to personalized notifications, every feature is optimized for effortless navigation and maximum engagement.\n\nBuilding on the foundation of our website, I ensured a consistent visual identity and feature set across both platforms, allowing our members to seamlessly transition between desktop and mobile environments without missing a beat.",
+        "client": "Grigory Ilkevich",
+        "link": "project not completed (client cancellation)",
+        "text1": "Cross-platform React Native app (Expo) with full functional identity to web version. Key development aspects:\n\n- Full functionality synchronization with Next.js web version\n- JWT authorization adaptation for mobile platform\n- Same role system implementation (RBAC) considering mobile UX\n- Multilingual support (i18n) with shared translation config\n- Custom solutions to replace unsupported libraries:\n  - Deep native module modifications\n  - Polyfills for web-specific APIs\n  - Rewriting critical library parts (Chart.js → Victory Native)\n- Performance optimization for low-end devices",
         "imgsArray": [
           "/workExamples/EmotionalApp/photo1.jpeg",
           "/workExamples/EmotionalApp/photo2.jpeg",
@@ -208,15 +287,16 @@
           "/workExamples/EmotionalApp/photo6.jpeg",
           "/workExamples/EmotionalApp/photo7.jpeg"
         ],
-        "text2": "Through the integration of real-time data feeds and third-party APIs, our mobile app delivers up-to-the-minute market insights directly to your device, empowering investors to stay informed and make informed decisions on the go.\n\nWhether you're checking your portfolio, analyzing market trends, or connecting with fellow investors, our mobile app is your indispensable companion in the world of investment. It's not just an app; it's your gateway to unlocking the full potential of our closed club investors community, meticulously crafted with React Native and Expo."
+        "text2": "Technical challenges and solutions:\n\n1. Migration from web-specific libraries to mobile alternatives:\n   - Material UI → React Native Paper + custom components\n   - Chart.js → Victory Native with business logic adaptations\n   - Redux Persist → AsyncStorage with custom serialization\n\n2. Native improvements:\n   - Gesture implementation for interactive charts\n   - Large dataset handling optimization\n   - Custom navigation stack (React Navigation 6)\n\n3. Implementation features:\n   - Single codebase for iOS/Android\n   - Offline mode with critical data caching\n   - Push notifications via Expo Notifications\n   - Biometric authorization\n\nStack: React Native 0.72, Expo SDK 48, TypeScript, Victory Native, React Navigation 6, Redux Toolkit, i18next, Jest"
       },
       {
         "mainImg": "/workExamples/ThisSite/previewImg.jpeg",
-        "header": "Site-Card",
+        "header": "Portfolio Website",
         "category": "Website",
         "date": "20/04/2024",
-        "client": "Sergei Tashlikovich",
-        "text1": "Welcome to my CV card-website, meticulously crafted by yours truly. As a passionate FrontEnd developer, I poured my creativity and expertise into every aspect of this project.\n\nFrom conceptualizing the design to implementing seamless animations, I strived to create an immersive user experience. Each interactive component was thoughtfully designed to accommodate a wealth of information without overwhelming the user.\n\nRecognizing the importance of accessibility, I ensured the website was fully responsive, with an adaptive layout optimized for mobile devices. Additionally, I leveraged the i18n library to seamlessly integrate multilingual support, making the site accessible to a global audience.",
+        "client": "Sergey Tashlikovich",
+        "link": "stash-cv.website",
+        "text1": "Personal SPA resume with full custom stack and the following key features:\n\n- Architecture: Vite + React (no UI libraries)\n- 100% custom components (Zero Dependency UI)\n- Performance:\n  - Vite build (5x faster than Webpack)\n  - Optimization for low-end servers (1GB RAM)\n  - Code splitting + tree shaking\n- Internationalization:\n  - i18n with dynamic language loading (RU/EN)\n  - SEO-optimized meta tags for each language\n- Interactivity:\n  - Custom SwiperJS implementation\n  - Complex animations via Animate.css\n  - Parallax effects (pure CSS)",
         "imgsArray": [
           "/workExamples/ThisSite/photo1.jpeg",
           "/workExamples/ThisSite/photo2.jpeg",
@@ -224,13 +304,50 @@
           "/workExamples/ThisSite/photo4.jpeg",
           "/workExamples/ThisSite/photo5.jpeg"
         ],
-        "text2": "Behind the scenes, I utilized a robust stack comprising React, Redux, and TypeScript. These cutting-edge technologies not only empowered me to bring my vision to life but also laid the foundation for a scalable and maintainable codebase.\n\nIn summary, my CV card-website is a testament to my skills as a FrontEnd developer, showcasing my ability to blend creativity with technical proficiency to deliver an exceptional digital experience."
+        "text2": "Technical achievements and features:\n\n1. Performance:\n   - Build time <15s (vs 2.5min in Webpack)\n   - Lighthouse Score: 98/100 (PWA-ready)\n   - Lazy-loading of all heavy resources\n\n2. Unique implementations:\n   - Adaptive grid system without third-party libraries\n\n3. Animations and UX:\n   - Micro-animations for all interactive elements\n   - Smooth page transitions\n\nStack: Vite 5, React 18, TypeScript, i18next, Animate.css, SwiperJS 11, CI/CD (GitHub Actions)"
+      },
+      {
+        "mainImg": "/workExamples/Agropomeste/previewImg.jpeg",
+        "header": "Vacation Home Rentals",
+        "category": "Website",
+        "date": "04/01/2025",
+        "client": "Oleg Klimovich",
+        "link": "agropomeste.com",
+        "text1": "Next.js application for house rentals with full SSR rendering and the following key technologies:\n\n- Architecture: 100% server-side data (except PATCH/POST requests)\n- UI Kit: Mantine UI with deep component customization\n- Image optimization:\n  - Custom carousel on SwiperJS (v11)\n  - Next.js Image with lazy loading\n  - Content loading prioritization (Critical Images)\n- Security: Google Authenticator for admin panel (6-digit TOTP)\n- Validation: complex schemas for all forms (Zod + React Hook Form)\n- SEO: 95+ Lighthouse scores (SSR + dynamic meta tags)",
+        "imgsArray": [
+          "/workExamples/Agropomeste/photo1.jpeg",
+          "/workExamples/Agropomeste/photo2.jpeg",
+          "/workExamples/Agropomeste/photo3.jpeg",
+          "/workExamples/Agropomeste/photo4.jpeg",
+          "/workExamples/Agropomeste/photo5.jpeg",
+          "/workExamples/Agropomeste/photo6.jpeg",
+          "/workExamples/Agropomeste/photo7.jpeg",
+          "/workExamples/Agropomeste/photo8.jpeg",
+          "/workExamples/Agropomeste/photo9.jpeg"
+        ],
+        "text2": "Admin system and technical features:\n\n1. Protected admin panel:\n   - TOTP authentication (google-authenticator)\n   - JWT tokens with short TTL\n   - Custom data validation (including files)\n\n2. Optimizations:\n   - Dynamic SwiperJS import\n   - Prefetch for critical routes\n   - API response caching (stale-while-revalidate)\n\n3. Integrations:\n   - Tabler Icons (custom build with only used icons)\n   - Server Actions for data mutations\n   - Streaming SSR for slow connections\n\n4. Implementation features:\n   - Zero-client state management (using server cache)\n   - Progressive enhancement for old browsers\n   - Full type-safety (TypeScript strict mode)\n\nStack: Next.js 14 (App Router), Mantine UI 7, SwiperJS 11, Zod, React Hook Form, Google Authenticator, Tabler Icons, Turbopack"
+      },
+      {
+        "mainImg": "/workExamples/BKT/previewImg.jpeg",
+        "header": "Landing Page for Heat Power Company",
+        "category": "Website",
+        "date": "27/02/2025",
+        "client": "Dmitry Tashlikovich",
+        "link": "belkrimteplo.ru",
+        "text1": "High-performance Next.js landing page with full deployment infrastructure:\n\n- Next.js 14 with SSR for instant content loading\n- Automatic meta tag generation for SEO\n- Optimized media handling:\n  - Compressed WebP images\n  - Lazy loading of below-the-fold content\n- Full infrastructure:\n  - Docker containerization\n  - Nginx as reverse proxy with HTTP/2\n  - Let's Encrypt certificates via Certbot\n- CI/CD pipeline:\n  - Automatic deployments via GitHub Actions\n  - Build verification before deployment\n  - Dependency caching",
+        "imgsArray": [
+          "/workExamples/BKT/photo1.jpeg",
+          "/workExamples/BKT/photo2.jpeg",
+          "/workExamples/BKT/photo3.jpeg"
+        ],
+        "text2": "Technical implementation features:\n\n1. Performance:\n   - 100/100 Google PageSpeed scores\n   - TTFB < 200ms thanks to SSR\n   - Optimized web fonts\n\n2. Security:\n   - Automatic SSL updates\n   - CSP security headers\n   - DDoS protection via Nginx rate-limiting\n\n3. DevOps solutions:\n   - Multi-stage Docker build\n   - Container health checks\n   - Service auto-recovery\n\nStack: Next.js 14, TypeScript, Docker 24, Nginx 1.25, Certbot 2.8, CI/CD (GitHub Actions)"
       }
     ],
     "workExampleModal": {
       "dateH": "Date",
       "clientH": "Client",
-      "categoryH": "Category"
+      "categoryH": "Category",
+      "linkH": "Link"
     }
   }
 }
