@@ -14,6 +14,11 @@ export default function Projects() {
     (state) => state.deviceInfo.isMobileDevice
   );
 
+  const projects = t("projectsPage.projects", {
+    returnObjects: true,
+  }) as IProject[];
+  const isEvenCount = projects.length % 2 === 0;
+
   return (
     <div
       className={
@@ -30,10 +35,13 @@ export default function Projects() {
       >
         <TextWithCircle text={t("projectsPage.h")} isFirst={true} />
         <div className={classes.workBlocksContainer}>
-          {(
-            t("projectsPage.projects", { returnObjects: true }) as IProject[]
-          ).map((data, index) => (
-            <div className={classes.blockContainer} key={index}>
+          {projects.map((data, index) => (
+            <div
+              className={`${classes.blockContainer} ${
+                isEvenCount ? classes.evenBlocksAmount : ""
+              }`}
+              key={index}
+            >
               <PreviewWorkBlock
                 previewImg={data.mainImg}
                 category={data.category}

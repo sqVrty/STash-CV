@@ -15,7 +15,7 @@ $gray: rgba(100, 100, 100, 0.5);
   }
 
   .blockContainer {
-    // display: flex;
+    display: flex;
 
     border-bottom: 1px solid $gray;
 
@@ -47,8 +47,18 @@ $gray: rgba(100, 100, 100, 0.5);
         padding-right: 0;
       }
 
-      &:nth-last-child(-n + 1) {
+      // Последний
+      &:nth-last-child(1) {
         border-bottom: none;
+      }
+    }
+
+    &.evenBlocksAmount {
+      @media (min-width: 600px) {
+        // Предпоследний
+        &:nth-last-child(2) {
+          border-bottom: none;
+        }
       }
     }
   }
