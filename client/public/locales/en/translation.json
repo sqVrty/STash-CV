@@ -341,6 +341,17 @@
           "/workExamples/BKT/photo3.jpeg"
         ],
         "text2": "Technical implementation features:\n\n1. Performance:\n   - 100/100 Google PageSpeed scores\n   - TTFB < 200ms thanks to SSR\n   - Optimized web fonts\n\n2. Security:\n   - Automatic SSL updates\n   - CSP security headers\n   - DDoS protection via Nginx rate-limiting\n\n3. DevOps solutions:\n   - Multi-stage Docker build\n   - Container health checks\n   - Service auto-recovery\n\nStack: Next.js 14, TypeScript, Docker 24, Nginx 1.25, Certbot 2.8, CI/CD (GitHub Actions)"
+      },
+      {
+        "mainImg": "/workExamples/A4-CV/previewImg.jpeg",
+        "header": "Frontend Developer Resume (PRO-level self-promotion)",
+        "category": "Website / Art Performance",
+        "date": "Yesterday (but in code — '2025-04-07T00:00:00.000Z')",
+        "client": "Myself (and proud of it)",
+        "link": "github.com/sqVrty/a4-site-cv",
+        "text1": "An innovative React+Vite app where I sell myself at a premium price (but with a discount):\n\n- Architecture: 'A4-first design' (no extra pixels allowed!)\n- UI Kit: CSS Modules + 3 hours wrestling with `margin: 0 auto`\n- Optimization: PDF generation without Word (because 'I'm a frontend dev, not office plankton')\n- Security: i18n protects against HRs who don't know English\n- Validation: The 'Download' button checks if you have a PDF reader\n- SEO: 100 Lighthouse score (because there's nothing there except the resume)",
+        "imgsArray": ["/workExamples/A4-CV/photo1.jpeg"],
+        "text2": "Technical features:\n\n1. Foolproofing:\n   - The 'Change Language' button requires confirmation ('Are you sure? You only studied English in school!')\n   - The PDF generator ignores typos in the resume (thanks to the 'AutoBeauty' magic algorithm)\n\n2. Optimizations:\n   - Lazy loading of Word jokes (to avoid immediate load)\n   - Prefetching all my future projects (while they don't exist yet)\n   - Caching self-confidence in my skills (TTL = ∞)\n\n3. Integrations:\n   - GitHub API to count stars (0 → but I'm an optimist!)\n   - LinkedIn API for automatic 'Open to Work' (self-initiated)\n\n4. Implementation quirks:\n   - 90% of time spent on PDF rendering setup (but at least it's not Word!)\n   - 10% convincing myself 'this isn't overengineering'\n   - 0% on documentation (but there's a ReadME!)\n\nTech stack: React 18, Vite 5, i18n (for the 'Me/Not Me' toggle button), PDF-lib (revenge against Word), 3 cups of coffee."
       }
     ],
     "workExampleModal": {
