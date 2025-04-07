@@ -1,6 +1,7 @@
 import { useState, useRef, useCallback, useEffect } from "react";
 import SwiperCore from "swiper";
 import { Swiper, SwiperSlide, SwiperRef } from "swiper/react";
+import { Swiper as SwiperType } from "swiper";
 import { useAppSelector, useAppDispatch } from "../../../app/hooks";
 import {
   setIsOpen,
@@ -72,7 +73,9 @@ export default function ScreenShotsCarousel({ data }: { data: string[] }) {
         centeredSlides={true}
         slidesPerView={"auto"}
         initialSlide={activeIndexCurr}
-        onSlideChange={(swiper) => setActiveIndexCurr(swiper.activeIndex)}
+        onSlideChange={(swiper: SwiperType) =>
+          setActiveIndexCurr(swiper.activeIndex)
+        }
         coverflowEffect={{
           rotate: 0,
           stretch: 0,

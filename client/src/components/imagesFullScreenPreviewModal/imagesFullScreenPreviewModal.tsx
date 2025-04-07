@@ -1,5 +1,6 @@
 import { useCallback, useEffect, MouseEvent, useRef, useState } from "react";
 import { Swiper, SwiperSlide, SwiperRef } from "swiper/react";
+import { Swiper as SwiperType } from "swiper";
 import { Navigation } from "swiper/modules";
 
 import "swiper/css";
@@ -120,7 +121,9 @@ export default function ImagesFullScreenPreviewModal({
           speed={0}
           initialSlide={activeIndex}
           modules={[Navigation]}
-          onSlideChange={(swiper) => setActiveIndexCurr(swiper.activeIndex)}
+          onSlideChange={(swiper: SwiperType) =>
+            setActiveIndexCurr(swiper.activeIndex)
+          }
           className="swiper-carousel-modal"
         >
           {images.map((item, index) => (

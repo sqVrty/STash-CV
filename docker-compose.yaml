@@ -1,0 +1,25 @@
+services:
+  client:
+    container_name: client
+    ports:
+      - "3000:80"
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+
+  nginx:
+    container_name: nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    env_file:
+      - .env
+    volumes:
+      - ./nginx/nginx.conf.template:/etc/nginx/nginx.conf.template
+      - /etc/letsencrypt:/etc/letsencrypt
+    build:
+      context: .
+      dockerfile: ./nginx/Dockerfile
+    restart: always
+    depends_on:
+      - client
