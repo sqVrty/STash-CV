@@ -12,7 +12,7 @@ import Resume from "./pages/Resume/Resume";
 import Projects from "./pages/Projects/Projects";
 import Modal from "./components/modal/Modal";
 import WorkExampleModal from "./pages/Projects/components/WorkExampleModal";
-import ImagesFullScreenPreviewModal from "./components/imagesFullScreenPreviewModal/imagesFullScreenPreviewModal";
+import ImagesFullScreenPreviewModal from "./components/imagesFullScreenPreviewModal/ImagesFullScreenPreviewModal";
 
 import type { IProject } from "./redux/features/workExampleModalInfoSlice";
 

@@ -15,7 +15,7 @@ import {
 import { CrossIcon } from "../../assets/svg's";
 
 import classes from "./ImagesFullScreenPreviewModal.module.scss";
-import "./imagesFullScreenPreviewModal.scss";
+import "./ImagesFullScreenPreviewModal.scss";
 
 export default function ImagesFullScreenPreviewModal({
   images,
