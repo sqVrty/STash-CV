@@ -73,8 +73,10 @@ export default function LineSkillBlock({
         </div>
         {desc && (
           <div className={classes.descContainer}>
-            {desc.map((item) => (
-              <p className={classes.descItem}>{item}</p>
+            {desc.map((item, index) => (
+              <p className={classes.descItem} key={index}>
+                {item}
+              </p>
             ))}
           </div>
         )}

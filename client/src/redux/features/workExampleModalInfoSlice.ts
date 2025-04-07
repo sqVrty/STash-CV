@@ -32,9 +32,13 @@ const workExampleModalInfoSlice = createSlice({
     setData: (state, action: PayloadAction<IProject>) => {
       state.data = action.payload;
     },
+    resetData: (state) => {
+      state.data = null;
+    },
   },
 });
 
-export const { setIsOpen, setData } = workExampleModalInfoSlice.actions;
+export const { setIsOpen, setData, resetData } =
+  workExampleModalInfoSlice.actions;
 
 export default workExampleModalInfoSlice.reducer;

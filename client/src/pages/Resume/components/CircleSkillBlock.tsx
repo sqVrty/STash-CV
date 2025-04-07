@@ -45,6 +45,7 @@ export default function CircleSkillBlock({
               className={`${classes.descItem} ${
                 index === 0 ? classes.firstDescItem : ""
               }`}
+              key={index}
             >
               {item}
             </p>

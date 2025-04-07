@@ -16,7 +16,10 @@ export const store = configureStore({
     modal: modalReducer,
     imagesFullScreenPreview: imagesFullScreenPreviewModalReducer,
   },
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware({}).concat([]),
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: false,
+    }),
 });
 
 export type RootState = ReturnType<typeof store.getState>;

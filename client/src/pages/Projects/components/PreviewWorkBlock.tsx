@@ -46,7 +46,7 @@ export default function PreviewWorkBlock({
   const handleBlockClicked = useCallback(() => {
     dispatch(setData(data));
     dispatch(setIsOpen(!isWorkExampleModalOpen));
-  }, [dispatch]);
+  }, [dispatch, data]);
 
   return (
     <div

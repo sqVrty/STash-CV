@@ -322,8 +322,7 @@
           "/workExamples/Agropomeste/photo5.jpeg",
           "/workExamples/Agropomeste/photo6.jpeg",
           "/workExamples/Agropomeste/photo7.jpeg",
-          "/workExamples/Agropomeste/photo8.jpeg",
-          "/workExamples/Agropomeste/photo9.jpeg"
+          "/workExamples/Agropomeste/photo8.jpeg"
         ],
         "text2": "Admin system and technical features:\n\n1. Protected admin panel:\n   - TOTP authentication (google-authenticator)\n   - JWT tokens with short TTL\n   - Custom data validation (including files)\n\n2. Optimizations:\n   - Dynamic SwiperJS import\n   - Prefetch for critical routes\n   - API response caching (stale-while-revalidate)\n\n3. Integrations:\n   - Tabler Icons (custom build with only used icons)\n   - Server Actions for data mutations\n   - Streaming SSR for slow connections\n\n4. Implementation features:\n   - Zero-client state management (using server cache)\n   - Progressive enhancement for old browsers\n   - Full type-safety (TypeScript strict mode)\n\nStack: Next.js 14 (App Router), Mantine UI 7, SwiperJS 11, Zod, React Hook Form, Google Authenticator, Tabler Icons, Turbopack"
       },

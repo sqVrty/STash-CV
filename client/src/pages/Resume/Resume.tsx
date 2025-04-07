@@ -184,7 +184,7 @@ export default function Resume() {
                 percentage={category.percentage}
                 name={category.title}
                 desc={category.items}
-                key={index}
+                key={`${category.title}-${index}`}
               />
             );
           })}

@@ -326,8 +326,7 @@
           "/workExamples/Agropomeste/photo5.jpeg",
           "/workExamples/Agropomeste/photo6.jpeg",
           "/workExamples/Agropomeste/photo7.jpeg",
-          "/workExamples/Agropomeste/photo8.jpeg",
-          "/workExamples/Agropomeste/photo9.jpeg"
+          "/workExamples/Agropomeste/photo8.jpeg"
         ],
         "text2": "Админ-система и технические особенности:\n\n1. Защищенная админ-панель:\n   - TOTP-аутентификация (google-authenticator)\n   - JWT-токены с коротким TTL\n   - Кастомная валидация данных (включая файлы)\n\n2. Оптимизации:\n   - Динамический импорт SwiperJS\n   - Prefetch для критических маршрутов\n   - Кеширование API-ответов (stale-while-revalidate)\n\n3. Интеграции:\n   - Tabler Icons (кастомная сборка только используемых иконок)\n   - Server Actions для мутаций данных\n   - Streaming SSR для медленных соединений\n\n4. Особенности реализации:\n   - Zero-клиентский state management (использование серверного кэша)\n   - Прогрессивное улучшение для старых браузеров\n   - Полная type-safety (TypeScript строгий режим)\n\nСтек: Next.js 14 (App Router), Mantine UI 7, SwiperJS 11, Zod, React Hook Form, Google Authenticator, Tabler Icons, Turbopack"
       },

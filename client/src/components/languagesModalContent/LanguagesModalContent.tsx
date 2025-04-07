@@ -1,11 +1,15 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useCallback } from "react";
 import { useTranslation } from "react-i18next";
+
+import { useAppDispatch } from "../../app/hooks";
+import { resetData } from "../../redux/features/workExampleModalInfoSlice";
 
 import { UKIcon, RussiaIcon } from "../../assets/svg's";
 
 import classes from "./LanguagesModalContent.module.scss";
 
 export default function LanguagesModalContent() {
+  const dispatch = useAppDispatch();
   const { t, i18n } = useTranslation();
   const buttonsContainerRef = useRef<HTMLDivElement | null>(null);
 
@@ -17,12 +21,14 @@ export default function LanguagesModalContent() {
     }
   }, [i18n.language]);
 
-  const handleLanguageClicked = (lng: string) => {
-    i18n.changeLanguage(lng);
-    // setTimeout(() => {
-    //   window.location.reload();
-    // }, 500);
-  };
+  const handleLanguageClicked = useCallback(
+    (lng: string) => {
+      i18n.changeLanguage(lng).then(() => {
+        dispatch(resetData());
+      });
+    },
+    [dispatch, i18n]
+  );
 
   return (
     <div className={classes.container}>
