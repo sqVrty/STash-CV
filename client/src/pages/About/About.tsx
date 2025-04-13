@@ -4,11 +4,10 @@ import "animate.css";
 import { useAppSelector } from "../../app/hooks";
 import SwiperCore from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
+import { Pagination } from "swiper/modules";
+
 import "swiper/css";
 import "swiper/css/pagination";
-// import required modules
-import { Pagination } from "swiper/modules";
 
 import TextWithCircle from "../../components/textWithCircle/TextWithCircle";
 import ServiceBlock from "./components/ServiceBlock";
@@ -19,7 +18,7 @@ import PhotoMobileContainer from "../../components/photoMobileContainer/PhotoMob
 import { COLORS } from "../../assets/colors";
 import {
   GrigoriAvatar,
-  RabkinAvatar,
+  LisichkinAvatar,
   PodelnikovAvatar,
 } from "../../assets/img's";
 import {
@@ -195,7 +194,7 @@ export default function About() {
               </SwiperSlide>
               <SwiperSlide className={classes.swiperSlide}>
                 <TestimonialsBlock
-                  img={RabkinAvatar}
+                  img={LisichkinAvatar}
                   name={t("aboutPage.testimonialsBlock.block2.name")}
                   post={t("aboutPage.testimonialsBlock.block2.post")}
                   review={t("aboutPage.testimonialsBlock.block2.review")}

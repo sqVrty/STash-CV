@@ -43,7 +43,7 @@ import {
   ApiIcon,
 } from "../../assets/svg's";
 import {
-  BMSTULogo,
+  BWGLogo,
   InginiriumLogo,
   EmotionalEggheadLogo,
 } from "../../assets/img's";
@@ -107,7 +107,7 @@ export default function Resume() {
                 period={t("resumePage.expBlock.block2.period")}
                 post={t("resumePage.expBlock.block2.post")}
                 cpName={t("resumePage.expBlock.block2.cpName")}
-                logo={BMSTULogo}
+                logo={BWGLogo}
                 desc={t("resumePage.expBlock.block2.desc")}
               />
               <div className={`${classes.dot}`} />
