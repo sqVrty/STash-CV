@@ -15,6 +15,7 @@ import TestimonialsBlock from "@/features/about/TestimonialsBlock/TestimonialsBl
 import FactBlock from "@/features/about/FactBlock/FactBlock";
 import PhotoMobileContainer from "@/components/photoMobileContainer/PhotoMobileContainer";
 
+import { getCommercialExperienceYears } from "@/lib/experience";
 import { COLORS } from "@/assets/colors";
 import {
   GlebAvatar,
@@ -31,7 +32,6 @@ import {
   ZapIcon,
   SpeedometerIcon,
   HighSpeedTrainIcon,
-  ProfileIcon,
 } from "@/assets/icons";
 
 import classes from "./About.module.scss";
@@ -44,8 +44,16 @@ const TESTIMONIALS: Array<{ key: string; img: string; stars: number }> = [
   { key: "block5", img: PavelAvatar, stars: 5 },
 ];
 
+function pluralYearsRu(n: number): string {
+  const mod10 = n % 10;
+  const mod100 = n % 100;
+  if (mod10 === 1 && mod100 !== 11) return "год";
+  if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) return "года";
+  return "лет";
+}
+
 export default function About() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { isMobile, width } = useViewport();
 
   const paginationRef = useRef(null);
@@ -70,6 +78,11 @@ export default function About() {
   if (hasNotHadBirthdayThisYear) {
     myAge--;
   }
+
+  const expYears = getCommercialExperienceYears(todayDate);
+  const exp = i18n.language.startsWith("ru")
+    ? `${expYears}+ ${pluralYearsRu(expYears)}`
+    : `${expYears}+ years`;
 
   return (
     <>
@@ -96,13 +109,13 @@ export default function About() {
         >
           <div className={classes.heyContainer}>
             <TextWithCircle text={t("aboutPage.aboutBlock.h")} isFirst={true} />
-            <p className={classes.greeting}>
-              {t("aboutPage.aboutBlock.greeting")} 👋
+            <p className={classes.tagline}>
+              {t("aboutPage.aboutBlock.tagline")}
             </p>
             <p
               style={{ color: COLORS.gray }}
               dangerouslySetInnerHTML={{
-                __html: t("aboutPage.aboutBlock.desc"),
+                __html: t("aboutPage.aboutBlock.desc", { exp }),
               }}
             />
             <div className={classes.aboutDataContainer}>
@@ -134,6 +147,42 @@ export default function About() {
                   React + TypeScript
                 </span>
               </p>
+            </div>
+          </div>
+
+          <TextWithCircle text={t("aboutPage.factsBlock.h")} />
+          <div className={classes.factsContainer}>
+            <div className={classes.delimiterContainer}>
+              <FactBlock
+                icon={<ZapIcon fill={COLORS.aqua} width={35} height={35} />}
+                text={t("aboutPage.factsBlock.block1.h")}
+              />
+            </div>
+            <div className={classes.delimiterContainer}>
+              <FactBlock
+                icon={
+                  <HighSpeedTrainIcon
+                    fill={COLORS.aqua}
+                    width={35}
+                    height={35}
+                  />
+                }
+                text={t("aboutPage.factsBlock.block2.h")}
+              />
+            </div>
+            <div className={classes.delimiterContainer}>
+              <FactBlock
+                icon={
+                  <SpeedometerIcon fill={COLORS.aqua} width={35} height={35} />
+                }
+                text={t("aboutPage.factsBlock.block3.h")}
+              />
+            </div>
+            <div className={classes.delimiterContainer}>
+              <FactBlock
+                icon={<BrushIcon fill={COLORS.aqua} width={35} height={35} />}
+                text={t("aboutPage.factsBlock.block4.h")}
+              />
             </div>
           </div>
 
@@ -196,42 +245,6 @@ export default function About() {
               ))}
             </Swiper>
             <div ref={paginationRef} className={classes.pagination} />
-          </div>
-
-          <TextWithCircle text={t("aboutPage.factsBlock.h")} />
-          <div className={classes.factsContainer}>
-            <div className={classes.delimiterContainer}>
-              <FactBlock
-                icon={<ZapIcon fill={COLORS.aqua} width={35} height={35} />}
-                text={t("aboutPage.factsBlock.block1.h")}
-              />
-            </div>
-            <div className={classes.delimiterContainer}>
-              <FactBlock
-                icon={
-                  <HighSpeedTrainIcon
-                    fill={COLORS.aqua}
-                    width={35}
-                    height={35}
-                  />
-                }
-                text={t("aboutPage.factsBlock.block2.h")}
-              />
-            </div>
-            <div className={classes.delimiterContainer}>
-              <FactBlock
-                icon={
-                  <SpeedometerIcon fill={COLORS.aqua} width={35} height={35} />
-                }
-                text={t("aboutPage.factsBlock.block3.h")}
-              />
-            </div>
-            <div className={classes.delimiterContainer}>
-              <FactBlock
-                icon={<ProfileIcon fill={COLORS.aqua} width={35} height={35} />}
-                text={t("aboutPage.factsBlock.block4.h")}
-              />
-            </div>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import {
   createContext,
+  useCallback,
   useContext,
   useMemo,
   useState,
@@ -21,13 +22,16 @@ const ProjectModalContext = createContext<ProjectModalContextValue | null>(
 export function ProjectModalProvider({ children }: { children: ReactNode }) {
   const [project, setProject] = useState<Project | null>(null);
 
+  const openProject = useCallback((next: Project) => setProject(next), []);
+  const closeProject = useCallback(() => setProject(null), []);
+
   const value = useMemo<ProjectModalContextValue>(
     () => ({
       project,
-      openProject: setProject,
-      closeProject: () => setProject(null),
+      openProject,
+      closeProject,
     }),
-    [project]
+    [project, openProject, closeProject]
   );
 
   return (

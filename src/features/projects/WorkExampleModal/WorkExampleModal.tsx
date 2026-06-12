@@ -1,5 +1,6 @@
-import { useCallback, type MouseEvent } from "react";
+import { useCallback, useEffect, type MouseEvent } from "react";
 import { useTranslation } from "react-i18next";
+import { useLocation } from "react-router-dom";
 
 import { useProjectModal } from "@/providers/ProjectModalProvider";
 import { useViewport } from "@/providers/ViewportProvider";
@@ -20,10 +21,15 @@ export default function WorkExampleModal() {
   const { t } = useTranslation();
   const { project, closeProject } = useProjectModal();
   const { isMobile, height } = useViewport();
+  const { pathname } = useLocation();
 
   useModalEffects(project !== null, closeProject, {
     scrollableSelector: MODAL_SELECTOR,
   });
+
+  useEffect(() => {
+    closeProject();
+  }, [pathname, closeProject]);
 
   const handleOverlayClick = useCallback(
     (event: MouseEvent<HTMLDivElement>) => {

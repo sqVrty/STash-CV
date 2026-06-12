@@ -6,39 +6,13 @@ import TextWithCircle from "@/components/textWithCircle/TextWithCircle";
 import TextWithIcon from "@/components/textWithIcon/TextWithIcon";
 import ExperienceBlock from "@/features/resume/ExperienceBlock/ExperienceBlock";
 import EducationBlock from "@/features/resume/EducationBlock/EducationBlock";
-import CircleSkillBlock from "@/features/resume/CircleSkillBlock/CircleSkillBlock";
-import LineSkillBlock from "@/features/resume/LineSkillBlock/LineSkillBlock";
-import PlatformBlock from "@/features/resume/PlatformBlock/PlatformBlock";
+import PreProBlock from "@/features/resume/PreProBlock/PreProBlock";
+import SkillTagGroup from "@/features/resume/SkillTagGroup/SkillTagGroup";
 import KnowledgeBlock from "@/features/resume/KnowledgeBlock/KnowledgeBlock";
 
 import { COLORS } from "@/assets/colors";
-import {
-  SuitcaseIcon,
-  EducationIcon,
-  KworkIcon,
-  CodingIcon,
-  LanguagesIcon,
-  UKIcon,
-  RussiaIcon,
-  BelarusIcon,
-  GearsIcon,
-  ListIcon,
-  ProgrammingLanguagesIcon,
-  ConductorIcon,
-  LipstickIcon,
-  CraneIcon,
-  ChemistryIcon,
-  MultilanguageIcon,
-  DevopsIcon,
-  GraphIcon,
-  ApiIcon,
-  AnalyzeIcon,
-} from "@/assets/icons";
-import {
-  BWGLogo,
-  InginiriumLogo,
-  EmotionalEggheadLogo,
-} from "@/assets/images";
+import { SuitcaseIcon, EducationIcon } from "@/assets/icons";
+import { BWGLogo, EmotionalEggheadLogo } from "@/assets/images";
 import { withBase } from "@/lib/withBase";
 
 import classes from "./Resume.module.scss";
@@ -47,31 +21,28 @@ const EXPERIENCE: Array<{ key: string; logo: string; isPresent?: boolean }> = [
   { key: "block1", logo: withBase("logos/yandex.svg"), isPresent: true },
   { key: "block2", logo: EmotionalEggheadLogo },
   { key: "block3", logo: BWGLogo },
-  { key: "block4", logo: InginiriumLogo },
-  { key: "block5", logo: KworkIcon },
 ];
-
-const GLOBAL_PROGRAMMING_SKILLS_ICONS_MAP = {
-  ProgrammingLanguagesIcon,
-  ConductorIcon,
-  LipstickIcon,
-  CraneIcon,
-  ChemistryIcon,
-  ApiIcon,
-  GraphIcon,
-};
-
-const PROGRAMMING_SKILLS_ICONS_MAP = {
-  MultilanguageIcon,
-  DevopsIcon,
-  GraphIcon,
-  ApiIcon,
-  AnalyzeIcon,
-};
 
 export default function Resume() {
   const { t } = useTranslation();
   const { isMobile } = useViewport();
+
+  const skillGroups = t("resumePage.skillsBlock.groups", {
+    returnObjects: true,
+  }) as Array<{ title: string; tags: string[] }>;
+
+  const strengths = t("resumePage.strengthsBlock.items", {
+    returnObjects: true,
+  }) as string[];
+
+  const preProItems = t("resumePage.expBlock.preProItems", {
+    returnObjects: true,
+  }) as Array<{
+    post: string;
+    cpName: string;
+    period: string;
+    stack: string;
+  }>;
 
   return (
     <div
@@ -107,6 +78,13 @@ export default function Resume() {
                 />
               </div>
             ))}
+            <div className={classes.expAndEduBlock}>
+              <PreProBlock
+                title={t("resumePage.expBlock.preProH")}
+                items={preProItems}
+              />
+              <div className={classes.dot} />
+            </div>
           </div>
           <div className={classes.textWithIconContainer2}>
             <TextWithIcon
@@ -135,129 +113,22 @@ export default function Resume() {
           </div>
         </div>
 
-        <TextWithCircle text={t("resumePage.progSkillsBlock.h")} />
-        <div
-          className={`${classes.progSkillsContainer} ${
-            isMobile && classes.mobile
-          }`}
-        >
-          {(
-            t("resumePage.progSkillsBlock.categories", {
-              returnObjects: true,
-            }) as Array<{
-              title: string;
-              percentage: number;
-              iconName: keyof typeof GLOBAL_PROGRAMMING_SKILLS_ICONS_MAP;
-              items: string[];
-            }>
-          ).map((category, index) => {
-            const IconComponent =
-              GLOBAL_PROGRAMMING_SKILLS_ICONS_MAP[category.iconName];
-            return (
-              <CircleSkillBlock
-                icon={<IconComponent width={40} height={40} />}
-                percentage={category.percentage}
-                name={category.title}
-                desc={category.items}
-                key={`${category.title}-${index}`}
-              />
-            );
-          })}
+        <TextWithCircle text={t("resumePage.skillsBlock.h")} />
+        <div className={classes.skillGroupsContainer}>
+          {skillGroups.map((group) => (
+            <SkillTagGroup
+              key={group.title}
+              title={group.title}
+              tags={group.tags}
+            />
+          ))}
         </div>
 
-        <TextWithCircle text={t("resumePage.generalSkillsBlock.h")} />
-        <div className={classes.textWithIconsContainer}>
-          <div className={classes.textWithIconContainer1}>
-            <TextWithIcon
-              icon={<CodingIcon fill={COLORS.aqua} width={35} height={35} />}
-              text={t("resumePage.generalSkillsBlock.codingBlock.h")}
-            />
-            <div className={classes.lineSkillBlocksContainer}>
-              {(
-                t("resumePage.generalSkillsBlock.codingBlock.categories", {
-                  returnObjects: true,
-                }) as Array<{
-                  title: string;
-                  percentage: number;
-                  iconName: keyof typeof PROGRAMMING_SKILLS_ICONS_MAP;
-                  items: string[];
-                }>
-              ).map((category, index) => {
-                const IconComponent =
-                  PROGRAMMING_SKILLS_ICONS_MAP[category.iconName];
-                return (
-                  <LineSkillBlock
-                    icon={<IconComponent width={40} height={40} />}
-                    percentage={category.percentage}
-                    name={category.title}
-                    desc={category.items}
-                    key={index}
-                  />
-                );
-              })}
-            </div>
-          </div>
-          <div className={classes.textWithIconContainer2}>
-            <TextWithIcon
-              icon={<LanguagesIcon fill={COLORS.aqua} width={35} height={35} />}
-              text={t("resumePage.generalSkillsBlock.lngsBlock.h")}
-            />
-            <div className={classes.lineSkillBlocksContainer}>
-              <LineSkillBlock
-                icon={<UKIcon width={35} height={35} />}
-                name={t("resumePage.generalSkillsBlock.lngsBlock.en")}
-                percentage={75}
-                circled={true}
-              />
-              <LineSkillBlock
-                icon={<RussiaIcon width={35} height={35} />}
-                name={t("resumePage.generalSkillsBlock.lngsBlock.ru")}
-                percentage={90}
-                circled={true}
-              />
-              <LineSkillBlock
-                icon={<BelarusIcon width={35} height={35} />}
-                name={t("resumePage.generalSkillsBlock.lngsBlock.by")}
-                percentage={20}
-                circled={true}
-              />
-            </div>
-          </div>
-        </div>
-
-        <div
-          className={`${classes.textWithIconsContainer} ${classes.platformsAndKnowledgeContainer}`}
-        >
-          <div className={classes.textWithIconContainer1}>
-            <TextWithIcon
-              icon={<GearsIcon fill={COLORS.aqua} width={35} height={35} />}
-              text={t("resumePage.generalSkillsBlock.platformsH")}
-            />
-            <div className={classes.platformsBlocksContainer}>
-              <PlatformBlock percentage={92} name="Git / GitHub" />
-              <PlatformBlock percentage={82} name="GitHub Actions" />
-              <PlatformBlock percentage={78} name="Storybook" />
-              <PlatformBlock percentage={72} name="Figma" />
-            </div>
-          </div>
-          <div className={classes.textWithIconContainer2}>
-            <TextWithIcon
-              icon={<ListIcon stroke={COLORS.aqua} width={35} height={35} />}
-              text={t("resumePage.generalSkillsBlock.knowledgeBlock.h")}
-            />
-            <div className={classes.knowledgeBlocksContainer}>
-              {(
-                t(
-                  "resumePage.generalSkillsBlock.knowledgeBlock.knowledgesArr",
-                  {
-                    returnObjects: true,
-                  }
-                ) as string[]
-              ).map((text, index) => (
-                <KnowledgeBlock key={index} text={text} />
-              ))}
-            </div>
-          </div>
+        <TextWithCircle text={t("resumePage.strengthsBlock.h")} />
+        <div className={classes.strengthsContainer}>
+          {strengths.map((text, index) => (
+            <KnowledgeBlock key={index} text={text} />
+          ))}
         </div>
       </div>
     </div>

@@ -1,0 +1,68 @@
+$gray: rgba(140, 140, 140, 1);
+$lightgray: rgba(200, 200, 200, 1);
+$aqua: rgba(16, 200, 236, 0.8);
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 20px;
+
+  border: 0.5px dashed $gray;
+  border-radius: 15px;
+}
+
+.title {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: $gray;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.headerRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.role {
+  font-size: 15px;
+}
+
+.post {
+  font-weight: 500;
+}
+
+.sep {
+  color: $aqua;
+}
+
+.cpName {
+  font-style: italic;
+  color: $lightgray;
+}
+
+.period {
+  flex-shrink: 0;
+  font-size: 12px;
+  color: $aqua;
+}
+
+.stack {
+  font-size: 13px;
+  color: $gray;
+}
