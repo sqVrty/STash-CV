@@ -1,5 +1,5 @@
 import React, { ReactElement, useState } from "react";
-import { COLORS } from "../../../assets/colors";
+import { COLORS } from "@/assets/colors";
 import classes from "./IconContainer.module.scss";
 
 export default function IconContainer({

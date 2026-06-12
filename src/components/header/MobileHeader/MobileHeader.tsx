@@ -3,14 +3,14 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation";
 
-import { useModal } from "../../../providers/ModalProvider";
+import { useModal } from "@/providers/ModalProvider";
 
 import BurgerMenu from "./BurgerMenu";
-import LanguagesModalContent from "../../languagesModalContent/LanguagesModalContent";
+import LanguagesModalContent from "@/components/languagesModalContent/LanguagesModalContent";
 
-import { MyAvatar } from "../../../assets/images";
-import { MenuIcon, GlobusIcon } from "../../../assets/icons";
-import { COLORS } from "../../../assets/colors";
+import { MyAvatar } from "@/assets/images";
+import { MenuIcon, GlobusIcon } from "@/assets/icons";
+import { COLORS } from "@/assets/colors";
 
 import classes from "./MobileHeader.module.scss";
 

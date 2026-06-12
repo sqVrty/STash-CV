@@ -1,8 +1,8 @@
 import { useRef, useEffect, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 
-import { useProjectModal } from "../../providers/ProjectModalProvider";
-import { UKIcon, RussiaIcon } from "../../assets/icons";
+import { useProjectModal } from "@/providers/ProjectModalProvider";
+import { UKIcon, RussiaIcon } from "@/assets/icons";
 
 import classes from "./LanguagesModalContent.module.scss";
 

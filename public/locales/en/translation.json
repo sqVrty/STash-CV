@@ -27,7 +27,7 @@
     "aboutBlock": {
       "h": "About Me",
       "greeting": "hello",
-      "desc": "My name is Sergey, with over 3 years of experience in Frontend development. My core stack includes React, TypeScript, Redux (including Redux Toolkit and Thunk), as well as Next.js and React Native for mobile development.<br/><br/>I pay special attention to performance optimization (Lighthouse, SEO), writing tests, and developing complex UI components. In my work, I actively use UI libraries (Ant Design, MUI, Mantine UI, PrimeReact) and have experience with various APIs (REST, GraphQL, third-party services).<br/><br/>I created this portfolio website to showcase my skills and completed projects :) It's built using my main work stack and serves as an example of my capabilities.<br/><br/>I'm confident that my experience and skills would be valuable to your team. I'd be happy to discuss my candidacy and answer any questions during an interview.",
+      "desc": "My name is Sergey, with 3+ years in frontend development. Currently a Middle+ Frontend Developer at Yandex, on the B2B payments team of Yandex 360 for Business (admin.yandex.ru).<br/><br/>Most of my time goes to product features that grow functionality and bring the business money. I own them end-to-end: from design and server-side SSR/BFF logic (Node.js) to production rollout and A/B experiments — a feature turnkey, not just the client.<br/><br/>On my own initiative I also remove team pains: speeding up infrastructure and CI, working on performance, the design system, tooling and analytics. This portfolio site is built on my work stack — a living example of what I can do.",
       "ageQ": "Age",
       "locationQ": "Location",
       "lngsQ": "Languages",
@@ -39,11 +39,11 @@
       "h": "What I Can Do",
       "block1": {
         "h": "Web Development",
-        "desc": "SPA and SSR applications using React/Next.js. I create adaptive layouts (CSS Modules, SCSS, Tailwind) and optimize loading performance (Lighthouse ≥90). Experience with REST/GraphQL APIs."
+        "desc": "SPA and SSR applications with React/Next.js, server-side BFF logic in Node.js. Adaptive layouts (CSS Modules, SCSS, Tailwind), performance tuning (APDEX, TTFB, Lighthouse)."
       },
       "block2": {
         "h": "Frontend Development",
-        "desc": "React + TypeScript, state management (Redux/Zustand/Effector). Worked with Material UI, Ant Design, PrimeReact. Build projects with Vite/Webpack. Testing: Jest + React Testing Library."
+        "desc": "React + TypeScript, state management (Redux/Zustand/Effector), design systems and UI kits. I ship features to A/B in production. Testing: Playwright, Jest + RTL."
       },
       "block3": {
         "h": "UI/UX Practice",
@@ -57,34 +57,44 @@
     "testimonialsBlock": {
       "h": "Testimonials",
       "block1": {
-        "name": "Grigory Ilkevich",
-        "post": "CEO of Investment Club",
-        "review": "Sergey developed our website and app — and for six months now, I haven't heard a single 'where's the button?' from our investors. The design is intuitive, the code is fire, and most importantly: he suggested tons of features we hadn't even considered. Works like Swiss clockwork, only cheaper 😄"
+        "name": "Gleb Kuznetsov",
+        "post": "QA Engineer",
+        "review": "Sergey is incredibly easy to work with 🔥 He closes tasks fast and with quality, sometimes even ahead of QA — you can tell he thinks a task through instead of just writing code and tossing it over the fence. If bugs do show up, they don't survive half a day. He also writes great autotests, which is a rare talent for a frontender. I'd happily work with him more."
       },
       "block2": {
-        "name": "Boris Lisichkin",
-        "post": "Middle+ Frontend Developer",
-        "review": "When Sergey joined the project, I mentally prepared for lengthy code reviews — you know how it usually goes with newcomers. But within weeks, I caught myself thinking: 'Damn, he actually fixed my mistake too.' In the admin panel we built, he handled all the complex form logic and then proposed reusable components that saved us a month of work. Rare to find a developer who doesn't just write code but immediately sees how their solution impacts the whole team."
+        "name": "Timur Safin",
+        "post": "Frontend Developer (adjacent team)",
+        "review": "Sergey was super responsive when I asked for help contributing to our service — with his help we closed the task noticeably faster. Thanks!"
       },
       "block3": {
-        "name": "Lev Podelnikov",
-        "post": "Owner of Business Card Service",
-        "review": "We ordered a simple business card site... and got a 'wow' site instead. Sergey managed to pack in smooth animations, perfect mobile adaptation (tested on grandpa's Nokia!), and even a dark theme — though we never asked. Now all clients ask: 'Who's your designer?'. Too bad we can't clone him 🤷‍♂️"
+        "name": "Alisa Kovaleva",
+        "post": "UX Writer",
+        "review": "A responsible and reliable developer who pays real attention to copy — that's genuinely great. Always reachable: happy to hop on a call, walk through a flow, discuss texts and design. Even on tight deadlines he makes edits carefully, never mixing anything up. Communication is comfortable and transparent — as a UX writer I'm very happy with the quality of his work 😃"
+      },
+      "block4": {
+        "name": "Anton Lebedev",
+        "post": "UI Designer",
+        "review": "Working with you on projects is really great! Easy to communicate, you dive in well and are always ready to dig into a question instead of brushing it off. One wish — don't work on weekends 😄"
+      },
+      "block5": {
+        "name": "Pavel Morozov",
+        "post": "Product Manager",
+        "review": "A real pleasure to deal with. Within a project, communication is easy: he explains complex things clearly and lays out risks and timelines. What to improve? Nothing really — all great."
       }
     },
     "factsBlock": {
       "h": "Fun Facts",
       "block1": {
-        "h": "Optimized page load: 2s → 0.8s"
+        "h": "A/B experiments: conversion up to 6.5×"
       },
       "block2": {
-        "h": "Built React SPA from scratch"
+        "h": "Tuned SSR endpoint: 2.9s → 200ms (−90%)"
       },
       "block3": {
-        "h": "Sped up deployment by 40% (Vite)"
+        "h": "Sped up team CI: −30% p90, ~2400 hrs/year"
       },
       "block4": {
-        "h": "Train both code and muscles"
+        "h": "Talk at an internal frontend conference"
       }
     }
   },
@@ -94,28 +104,34 @@
     "expBlock": {
       "h": "Work Experience",
       "block1": {
+        "period": "Jul 2025 — Present",
+        "post": "Frontend Developer (Middle+)",
+        "cpName": "Yandex · Yandex 360 for Business",
+        "desc": "Building the B2B admin panel of Yandex 360 for Business (admin.yandex.ru) in a product frontend team. I own product features end-to-end: design, alignment with adjacent teams, development, production rollout and A/B.<br/><br/><b>Product work (~85% of my time)</b> — growing functionality and business revenue:<br/>• Delivered large cross-service features turnkey: new registration flows, add-on activation, referral and promo mechanics — part already in production.<br/>• I own features end-to-end: frontend + server-side SSR/BFF logic (Node.js) + integrations with adjacent services, not just the client.<br/>• Confirmed A/B: conversion to add-on activation grew 6.5×, to first top-up 1.5×.<br/>• Cut TTM for new locales by 5–7% and Dev Time by 20–40% via modular refactoring.<br/>• Contributed components from scratch to the corporate design system (via Figma) and migrated the UI to it at scale.<br/><br/><b>Self-initiated extras (beyond product tasks)</b>:<br/>• Sped up the team's PR flow: test-stand provisioning −19% (p50) / −30% (p90), ~2400 hrs/year saved.<br/>• Tuned a heavy SSR endpoint from ~2.9s to ~200ms (−90%), raised APDEX.<br/>• Built an instant on-stand debugging tool and analytics dashboards (ClickHouse + DataLens), gave a talk at an internal frontend conference, turned an analysis of 2000+ review comments into team ESLint rules.<br/><br/>Stack: React, TypeScript, Node.js (SSR/BFF), Redux, design system, CI/CD, Playwright/Jest, ClickHouse/DataLens"
+      },
+      "block2": {
         "period": "2023-2024",
         "post": "Frontend Developer (React/Next.js)",
         "cpName": "EmotionalEgghead",
-        "desc": "Developed a Next.js SPA from scratch (50+ pages): SSR/SSG for SEO, dynamic routes, multilingual support (i18n).<br/><br/>Key implementations: role-based access system with JWT auth, video platform with custom player, interactive dashboards with charts (Chart.js).<br/><br/>Performance optimization: reduced TTI by 35% via code splitting + lazy loading, decreased bundle size by 30% (Webpack Bundle Analyzer), configured API caching (SWR).<br/><br/>Processes & collaboration: set up CI/CD (GitHub Actions), close work with CEO — proposed business logic solutions (boosted conversion by 20%), received product co-ownership offer for significant contributions.<br/><br/>Stack: Next.js, React, TypeScript, Redux Toolkit, Redux Thunk, Vite, MUI, CSS Modules"
+        "desc": "Developed a multi-page Next.js SPA: SSR/SSG, dynamic routes, multilingual support (i18n).<br/><br/>Implemented auth and a role-based access system (JWT), interactive dashboards with charts (Chart.js), custom UI components. Set up CI/CD on GitHub Actions.<br/><br/>Stack: Next.js, React, TypeScript, Redux Toolkit, Vite, MUI, CSS Modules"
       },
-      "block2": {
+      "block3": {
         "period": "2022-2023",
         "post": "Frontend Developer",
         "cpName": "Black Wall Group",
-        "desc": "Developed an admin panel for a mobile app alongside a Middle+ Frontend Developer.<br/><br/>Key tasks: implemented complex forms and validation, created reusable UI components, optimized builds, conducted code reviews and joint codebase refactoring.<br/><br/>Stack: React, TypeScript, Redux Toolkit, Prime React, Webpack, Git Flow"
+        "desc": "Built an admin panel for a mobile app together with a Middle+ frontend developer.<br/><br/>Complex forms and validation, reusable UI components, build optimization, code reviews and joint codebase refactoring.<br/><br/>Stack: React, TypeScript, Redux Toolkit, PrimeReact, Webpack"
       },
-      "block3": {
+      "block4": {
         "period": "2022",
         "post": "JavaScript Instructor",
         "cpName": "Inzhinirium",
-        "desc": "Taught beginner courses: JavaScript fundamentals, algorithms, DOM manipulation, browser APIs, practical task development.<br/><br/>Achievements: honed ability to explain complex concepts simply, created interactive examples."
+        "desc": "Taught beginner courses: JavaScript fundamentals and algorithms, DOM and browser APIs, hands-on tasks on real cases.<br/><br/>Honed the ability to explain complex concepts simply."
       },
-      "block4": {
+      "block5": {
         "period": "2022-2023",
         "post": "Freelancer",
         "cpName": "Kwork / Upwork",
-        "desc": "Commercial projects: landing pages and SPAs with Vue/React, Three.js experiments for 3D graphics.<br/><br/>Acquired skills: client requirement management, rapid tech adoption.<br/><br/>Stack: Vue 2/3, React, JavaScript, Tailwind ..."
+        "desc": "Commercial freelance: landing pages and SPAs with Vue/React, Three.js experiments (3D graphics).<br/><br/>Working with client requirements and deadlines, rapid adoption of new tech.<br/><br/>Stack: Vue 2/3, React, JavaScript, Tailwind"
       }
     },
     "eduBlock": {
@@ -138,7 +154,7 @@
       "categories": [
         {
           "title": "Languages & Frameworks",
-          "percentage": 77,
+          "percentage": 82,
           "iconName": "ProgrammingLanguagesIcon",
           "items": [
             "JavaScript (ES6+), TypeScript",
@@ -147,8 +163,18 @@
           ]
         },
         {
+          "title": "Server-side Development",
+          "percentage": 76,
+          "iconName": "ApiIcon",
+          "items": [
+            "Node.js: SSR handlers & BFF",
+            "Integrations with adjacent services",
+            "Express, custom routes"
+          ]
+        },
+        {
           "title": "State Management",
-          "percentage": 72,
+          "percentage": 80,
           "iconName": "ConductorIcon",
           "items": [
             "Redux (Toolkit / RTK Query), Zustand, Effector",
@@ -162,21 +188,31 @@
           "items": [
             "CSS3, CSS Modules / SCSS",
             "Tailwind CSS",
-            "Libraries: Material-UI (MUI), Ant Design, Mantine UI, PrimeReact",
+            "Design systems & UI kits (MUI, Ant Design, Mantine, PrimeReact)",
             "Custom (self-built) components"
           ]
         },
         {
-          "title": "Tools",
-          "percentage": 62,
+          "title": "Performance",
+          "percentage": 84,
+          "iconName": "GraphIcon",
+          "items": [
+            "APDEX, TTFB, Core Web Vitals",
+            "Code splitting, lazy loading",
+            "SSR tuning & data caching"
+          ]
+        },
+        {
+          "title": "Tooling & Build",
+          "percentage": 78,
           "iconName": "CraneIcon",
-          "items": ["Webpack, Vite", "ESLint, Prettier"]
+          "items": ["Vite, Webpack", "CI/CD pipelines (GitHub Actions)", "ESLint, Prettier"]
         },
         {
           "title": "Testing",
-          "percentage": 51,
+          "percentage": 72,
           "iconName": "ChemistryIcon",
-          "items": ["Jest, React Testing Library (RTL)"]
+          "items": ["Playwright", "Jest, React Testing Library (RTL)", "Autotest maintenance & stabilization"]
         }
       ]
     },
@@ -186,32 +222,49 @@
         "h": "Programming",
         "categories": [
           {
-            "title": "API Work",
-            "percentage": 74,
+            "title": "Infrastructure & CI/CD",
+            "percentage": 78,
+            "iconName": "DevopsIcon",
+            "items": [
+              "GitHub Actions, pipeline optimization",
+              "Docker, Nginx",
+              "Server build & deploy"
+            ]
+          },
+          {
+            "title": "Analytics & A/B",
+            "percentage": 80,
+            "iconName": "AnalyzeIcon",
+            "items": [
+              "A/B experiments, product metrics",
+              "Dashboards (ClickHouse, DataLens)"
+            ]
+          },
+          {
+            "title": "API & Data",
+            "percentage": 82,
             "iconName": "ApiIcon",
-            "items": ["REST API, Axios / Fetch"]
+            "items": [
+              "REST API, Axios / Fetch",
+              "BFF / SSR data layer (Node.js)",
+              "Integrations with adjacent services"
+            ]
           },
           {
             "title": "Graphics & Visualization",
             "percentage": 84,
             "iconName": "GraphIcon",
             "items": [
-              "D3.js, Chart.js",
-              "Animate.css, Framer Motion",
+              "Chart.js, D3.js",
+              "Framer Motion, Animate.css",
               "Swiper.js"
             ]
-          },
-          {
-            "title": "Infrastructure & DevOps",
-            "percentage": 58,
-            "iconName": "DevopsIcon",
-            "items": ["Docker", "CI/CD", "Nginx"]
           },
           {
             "title": "Localization",
             "percentage": 90,
             "iconName": "MultilanguageIcon",
-            "items": ["i18n"]
+            "items": ["i18n, multilingual support", "Translation integration"]
           }
         ]
       },
@@ -221,24 +274,20 @@
         "ru": "Russian",
         "by": "Belarusian"
       },
-      "platformsH": "Platforms",
+      "platformsH": "Toolbox",
       "knowledgeBlock": {
-        "h": "Knowledge",
+        "h": "Strengths",
         "knowledgesArr": [
-          "Advanced JavaScript/TypeScript (ES6+)",
-          "React.js, Next.js and their ecosystems",
-          "State management (Redux, Zustand, Effector)",
-          "Modern CSS methodologies (CSS Modules, SCSS, Tailwind)",
-          "Performance optimization (Webpack, Vite, Lazy Loading)",
-          "Testing (Jest, React Testing Library)",
-          "REST API and GraphQL",
-          "CI/CD and automation (GitHub Actions, GitLab CI)",
-          "Accessibility (a11y) and semantic markup",
-          "Design systems (Material UI, Ant Design)",
-          "Internationalization (i18n)",
-          "Algorithms and data structures",
-          "SOLID and clean code principles",
-          "Agile/Scrum teamwork"
+          "I own product features end-to-end: design → development → production → A/B",
+          "85% of my time goes to product work that grows functionality and revenue",
+          "I go beyond the client: server-side SSR/BFF logic, integrations, infrastructure",
+          "I onboard fast into unfamiliar codebases and adjacent services",
+          "I close tasks fast and with quality — sometimes ahead of QA",
+          "I proactively remove team pains (CI speed-ups, debug tools, dashboards)",
+          "Go-to person for the design system and CI on the team; onboarded colleagues",
+          "Attentive to details and copy; close collaboration with design and UX",
+          "I explain complex things clearly and lay out risks and timelines",
+          "I write autotests, even though that's not a frontender's duty"
         ]
       }
     }
@@ -247,6 +296,17 @@
   "projectsPage": {
     "h": "Works",
     "projects": [
+      {
+        "mainImg": "/workExamples/Yandex360/previewImg.svg",
+        "header": "Yandex 360 for Business",
+        "category": "B2B SaaS · Web service",
+        "date": "2025 — Present",
+        "client": "Yandex",
+        "link": "admin.yandex.ru",
+        "text1": "The B2B admin panel of Yandex 360 for Business is a large team product (a frontend team of 15+ engineers) that has existed for years. I'm one of the developers; below is what I personally owned.\n\nMain work (~85% of my time) — product projects that grow functionality and business revenue:\n- Large cross-service features turnkey: new registration flows, add-on activation, referral and promo mechanics\n- I own features end-to-end: frontend + server-side SSR/BFF logic (Node.js) + integrations with adjacent services\n- Confirmed A/B: conversion to add-on activation 6.5×, to first top-up 1.5×\n- Cut TTM for new locales by 5–7% and Dev Time by 20–40%\n- Contributions to the corporate design system (components from scratch via Figma)",
+        "imgsArray": [],
+        "text2": "Self-initiated extras (beyond product tasks):\n\n1. Sped up the team's PR flow: test-stand provisioning −19% (p50) / −30% (p90), ~2400 hrs/year saved\n2. Performance: a heavy SSR endpoint 2.9s → 200ms (−90%), higher APDEX\n3. An instant on-stand debugging tool + analytics dashboards (ClickHouse + DataLens)\n4. A talk at an internal frontend conference, team ESLint rules from an analysis of 2000+ reviews\n\nStack: React, TypeScript, Node.js (SSR/BFF), Redux, design system, CI/CD, Playwright/Jest, ClickHouse/DataLens"
+      },
       {
         "mainImg": "/workExamples/EmotionalSite/previewImg.jpeg",
         "header": "Private Investment Club",
@@ -357,7 +417,8 @@
       "dateH": "Date",
       "clientH": "Client",
       "categoryH": "Category",
-      "linkH": "Link"
+      "linkH": "Link",
+      "ndaNotice": "The product UI is under NDA, so screenshots aren't published here. The product is publicly available at admin.yandex.ru."
     }
   }
 }

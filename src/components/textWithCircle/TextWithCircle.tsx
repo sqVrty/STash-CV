@@ -1,4 +1,4 @@
-import { COLORS } from "../../assets/colors";
+import { COLORS } from "@/assets/colors";
 
 import classes from "./TextWithCircle.module.scss";
 

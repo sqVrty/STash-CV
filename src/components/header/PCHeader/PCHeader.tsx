@@ -1,12 +1,12 @@
 import { useCallback } from "react";
 import { useTranslation } from "react-i18next";
 
-import { useModal } from "../../../providers/ModalProvider";
+import { useModal } from "@/providers/ModalProvider";
 
 import NavigationElement from "./NavigationElement";
 import IconContainer from "./IconContainer";
-import LanguagesModalContent from "../../languagesModalContent/LanguagesModalContent";
-import ContactMeModalContent from "../../contactMeModalContent/ContactMeModalContent";
+import LanguagesModalContent from "@/components/languagesModalContent/LanguagesModalContent";
+import ContactMeModalContent from "@/components/contactMeModalContent/ContactMeModalContent";
 
 import {
   ContactMeIcon,
@@ -14,8 +14,8 @@ import {
   ResumeIcon,
   FolderIcon,
   GlobusIcon,
-} from "../../../assets/icons";
-import { COLORS } from "../../../assets/colors";
+} from "@/assets/icons";
+import { COLORS } from "@/assets/colors";
 
 import classes from "./PCHeader.module.scss";
 

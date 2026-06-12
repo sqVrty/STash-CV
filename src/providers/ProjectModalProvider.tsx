@@ -6,7 +6,7 @@ import {
   type ReactNode,
 } from "react";
 
-import type { Project } from "../types/project";
+import type { Project } from "@/types/project";
 
 interface ProjectModalContextValue {
   project: Project | null;

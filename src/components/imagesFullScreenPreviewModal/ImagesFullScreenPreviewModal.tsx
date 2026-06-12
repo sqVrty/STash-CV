@@ -12,9 +12,9 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
-import { useGallery } from "../../providers/GalleryProvider";
-import { useModalEffects } from "../../hooks/useModalEffects";
-import { CrossIcon } from "../../assets/icons";
+import { useGallery } from "@/providers/GalleryProvider";
+import { useModalEffects } from "@/hooks/useModalEffects";
+import { CrossIcon } from "@/assets/icons";
 
 import classes from "./ImagesFullScreenPreviewModal.module.scss";
 import "./ImagesFullScreenPreviewModal.scss";

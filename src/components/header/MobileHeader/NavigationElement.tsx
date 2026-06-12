@@ -2,7 +2,7 @@ import React, { ReactElement } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "animate.css";
 
-import { COLORS } from "../../../assets/colors";
+import { COLORS } from "@/assets/colors";
 
 import classes from "./NavigationElement.module.scss";
 

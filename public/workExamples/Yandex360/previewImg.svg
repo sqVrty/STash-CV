@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" font-family="'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#202023"/>
+      <stop offset="1" stop-color="#0e0e10"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#10c8ec"/>
+      <stop offset="1" stop-color="#10c8ec" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#bg)"/>
+
+  <!-- decorative faint grid -->
+  <g stroke="#ffffff" stroke-opacity="0.03" stroke-width="1">
+    <path d="M0 168 H1200 M0 336 H1200 M0 504 H1200"/>
+    <path d="M300 0 V675 M600 0 V675 M900 0 V675"/>
+  </g>
+
+  <!-- oversized faint brand mark -->
+  <text x="1080" y="640" font-size="620" font-weight="700" fill="#ffffff" fill-opacity="0.03" text-anchor="middle">Я</text>
+
+  <!-- brand tile -->
+  <rect x="120" y="250" width="120" height="120" rx="28" fill="#FC3F1D"/>
+  <text x="180" y="312" font-size="82" font-weight="700" fill="#ffffff" text-anchor="middle" dominant-baseline="central">Я</text>
+
+  <!-- wordmark -->
+  <text x="280" y="300" font-size="62" font-weight="700" fill="#ffffff">Яндекс 360</text>
+  <text x="282" y="352" font-size="34" font-weight="400" fill="#b8b8bd">для бизнеса</text>
+
+  <!-- accent line + tag -->
+  <rect x="122" y="410" width="320" height="3" rx="1.5" fill="url(#accent)"/>
+  <text x="122" y="452" font-size="22" font-weight="500" fill="#10c8ec" letter-spacing="2">B2B · SaaS · ADMIN PANEL</text>
+</svg>

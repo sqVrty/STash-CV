@@ -59,3 +59,4 @@ export { ReactComponent as MultilanguageIcon } from "./multilanguage.svg";
 export { ReactComponent as DevopsIcon } from "./devops.svg";
 export { ReactComponent as GraphIcon } from "./graph.svg";
 export { ReactComponent as ApiIcon } from "./api.svg";
+export { ReactComponent as LockIcon } from "./lock.svg";

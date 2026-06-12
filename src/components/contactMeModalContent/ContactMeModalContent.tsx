@@ -7,7 +7,7 @@ import {
   WhatsAppIcon,
   PhoneIcon,
   MailIcon,
-} from "../../assets/icons";
+} from "@/assets/icons";
 
 import classes from "./ContactMeModalContent.module.scss";
 

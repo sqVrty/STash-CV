@@ -1,19 +1,19 @@
 import { useCallback, type Dispatch, type SetStateAction } from "react";
 import { useTranslation } from "react-i18next";
 
-import { useModal } from "../../../providers/ModalProvider";
-import { useViewport } from "../../../providers/ViewportProvider";
+import { useModal } from "@/providers/ModalProvider";
+import { useViewport } from "@/providers/ViewportProvider";
 
 import NavigationElement from "./NavigationElement";
-import ContactMeModalContent from "../../contactMeModalContent/ContactMeModalContent";
+import ContactMeModalContent from "@/components/contactMeModalContent/ContactMeModalContent";
 
 import {
   ProfileIcon,
   ResumeIcon,
   FolderIcon,
   ContactMeIcon,
-} from "../../../assets/icons";
-import { COLORS } from "../../../assets/colors";
+} from "@/assets/icons";
+import { COLORS } from "@/assets/colors";
 
 import classes from "./BurgerMenu.module.scss";
 

@@ -1,8 +1,8 @@
 import { useCallback, type MouseEvent } from "react";
 
-import { useModal } from "../../providers/ModalProvider";
-import { useModalEffects } from "../../hooks/useModalEffects";
-import { CrossIcon } from "../../assets/icons";
+import { useModal } from "@/providers/ModalProvider";
+import { useModalEffects } from "@/hooks/useModalEffects";
+import { CrossIcon } from "@/assets/icons";
 
 import classes from "./Modal.module.scss";
 

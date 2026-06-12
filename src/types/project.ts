@@ -6,6 +6,6 @@ export interface Project {
   client: string;
   link: string;
   text1: string;
-  imgsArray: string[];
+  imgsArray?: string[];
   text2: string;
 }
